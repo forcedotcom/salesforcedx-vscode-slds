@@ -1,0 +1,1954 @@
+{
+	"classes": [
+		{
+			"selector": "slds-text-link_reset",
+			"component": "Interactions",
+			"summary": "Makes links and buttons appear as regular text"
+		},
+		{
+			"selector": "slds-text-link",
+			"component": "Interactions",
+			"summary": "Used in combination with `.slds-text-link--reset`, you can apply the class `.slds-text-link` to a child element to reset its styles back to that of a link."
+		},
+		{
+			"selector": "slds-text-link_faux",
+			"component": "Interactions",
+			"summary": "Faux links are used on areas that can't be wrapped in an `a` element, but need to appear to be a link with an underline on hover. An example is in the page header for Object home. The `H1` and `button` that sit next to each other have the `.slds-text-link--faux` class on their parent element."
+		},
+		{
+			"selector": "slds-hyphenate",
+			"component": "Hyphenation",
+			"summary": "The truncation class can be used on an element, or the truncation include can be added to an existing class."
+		},
+		{
+			"selector": "slds-align_absolute-center",
+			"component": "Alignment",
+			"summary": "Class will absolutely center children content"
+		},
+		{
+			"selector": "slds-grid",
+			"component": "Grid",
+			"summary": "Initializes grid"
+		},
+		{
+			"selector": "slds-grid_frame",
+			"component": "Grid",
+			"summary": "Initializes grid"
+		},
+		{
+			"selector": "slds-grid_vertical",
+			"component": "Grid",
+			"summary": "Initializes grid"
+		},
+		{
+			"selector": "slds-grid_vertical-reverse",
+			"component": "Grid",
+			"summary": "Initializes grid"
+		},
+		{
+			"selector": "slds-grid_reverse",
+			"component": "Grid",
+			"summary": "Initializes grid"
+		},
+		{
+			"selector": "slds-wrap",
+			"component": "Grid",
+			"summary": "Allows columns to wrap when they exceed 100% of their parent’s width"
+		},
+		{
+			"selector": "slds-nowrap",
+			"component": "Grid",
+			"summary": "Keeps columns on one line. Allows columns to stretch and fill 100% of the parent&rsquo;s width and height."
+		},
+		{
+			"selector": "slds-gutters",
+			"component": "Grid",
+			"summary": "Apply 12px gutters to each grid column when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_xxx-small",
+			"component": "Grid",
+			"summary": "Apply 2px gutters to each grid column when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_xx-small",
+			"component": "Grid",
+			"summary": "Apply 4px gutters to each grid column when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_x-small",
+			"component": "Grid",
+			"summary": "Apply 8px gutters to each grid column when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_small",
+			"component": "Grid",
+			"summary": "Apply 12px gutters to each grid column when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_medium",
+			"component": "Grid",
+			"summary": "Apply 16px gutters to each grid column when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_large",
+			"component": "Grid",
+			"summary": "Apply 24px gutters to each grid column when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_x-large",
+			"component": "Grid",
+			"summary": "Apply 32px gutters to each grid column when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_xx-large",
+			"component": "Grid",
+			"summary": "Apply 48px gutters to each grid column when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_direct",
+			"component": "Grid",
+			"summary": "Apply 12px gutters to only direct column children when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_direct-xxx-small",
+			"component": "Grid",
+			"summary": "Apply 2px gutters to only direct column children when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_direct-xx-small",
+			"component": "Grid",
+			"summary": "Apply 4px gutters to only direct column children when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_direct-x-small",
+			"component": "Grid",
+			"summary": "Apply 8px gutters to only direct column children when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_direct-small",
+			"component": "Grid",
+			"summary": "Apply 12px gutters to only direct column children when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_direct-medium",
+			"component": "Grid",
+			"summary": "Apply 16px gutters to only direct column children when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_direct-large",
+			"component": "Grid",
+			"summary": "Apply 24px gutters to only direct column children when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_direct-x-large",
+			"component": "Grid",
+			"summary": "Apply 32px gutters to only direct column children when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-gutters_direct-xx-large",
+			"component": "Grid",
+			"summary": "Apply 48px gutters to only direct column children when you add this class to an `slds-grid` element"
+		},
+		{
+			"selector": "slds-grid_pull-padded",
+			"component": "Grid",
+			"summary": "Normalizes the 0.75rem of padding when nesting a grid in a region with `.slds-p-horizontal_small`"
+		},
+		{
+			"selector": "slds-grid_pull-padded-xxx-small",
+			"component": "Grid",
+			"summary": "Normalizes the 0.125rem of padding when nesting a grid in a region with `.slds-p-horizontal_xxx-small`"
+		},
+		{
+			"selector": "slds-grid_pull-padded-xx-small",
+			"component": "Grid",
+			"summary": "Normalizes the 0.25rem of padding when nesting a grid in a region with `.slds-p-horizontal_xx-small`"
+		},
+		{
+			"selector": "slds-grid_pull-padded-x-small",
+			"component": "Grid",
+			"summary": "Normalizes the 0.5rem of padding when nesting a grid in a region with `.slds-p-horizontal_x-small`"
+		},
+		{
+			"selector": "slds-grid_pull-padded-small",
+			"component": "Grid",
+			"summary": "Normalizes the 0.75rem of padding when nesting a grid in a region with `.slds-p-horizontal_small`"
+		},
+		{
+			"selector": "slds-grid_pull-padded-medium",
+			"component": "Grid",
+			"summary": "Normalizes the 1rem of padding when nesting a grid in a region with `.slds-p-horizontal_medium`"
+		},
+		{
+			"selector": "slds-grid_pull-padded-large",
+			"component": "Grid",
+			"summary": "Normalizes the 1.5rem of padding when nesting a grid in a region with `.slds-p-horizontal_large`"
+		},
+		{
+			"selector": "slds-grid_pull-padded-x-large",
+			"component": "Grid",
+			"summary": "Normalizes the 1.5rem of padding when nesting a grid in a region with `.slds-p-horizontal_x-large`"
+		},
+		{
+			"selector": "slds-grid_pull-padded-xx-large",
+			"component": "Grid",
+			"summary": "Normalizes the 1.5rem of padding when nesting a grid in a region with `.slds-p-horizontal_xx-large`"
+		},
+		{
+			"selector": "slds-col",
+			"component": "Grid",
+			"summary": "Initializes a grid column"
+		},
+		{
+			"selector": "slds-has-flexi-truncate",
+			"component": "Grid",
+			"summary": "Needed when truncation is nested in a flexible container in a grid"
+		},
+		{
+			"selector": "slds-no-flex",
+			"component": "Grid",
+			"summary": "Removes flexbox from grid column"
+		},
+		{
+			"selector": "slds-no-space",
+			"component": "Grid",
+			"summary": "Sets the column to a min-width of 0"
+		},
+		{
+			"selector": "slds-grow",
+			"component": "Grid",
+			"summary": "Allows column to grow to children&rsquo;s content"
+		},
+		{
+			"selector": "slds-grow-none",
+			"component": "Grid",
+			"summary": "Prevents column from growing to children&rsquo;s content"
+		},
+		{
+			"selector": "slds-shrink",
+			"component": "Grid",
+			"summary": "Allows column to shrink to children's content"
+		},
+		{
+			"selector": "slds-shrink-none",
+			"component": "Grid",
+			"summary": "Prevents column from shrinking to children's content"
+		},
+		{
+			"selector": "slds-grid_align-center",
+			"component": "Grid",
+			"summary": "Columns align in the center to the main axis and expand in each direction"
+		},
+		{
+			"selector": "slds-grid_align-space",
+			"component": "Grid",
+			"summary": "Columns are evenly distributed with equal space around them all"
+		},
+		{
+			"selector": "slds-grid_align-spread",
+			"component": "Grid",
+			"summary": "Columns align to the left and right followed by center. Space is equal between them"
+		},
+		{
+			"selector": "slds-grid_align-end",
+			"component": "Grid",
+			"summary": "Columns start on the opposite end of the grid's main axis"
+		},
+		{
+			"selector": "slds-grid_vertical-align-start",
+			"component": "Grid",
+			"summary": "Columns start at the beginning of the grid's cross axis"
+		},
+		{
+			"selector": "slds-grid_vertical-align-center",
+			"component": "Grid",
+			"summary": "Columns align in the center to the cross axis and expand it each direction"
+		},
+		{
+			"selector": "slds-grid_vertical-align-end",
+			"component": "Grid",
+			"summary": "Columns start on the opposite end of the grid's cross axis"
+		},
+		{
+			"selector": "slds-col_bump-top",
+			"component": "Grid",
+			"summary": "Bumps grid item(s) away from the other grid items to sit at the top, taking up the remaining white-space of the grid container"
+		},
+		{
+			"selector": "slds-col_bump-right",
+			"component": "Grid",
+			"summary": "Bumps grid item(s) away from the other grid items to sit to the right, taking up the remaining white-space of the grid container"
+		},
+		{
+			"selector": "slds-col_bump-bottom",
+			"component": "Grid",
+			"summary": "Bumps grid item(s) away from the other grid items to sit at the bottom, taking up the remaining white-space of the grid container"
+		},
+		{
+			"selector": "slds-col_bump-left",
+			"component": "Grid",
+			"summary": "Bumps grid item(s) away from the other grid items to sit to the left, taking up the remaining white-space of the grid container"
+		},
+		{
+			"selector": "slds-grid_vertical-stretch",
+			"component": "Grid",
+			"summary": "Stretch the grid items for both single row and multi-line rows to fill the height of the parent grid container"
+		},
+		{
+			"selector": "slds-container_small",
+			"component": "Grid",
+			"summary": "Restrict width of containers to a maximum of 480px"
+		},
+		{
+			"selector": "slds-container_medium",
+			"component": "Grid",
+			"summary": "Restrict width of containers to a maximum of 768px"
+		},
+		{
+			"selector": "slds-container_large",
+			"component": "Grid",
+			"summary": "Restrict width of containers to a maximum of 1024px"
+		},
+		{
+			"selector": "slds-container_x-large",
+			"component": "Grid",
+			"summary": "Restrict width of containers to a maximum of 1280px"
+		},
+		{
+			"selector": "slds-container_fluid",
+			"component": "Grid",
+			"summary": "Width of container takes up 100% of viewport"
+		},
+		{
+			"selector": "slds-container_center",
+			"component": "Grid",
+			"summary": "Horizontally positions containers in the center of the viewport"
+		},
+		{
+			"selector": "slds-container_left",
+			"component": "Grid",
+			"summary": "Horizontally positions containers to the left of the viewport"
+		},
+		{
+			"selector": "slds-container_right",
+			"component": "Grid",
+			"summary": "Horizontally positions containers to the right of the viewport"
+		},
+		{
+			"selector": "slds-list_horizontal",
+			"component": "Horizontal List",
+			"summary": "Causes items of a list to display horizontally"
+		},
+		{
+			"selector": "slds-scrollable",
+			"component": "Scrollable",
+			"summary": "Forces element to scroll horizontally and vertically when content exceeds element's width and height"
+		},
+		{
+			"selector": "slds-scrollable_none",
+			"component": "Scrollable",
+			"summary": "Forces overflow items to not scroll within element's width and height"
+		},
+		{
+			"selector": "slds-scrollable_y",
+			"component": "Scrollable",
+			"summary": "Forces element to scroll vertically when content exceeds element's height"
+		},
+		{
+			"selector": "slds-scrollable_x",
+			"component": "Scrollable",
+			"summary": "Forces element to scroll horizontally when content exceeds element's width"
+		},
+		{
+			"selector": "slds-border_bottom",
+			"component": "Borders",
+			"summary": "Adds a bottom border to an element"
+		},
+		{
+			"selector": "slds-border_left",
+			"component": "Borders",
+			"summary": "Adds a left border to an element"
+		},
+		{
+			"selector": "slds-border_right",
+			"component": "Borders",
+			"summary": "Adds a right border to an element"
+		},
+		{
+			"selector": "slds-border_top",
+			"component": "Borders",
+			"summary": "Adds a top border to an element"
+		},
+		{
+			"selector": "slds-has-flexi-truncate",
+			"component": "Truncation",
+			"summary": "Needed when truncation is nested in a flexible container in a grid"
+		},
+		{
+			"selector": "slds-truncate_container_25",
+			"component": "Truncation",
+			"summary": "Truncates text at 25% of its parent container"
+		},
+		{
+			"selector": "slds-truncate_container_50",
+			"component": "Truncation",
+			"summary": "Truncates text at 50% of its parent container"
+		},
+		{
+			"selector": "slds-truncate_container_75",
+			"component": "Truncation",
+			"summary": "Truncates text at 75% of its parent container"
+		},
+		{
+			"selector": "slds-truncate_container_33",
+			"component": "Truncation",
+			"summary": "Truncates text at 33% of its parent container"
+		},
+		{
+			"selector": "slds-truncate_container_66",
+			"component": "Truncation",
+			"summary": "Truncates text at 66% of its parent container"
+		},
+		{
+			"selector": "slds-is-static",
+			"component": "Position",
+			"summary": "Reset positioning back to normal behavior"
+		},
+		{
+			"selector": "slds-is-relative",
+			"component": "Position",
+			"summary": "Used to contain children if children are absolutely positioned and out of flow. Also used to position element without changing layout."
+		},
+		{
+			"selector": "slds-is-fixed",
+			"component": "Position",
+			"summary": "Used to position an element relative to the viewport."
+		},
+		{
+			"selector": "slds-is-absolute",
+			"component": "Position",
+			"summary": "Used to position an element relative to its closest ancestor with relative positioning."
+		},
+		{
+			"selector": "slds-is-nested",
+			"component": "Position",
+			"summary": "Provides styles for a nested lists"
+		},
+		{
+			"selector": "slds-is-collapsed",
+			"component": "Position",
+			"summary": "Hides elements inside a parent"
+		},
+		{
+			"selector": "slds-is-expanded",
+			"component": "Position",
+			"summary": "Shows the elements inside the parent"
+		},
+		{
+			"selector": "slds-is-visually-empty",
+			"component": "Position",
+			"summary": "Hides element and removes width"
+		},
+		{
+			"selector": "slds-has-bottom-magnet",
+			"component": "Layout",
+			"summary": "Assumes element below is connected"
+		},
+		{
+			"selector": "slds-has-top-magnet",
+			"component": "Layout",
+			"summary": "Assumes element above is connected"
+		},
+		{
+			"selector": "slds-theme_default",
+			"component": "Themes",
+			"summary": "Sets the background color to white"
+		},
+		{
+			"selector": "slds-theme_shade",
+			"component": "Themes",
+			"summary": "Sets the background color to gray"
+		},
+		{
+			"selector": "slds-theme_inverse",
+			"component": "Themes",
+			"summary": "Sets the background color to dark blue"
+		},
+		{
+			"selector": "slds-theme_alt-inverse",
+			"component": "Themes",
+			"summary": "Sets the background color to darker blue"
+		},
+		{
+			"selector": "slds-theme_success",
+			"component": "Themes",
+			"summary": "Sets the background color to green"
+		},
+		{
+			"selector": "slds-theme_info",
+			"component": "Themes",
+			"summary": "Sets the background color to gray-ish blue"
+		},
+		{
+			"selector": "slds-theme_warning",
+			"component": "Themes",
+			"summary": "Sets the background color to yellow"
+		},
+		{
+			"selector": "slds-theme_error",
+			"component": "Themes",
+			"summary": "Sets the background color to red"
+		},
+		{
+			"selector": "slds-theme_offline",
+			"component": "Themes",
+			"summary": "Sets the background color to black"
+		},
+		{
+			"selector": "slds-theme_alert-texture",
+			"component": "Themes",
+			"summary": "Adds striped background"
+		},
+		{
+			"selector": "slds-media__figure",
+			"component": "Media Objects",
+			"summary": "Defines the figure area"
+		},
+		{
+			"selector": "slds-media__body",
+			"component": "Media Objects",
+			"summary": "Defines the body area"
+		},
+		{
+			"selector": "slds-media_small",
+			"component": "Media Objects",
+			"summary": "Adjusts whitespace on smaller media objects"
+		},
+		{
+			"selector": "slds-media_large",
+			"component": "Media Objects",
+			"summary": "Adjusts whitespace on larger media objects"
+		},
+		{
+			"selector": "slds-media_inline",
+			"component": "Media Objects",
+			"summary": "Aligns the figure and body to be inline-block of each other"
+		},
+		{
+			"selector": "slds-media_center",
+			"component": "Media Objects",
+			"summary": "Aligns the content in the .slds-media__body to the middle of the .slds-media__figure"
+		},
+		{
+			"selector": "slds-media__figure_reverse",
+			"component": "Media Objects",
+			"summary": "Defines the figure area on the other side"
+		},
+		{
+			"selector": "slds-media_responsive",
+			"component": "Media Objects",
+			"summary": ".slds-media__figure and .slds-media__body stack on smaller screens"
+		},
+		{
+			"selector": "slds-box",
+			"component": "Box",
+			"summary": "Provides 1rem base padding and borders"
+		},
+		{
+			"selector": "slds-text-link_reset",
+			"component": "Text",
+			"summary": "Makes links and buttons appear as regular text"
+		},
+		{
+			"selector": "slds-text-link",
+			"component": "Text",
+			"summary": "Used in combination with `.slds-text-link--reset`, you can apply the class `.slds-text-link` to a child element to reset its styles back to that of a link."
+		},
+		{
+			"selector": "slds-text-link_faux",
+			"component": "Text",
+			"summary": "Faux links are used on areas that can't be wrapped in an `a` element, but need to appear to be a link with an underline on hover. An example is in the page header for Object home. The `H1` and `button` that sit next to each other have the `.slds-text-link--faux` class on their parent element."
+		},
+		{
+			"selector": "slds-text-body_regular",
+			"component": "Text",
+			"summary": "Creates the 13px regular body copy"
+		},
+		{
+			"selector": "slds-text-body_small",
+			"component": "Text",
+			"summary": "Creates a more pale-colored 12px copy"
+		},
+		{
+			"selector": "slds-text-heading_large",
+			"component": "Text",
+			"summary": "Very large 28px heading"
+		},
+		{
+			"selector": "slds-text-heading_medium",
+			"component": "Text",
+			"summary": "Large 20px heading"
+		},
+		{
+			"selector": "slds-text-heading_small",
+			"component": "Text",
+			"summary": "Smaller 16px heading"
+		},
+		{
+			"selector": "slds-text-title",
+			"component": "Text",
+			"summary": "12px heading that is not all caps"
+		},
+		{
+			"selector": "slds-text-title_caps",
+			"component": "Text",
+			"summary": "All caps 12px heading"
+		},
+		{
+			"selector": "slds-text-title_bold",
+			"component": "Text",
+			"summary": "Bold 14px heading"
+		},
+		{
+			"selector": "slds-text-color_default",
+			"component": "Text",
+			"summary": "Default color of text"
+		},
+		{
+			"selector": "slds-text-color_weak",
+			"component": "Text",
+			"summary": "Weak color of text"
+		},
+		{
+			"selector": "slds-text-color_error",
+			"component": "Text",
+			"summary": "Error color of text"
+		},
+		{
+			"selector": "slds-text-color_destructive",
+			"component": "Text",
+			"summary": "Color of text for destructive actions"
+		},
+		{
+			"selector": "slds-text-color_success",
+			"component": "Text",
+			"summary": "Success color of text"
+		},
+		{
+			"selector": "slds-text-color_inverse",
+			"component": "Text",
+			"summary": "Default color of text on inversed background"
+		},
+		{
+			"selector": "slds-text-color_inverse-weak",
+			"component": "Text",
+			"summary": "Weak color of text on inversed background"
+		},
+		{
+			"selector": "slds-text-align_left",
+			"component": "Text",
+			"summary": "Aligns text left"
+		},
+		{
+			"selector": "slds-text-align_center",
+			"component": "Text",
+			"summary": "Aligns text center"
+		},
+		{
+			"selector": "slds-text-align_right",
+			"component": "Text",
+			"summary": "Aligns text right"
+		},
+		{
+			"selector": "slds-text-longform",
+			"component": "Text",
+			"summary": "Adds default spacing and list styling within a wrapper"
+		},
+		{
+			"selector": "slds-text-font_monospace",
+			"component": "Text",
+			"summary": "Monospace font family"
+		},
+		{
+			"selector": "slds-m-top_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-left_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-bottom_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-right_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-horizontal_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-vertical_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-around_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-top_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-left_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-bottom_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-right_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-horizontal_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-vertical_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-around_xxx-small",
+			"component": "Margin",
+			"summary": "Adds .125rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-top_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-left_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-bottom_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-right_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-horizontal_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-vertical_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-around_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-top_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-left_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-bottom_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-right_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-horizontal_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-vertical_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-around_xx-small",
+			"component": "Margin",
+			"summary": "Adds .25rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-top_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-left_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-bottom_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-right_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-horizontal_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-vertical_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-around_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-top_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-left_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-bottom_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-right_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-horizontal_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-vertical_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-around_x-small",
+			"component": "Margin",
+			"summary": "Adds .5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-top_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-left_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-bottom_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-right_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-horizontal_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-vertical_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-around_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-top_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-left_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-bottom_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-right_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-horizontal_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-vertical_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-around_small",
+			"component": "Margin",
+			"summary": "Adds .75rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-top_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-left_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-bottom_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-right_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-horizontal_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-vertical_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-around_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-top_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-left_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-bottom_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-right_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-horizontal_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-vertical_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-around_medium",
+			"component": "Margin",
+			"summary": "Adds 1rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-top_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-left_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-bottom_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-right_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-horizontal_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-vertical_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-around_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-top_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-left_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-bottom_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-right_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-horizontal_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-vertical_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-around_large",
+			"component": "Margin",
+			"summary": "Adds 1.5rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-top_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-left_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-bottom_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-right_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-horizontal_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-vertical_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-around_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-top_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-left_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-bottom_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-right_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-horizontal_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-vertical_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-around_x-large",
+			"component": "Margin",
+			"summary": "Adds 2rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-top_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-left_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-bottom_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-right_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-horizontal_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-vertical_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-m-around_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-top_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-left_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-bottom_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-right_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-horizontal_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-vertical_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-var-m-around_xx-large",
+			"component": "Margin",
+			"summary": "Adds 3rem margin to the side specified"
+		},
+		{
+			"selector": "slds-dl_inline",
+			"component": "Description List",
+			"summary": "Causes description list to display horizontally with `dt` followed immediately by the `dd`."
+		},
+		{
+			"selector": "slds-dl_inline__label",
+			"component": "Description List",
+			"summary": "Marks a term"
+		},
+		{
+			"selector": "slds-dl_inline__detail",
+			"component": "Description List",
+			"summary": "Marks a description"
+		},
+		{
+			"selector": "slds-dl_horizontal",
+			"component": "Description List",
+			"summary": "Causes description list to display horizontally with `dt` consuming 33% of the space and the `dd` taking up the rest."
+		},
+		{
+			"selector": "slds-dl_horizontal__label",
+			"component": "Description List",
+			"summary": "Marks a term"
+		},
+		{
+			"selector": "slds-dl_horizontal__detail",
+			"component": "Description List",
+			"summary": "Marks a description"
+		},
+		{
+			"selector": "slds-p-top_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-left_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-bottom_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-right_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-horizontal_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-vertical_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-around_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-top_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-left_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-bottom_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-right_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-horizontal_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-vertical_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-around_xxx-small",
+			"component": "Padding",
+			"summary": "Adds .125rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-top_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-left_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-bottom_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-right_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-horizontal_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-vertical_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-around_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-top_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-left_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-bottom_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-right_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-horizontal_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-vertical_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-around_xx-small",
+			"component": "Padding",
+			"summary": "Adds .25rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-top_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-left_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-bottom_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-right_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-horizontal_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-vertical_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-around_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-top_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-left_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-bottom_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-right_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-horizontal_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-vertical_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-around_x-small",
+			"component": "Padding",
+			"summary": "Adds .5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-top_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-left_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-bottom_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-right_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-horizontal_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-vertical_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-around_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-top_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-left_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-bottom_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-right_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-horizontal_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-vertical_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-around_small",
+			"component": "Padding",
+			"summary": "Adds .75rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-top_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-left_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-bottom_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-right_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-horizontal_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-vertical_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-around_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-top_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-left_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-bottom_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-right_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-horizontal_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-vertical_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-around_medium",
+			"component": "Padding",
+			"summary": "Adds 1rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-top_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-left_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-bottom_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-right_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-horizontal_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-vertical_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-around_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-top_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-left_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-bottom_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-right_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-horizontal_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-vertical_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-around_large",
+			"component": "Padding",
+			"summary": "Adds 1.5rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-top_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-left_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-bottom_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-right_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-horizontal_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-vertical_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-around_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-top_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-left_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-bottom_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-right_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-horizontal_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-vertical_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-around_x-large",
+			"component": "Padding",
+			"summary": "Adds 2rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-top_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-left_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-bottom_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-right_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-horizontal_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-vertical_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-p-around_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-top_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-left_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-bottom_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-right_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-horizontal_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-vertical_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-var-p-around_xx-large",
+			"component": "Padding",
+			"summary": "Adds 3rem padding to the side specified"
+		},
+		{
+			"selector": "slds-assistive-text",
+			"component": "Visibility",
+			"summary": "Hides an element yet enables a screen reader to read the element that is hidden"
+		},
+		{
+			"selector": "slds-hide",
+			"component": "Visibility",
+			"summary": "Hides an element from the page by setting display propery to `none`"
+		},
+		{
+			"selector": "slds-show",
+			"component": "Visibility",
+			"summary": "Shows the element by setting display property to `block`"
+		},
+		{
+			"selector": "slds-show_inline-block",
+			"component": "Visibility",
+			"summary": "Shows the element by setting display to `inline-block`"
+		},
+		{
+			"selector": "slds-show_inline",
+			"component": "Visibility",
+			"summary": "Shows the element by setting display to `inline`"
+		},
+		{
+			"selector": "transition-hide",
+			"component": "Visibility",
+			"summary": "Hides an element from the page by setting the opacity property set to `0`"
+		},
+		{
+			"selector": "transition-show",
+			"component": "Visibility",
+			"summary": "Shows the element using the opacity property set to `1`"
+		},
+		{
+			"selector": "slds-hide_x-small",
+			"component": "Visibility",
+			"summary": "Hides the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large."
+		},
+		{
+			"selector": "slds-hide_small",
+			"component": "Visibility",
+			"summary": "Hides the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large."
+		},
+		{
+			"selector": "slds-hide_medium",
+			"component": "Visibility",
+			"summary": "Hides the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large."
+		},
+		{
+			"selector": "slds-hide_large",
+			"component": "Visibility",
+			"summary": "Hides the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large."
+		},
+		{
+			"selector": "slds-hide_x-large",
+			"component": "Visibility",
+			"summary": "Hides the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large."
+		},
+		{
+			"selector": "slds-show_x-small",
+			"component": "Visibility",
+			"summary": "Shows the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large."
+		},
+		{
+			"selector": "slds-show_small",
+			"component": "Visibility",
+			"summary": "Shows the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large."
+		},
+		{
+			"selector": "slds-show_medium",
+			"component": "Visibility",
+			"summary": "Shows the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large."
+		},
+		{
+			"selector": "slds-show_large",
+			"component": "Visibility",
+			"summary": "Shows the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large."
+		},
+		{
+			"selector": "slds-show_x-large",
+			"component": "Visibility",
+			"summary": "Shows the element when the window is bigger than the specific size. Sizes can be: x-small, small, medium, large, and * x-large."
+		},
+		{
+			"selector": "slds-list_vertical-space",
+			"component": "Vertical List",
+			"summary": "Marks a vertical list with .5rem spacing around"
+		},
+		{
+			"selector": "slds-list_vertical-space-medium",
+			"component": "Vertical List",
+			"summary": "Marks a vertical list with 1rem spacing around"
+		},
+		{
+			"selector": "slds-float_left",
+			"component": "Floats",
+			"summary": "Pulls element from document flow and floats left. Text and other elements wrap around it."
+		},
+		{
+			"selector": "slds-float_none",
+			"component": "Floats",
+			"summary": "Removes float from an element that has attribute already"
+		},
+		{
+			"selector": "slds-float_right",
+			"component": "Floats",
+			"summary": "Pulls element from document flow and floats right. Text and other elements wrap around it."
+		},
+		{
+			"selector": "slds-item_label",
+			"component": "Name Value List",
+			"summary": "Label of the name-value pair variant. Layout is modified by its parent class."
+		},
+		{
+			"selector": "slds-item_detail",
+			"component": "Name Value List",
+			"summary": "Label of the name-value pair variant. Layout is modified by its parent class."
+		},
+		{
+			"selector": "slds-size_small",
+			"component": "Sizing",
+			"summary": ""
+		},
+		{
+			"selector": "slds-size_full",
+			"component": "Sizing",
+			"summary": ""
+		}
+	]
+}

@@ -1,0 +1,28 @@
+{
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/bin": true,
+    "**/.idea": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/target": true,
+    "**/.classpath": true,
+    "**/out": true,
+    "**/slds-validation-vscode.iml": true,
+    "**/.factorypath": true,
+    "node_modules": "explorerExcludedFiles",
+    "bin": "explorerExcludedFiles",
+    "target": "explorerExcludedFiles",
+    "out": "explorerExcludedFiles",
+    ".DS_Store": "explorerExcludedFiles"
+  },
+  "terminal.integrated.env.osx": {
+    "SFDX_SET_CLIENT_IDS": "sfdx-vscode"
+  },
+  "terminal.integrated.env.linux": {
+    "SFDX_SET_CLIENT_IDS": "sfdx-vscode"
+  },
+  "terminal.integrated.env.windows": {
+    "SFDX_SET_CLIENT_IDS": "sfdx-vscode"
+  }
+}

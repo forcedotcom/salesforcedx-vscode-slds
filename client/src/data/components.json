@@ -1,0 +1,5409 @@
+{
+	"classes": [
+		{
+			"selector": "slds-carousel",
+			"component": "Carousel",
+			"summary": "Initiates a carousel component"
+		},
+		{
+			"selector": "slds-carousel__stage",
+			"component": "Carousel",
+			"summary": "Main stage for carousel's tab-panels and tab-list inidicators"
+		},
+		{
+			"selector": "slds-carousel__panels",
+			"component": "Carousel",
+			"summary": "Tabpanel region that contains all carousel panels"
+		},
+		{
+			"selector": "slds-carousel__panel-action",
+			"component": "Carousel",
+			"summary": "Actionable element that contains the carousel's tab-panel content"
+		},
+		{
+			"selector": "slds-carousel__image",
+			"component": "Carousel",
+			"summary": "Element that contains the image inside the carousel's tab-panel"
+		},
+		{
+			"selector": "slds-carousel__content",
+			"component": "Carousel",
+			"summary": "Element that contains the content inside the carousel's tab-panel"
+		},
+		{
+			"selector": "slds-carousel__content-title",
+			"component": "Carousel",
+			"summary": "Heading element that contains the title of the carousel's tab-panel"
+		},
+		{
+			"selector": "slds-carousel__autoplay",
+			"component": "Carousel",
+			"summary": "Element that contains the auto-play button icon to toggle on/off"
+		},
+		{
+			"selector": "slds-carousel__indicators",
+			"component": "Carousel",
+			"summary": "List element that contains the carousel's tab-list inidicators"
+		},
+		{
+			"selector": "slds-carousel__indicator",
+			"component": "Carousel",
+			"summary": "Carousel's tab-list inidicator items"
+		},
+		{
+			"selector": "slds-carousel__indicator-action",
+			"component": "Carousel",
+			"summary": "Actionable element inside of each tab-list indicator"
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Carousel",
+			"summary": "Active state notifying the tab that its current panel is active"
+		},
+		{
+			"selector": "slds-datetime-picker",
+			"component": "Datetime Picker",
+			"summary": "Initializes a datetime picker"
+		},
+		{
+			"selector": "slds-slider",
+			"component": "Slider",
+			"summary": "Initializes slider component"
+		},
+		{
+			"selector": "slds-slider__value",
+			"component": "Slider",
+			"summary": "Element that contains value of input range"
+		},
+		{
+			"selector": "slds-slider_vertical",
+			"component": "Slider",
+			"summary": "Modifier that makes the slider vertical"
+		},
+		{
+			"selector": "slds-button",
+			"component": "Buttons",
+			"summary": "This neutralizes all the base styles making it look like a text link"
+		},
+		{
+			"selector": "slds-button_first",
+			"component": "Buttons",
+			"summary": "Explicitly style the first button in a button group"
+		},
+		{
+			"selector": "slds-button_middle",
+			"component": "Buttons",
+			"summary": "Explicitly style buttons in the middle (i.e., not first or last) in a button group"
+		},
+		{
+			"selector": "slds-button_last",
+			"component": "Buttons",
+			"summary": "Explicitly style the last button in a button group"
+		},
+		{
+			"selector": "slds-button_neutral",
+			"component": "Buttons",
+			"summary": "Creates the gray border with white background default style"
+		},
+		{
+			"selector": "slds-button_brand",
+			"component": "Buttons",
+			"summary": "Creates the brand blue Salesforce style"
+		},
+		{
+			"selector": "slds-button_outline-brand",
+			"component": "Buttons",
+			"summary": "Creates the outlined button with the brand color"
+		},
+		{
+			"selector": "slds-button_inverse",
+			"component": "Buttons",
+			"summary": "Creates the inverse style for dark backgrounds"
+		},
+		{
+			"selector": "slds-button_destructive",
+			"component": "Buttons",
+			"summary": "Creates a red button style"
+		},
+		{
+			"selector": "slds-button_text-destructive",
+			"component": "Buttons",
+			"summary": "Creates a neutral button with red text"
+		},
+		{
+			"selector": "slds-button_success",
+			"component": "Buttons",
+			"summary": "Creates a green button style"
+		},
+		{
+			"selector": "slds-button__icon",
+			"component": "Buttons",
+			"summary": "Sizing for icon that sits inside button__icon"
+		},
+		{
+			"selector": "slds-button__icon_large",
+			"component": "Buttons",
+			"summary": "Large size button icon svg"
+		},
+		{
+			"selector": "slds-button__icon_small",
+			"component": "Buttons",
+			"summary": "Small size button icon svg"
+		},
+		{
+			"selector": "slds-button__icon_x-small",
+			"component": "Buttons",
+			"summary": "X-Small size button icon svg"
+		},
+		{
+			"selector": "slds-button__icon_left",
+			"component": "Buttons",
+			"summary": "Position of icon when sitting to the left side of the text when inside a button"
+		},
+		{
+			"selector": "slds-button__icon_right",
+			"component": "Buttons",
+			"summary": "Position of icon when sitting to the right side of the text when inside a button"
+		},
+		{
+			"selector": "slds-icon_x-small",
+			"component": "Buttons",
+			"summary": ""
+		},
+		{
+			"selector": "slds-button_full-width",
+			"component": "Buttons",
+			"summary": "Creates a button style for full width that resets styling"
+		},
+		{
+			"selector": "slds-button_stretch",
+			"component": "Buttons",
+			"summary": "Creates a button style for 100% width that maintains current styling"
+		},
+		{
+			"selector": "slds-button_dual-stateful",
+			"component": "Buttons",
+			"summary": "Initiates a dual stateful button"
+		},
+		{
+			"selector": "slds-text-not-pressed",
+			"component": "Buttons",
+			"summary": "Shown text when button is not pressed - default state"
+		},
+		{
+			"selector": "slds-text-pressed",
+			"component": "Buttons",
+			"summary": "Shown text when button is pressed"
+		},
+		{
+			"selector": "slds-is-pressed",
+			"component": "Buttons",
+			"summary": "When button is in pressed state"
+		},
+		{
+			"selector": "slds-button_stateful",
+			"component": "Buttons",
+			"summary": "Initiates a stateful button"
+		},
+		{
+			"selector": "slds-not-selected",
+			"component": "Buttons",
+			"summary": "Default state of a stateful button"
+		},
+		{
+			"selector": "slds-text-selected",
+			"component": "Buttons",
+			"summary": "Shown text when button is selected"
+		},
+		{
+			"selector": "slds-text-selected-focus",
+			"component": "Buttons",
+			"summary": "Shown text when button is selected and focused"
+		},
+		{
+			"selector": "slds-text-not-selected",
+			"component": "Buttons",
+			"summary": "Shown text when button is not selected - default state"
+		},
+		{
+			"selector": "slds-is-selected-clicked",
+			"component": "Buttons",
+			"summary": "When button is selected and still has focus from click"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Buttons",
+			"summary": "When button is pressed and selected"
+		},
+		{
+			"selector": "slds-dueling-list",
+			"component": "Dueling Picklist",
+			"summary": "A dueling picklist inherits styles from the listbox component"
+		},
+		{
+			"selector": "slds-dueling-list__column",
+			"component": "Dueling Picklist",
+			"summary": "Handles the layout of the dueling picklist"
+		},
+		{
+			"selector": "slds-dueling-list__column_responsive",
+			"component": "Dueling Picklist",
+			"summary": "Changes the layout of the dueling picklist to be responsive"
+		},
+		{
+			"selector": "slds-dueling-list__options",
+			"component": "Dueling Picklist",
+			"summary": "Bounding visual container for listbox of options"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Dueling Picklist",
+			"summary": "Selected/dragging state of a listbox option"
+		},
+		{
+			"selector": "slds-is-grabbed",
+			"component": "Dueling Picklist",
+			"summary": "grabbed state of a listbox option"
+		},
+		{
+			"selector": "slds-is-disabled",
+			"component": "Dueling Picklist",
+			"summary": "Disabled state of a picklist option"
+		},
+		{
+			"selector": "slds-card",
+			"component": "Cards",
+			"summary": "Initializes card"
+		},
+		{
+			"selector": "slds-card_boundary",
+			"component": "Cards",
+			"summary": "Used to bring back the border on a card when needed"
+		},
+		{
+			"selector": "slds-card__header",
+			"component": "Cards",
+			"summary": "Initializes card header"
+		},
+		{
+			"selector": "slds-card__header-title",
+			"component": "Cards",
+			"summary": "Title element within card header"
+		},
+		{
+			"selector": "slds-card__header-link",
+			"component": "Cards",
+			"summary": "Actionable element within the card header title"
+		},
+		{
+			"selector": "slds-einstein-header",
+			"component": "Cards",
+			"summary": "Einstein themed card header"
+		},
+		{
+			"selector": "slds-card__body",
+			"component": "Cards",
+			"summary": "Initializes card body"
+		},
+		{
+			"selector": "slds-card__body_inner",
+			"component": "Cards",
+			"summary": "Apply the same spacing found on the card header to the card body"
+		},
+		{
+			"selector": "slds-card__footer",
+			"component": "Cards",
+			"summary": "Initializes card footer"
+		},
+		{
+			"selector": "slds-card__footer-action",
+			"component": "Cards",
+			"summary": "Actionable element within card footer"
+		},
+		{
+			"selector": "slds-card-wrapper",
+			"component": "Cards",
+			"summary": "Removes the card look from nested cards and pulls them to the boundary of the card wrapper, making the nested cards look like they are inside of one card"
+		},
+		{
+			"selector": "slds-checkbox",
+			"component": "Checkbox",
+			"summary": "Initializes checkbox"
+		},
+		{
+			"selector": "slds-checkbox_stacked",
+			"component": "Checkbox",
+			"summary": "stacks label over checkbox"
+		},
+		{
+			"selector": "slds-checkbox__label",
+			"component": "Checkbox",
+			"summary": "Container for faux checkbox element"
+		},
+		{
+			"selector": "slds-checkbox_faux",
+			"component": "Checkbox",
+			"summary": "Creates a custom styled checkbox"
+		},
+		{
+			"selector": "slds-checkbox_standalone",
+			"component": "Checkbox",
+			"summary": ""
+		},
+		{
+			"selector": "slds-modal_prompt",
+			"component": "Prompt",
+			"summary": "Initializes Prompt style notification"
+		},
+		{
+			"selector": "slds-path",
+			"component": "Path",
+			"summary": ""
+		},
+		{
+			"selector": "slds-is-expanded",
+			"component": "Path",
+			"summary": "Indicates the coaching section is expanded"
+		},
+		{
+			"selector": "slds-path__track",
+			"component": "Path",
+			"summary": "Allows the path itself to be responsive"
+		},
+		{
+			"selector": "slds-has-overflow",
+			"component": "Path",
+			"summary": "Indicates the scroller is in the overflow state"
+		},
+		{
+			"selector": "slds-path__scroller",
+			"component": "Path",
+			"summary": "Creates the scrolling container for tab overflow"
+		},
+		{
+			"selector": "slds-path__scroller_inner",
+			"component": "Path",
+			"summary": "Allows the path to scroll when necessary"
+		},
+		{
+			"selector": "slds-path__nav",
+			"component": "Path",
+			"summary": "Horizontal list of stages in path component"
+		},
+		{
+			"selector": "slds-path__item",
+			"component": "Path",
+			"summary": "Individual stages of a path"
+		},
+		{
+			"selector": "slds-is-incomplete",
+			"component": "Path",
+			"summary": "Creates the incomplete stage of the path"
+		},
+		{
+			"selector": "slds-is-complete",
+			"component": "Path",
+			"summary": "Creates the completed stage of the path"
+		},
+		{
+			"selector": "slds-is-current",
+			"component": "Path",
+			"summary": "Creates the current stage of the path"
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Path",
+			"summary": "Creates the active stage of the sales path"
+		},
+		{
+			"selector": "slds-is-lost",
+			"component": "Path",
+			"summary": "Creates lost stage of the path"
+		},
+		{
+			"selector": "slds-is-won",
+			"component": "Path",
+			"summary": "Creates success stage of the path"
+		},
+		{
+			"selector": "slds-path__link",
+			"component": "Path",
+			"summary": "Creates actionable element inside of each path item"
+		},
+		{
+			"selector": "slds-path__title",
+			"component": "Path",
+			"summary": "Contains the name of the stage"
+		},
+		{
+			"selector": "slds-path__stage",
+			"component": "Path",
+			"summary": "Contains the check mark when the stage is completed"
+		},
+		{
+			"selector": "slds-path__scroll-controls",
+			"component": "Path",
+			"summary": "Container for the buttons that control the scrolling"
+		},
+		{
+			"selector": "slds-path__stage-name",
+			"component": "Path",
+			"summary": "Shows the stage name when in the smaller state"
+		},
+		{
+			"selector": "slds-path__scroller-container",
+			"component": "Path",
+			"summary": "Creates the container for toggle button and path"
+		},
+		{
+			"selector": "slds-path__action",
+			"component": "Path",
+			"summary": "Container for path actions"
+		},
+		{
+			"selector": "slds-path__trigger",
+			"component": "Path",
+			"summary": "Button that toggles visibility of stage's tabpanel"
+		},
+		{
+			"selector": "slds-path__mark-complete",
+			"component": "Path",
+			"summary": "Actionable button that invokes a completion of the path"
+		},
+		{
+			"selector": "slds-path__mark-current",
+			"component": "Path",
+			"summary": "Actionable button that invokes a current stage of the path"
+		},
+		{
+			"selector": "slds-path__content",
+			"component": "Path",
+			"summary": "Tabpanel of each stage of the path"
+		},
+		{
+			"selector": "slds-path__keys",
+			"component": "Path",
+			"summary": "Key field section of expanded tabpanel"
+		},
+		{
+			"selector": "slds-path__coach-title",
+			"component": "Path",
+			"summary": "This creates the underlined titles in the coaching area"
+		},
+		{
+			"selector": "slds-path__coach-edit",
+			"component": "Path",
+			"summary": "The Edit link in Path Coaching"
+		},
+		{
+			"selector": "slds-path__guidance",
+			"component": "Path",
+			"summary": "Guidance section of expanded tabpanel"
+		},
+		{
+			"selector": "slds-path__coach-title",
+			"component": "Path",
+			"summary": "This creates the underlined titles in the coaching area"
+		},
+		{
+			"selector": "slds-path__coach-edit",
+			"component": "Path",
+			"summary": "The Edit link in Path Coaching"
+		},
+		{
+			"selector": "slds-path__guidance-content",
+			"component": "Path",
+			"summary": "This creates the space at the top of the guidance area"
+		},
+		{
+			"selector": "slds-tile",
+			"component": "Tiles",
+			"summary": "Initializes tile"
+		},
+		{
+			"selector": "slds-card__tile",
+			"component": "Tiles",
+			"summary": "Use class if card consumes any form of a tile"
+		},
+		{
+			"selector": "slds-tile__detail",
+			"component": "Tiles",
+			"summary": ""
+		},
+		{
+			"selector": "slds-tile__meta",
+			"component": "Tiles",
+			"summary": ""
+		},
+		{
+			"selector": "slds-modal",
+			"component": "Modals",
+			"summary": ""
+		},
+		{
+			"selector": "slds-modal__container",
+			"component": "Modals",
+			"summary": "Centers and sizes the modal horizontally and confines modal within viewport height"
+		},
+		{
+			"selector": "slds-modal__header",
+			"component": "Modals",
+			"summary": "Creates the Modal Header container."
+		},
+		{
+			"selector": "slds-modal__header_empty",
+			"component": "Modals",
+			"summary": "Use when modal header has no content"
+		},
+		{
+			"selector": "slds-modal__content",
+			"component": "Modals",
+			"summary": "Creates the scrollable content area for the modal."
+		},
+		{
+			"selector": "slds-modal__menu",
+			"component": "Modals",
+			"summary": "Creates the shaded menu area for the modal."
+		},
+		{
+			"selector": "slds-modal__footer",
+			"component": "Modals",
+			"summary": "Creates the Modal Footer container."
+		},
+		{
+			"selector": "slds-modal__footer_directional",
+			"component": "Modals",
+			"summary": "Makes buttons inside the footer spread to both left and right."
+		},
+		{
+			"selector": "slds-modal__close",
+			"component": "Modals",
+			"summary": "Positions the close button to the top right outside of the modal."
+		},
+		{
+			"selector": "slds-modal_small",
+			"component": "Modals",
+			"summary": "Widens the modal to take more horizontal space than default"
+		},
+		{
+			"selector": "slds-modal_medium",
+			"component": "Modals",
+			"summary": "Widens the modal to take more horizontal space than small"
+		},
+		{
+			"selector": "slds-modal_large",
+			"component": "Modals",
+			"summary": "Widens the modal to take more horizontal space than large"
+		},
+		{
+			"selector": "slds-fade-in-open",
+			"component": "Modals",
+			"summary": "Allows the modal to be visible."
+		},
+		{
+			"selector": "slds-slide-up-open",
+			"component": "Modals",
+			"summary": ""
+		},
+		{
+			"selector": "slds-slide-up-saving",
+			"component": "Modals",
+			"summary": ""
+		},
+		{
+			"selector": "slds-slide-down-cancel",
+			"component": "Modals",
+			"summary": ""
+		},
+		{
+			"selector": "slds-backdrop",
+			"component": "Modals",
+			"summary": "Creates the shaded backdrop used behind the modal."
+		},
+		{
+			"selector": "slds-backdrop_open",
+			"component": "Modals",
+			"summary": "Allows the backdrop to be visible."
+		},
+		{
+			"selector": "slds-notify_container",
+			"component": "Toast",
+			"summary": "Initializes a toast container"
+		},
+		{
+			"selector": "slds-notify_toast",
+			"component": "Toast",
+			"summary": "Initializes toast notification"
+		},
+		{
+			"selector": "slds-notify__close",
+			"component": "Toast",
+			"summary": "Alert close button"
+		},
+		{
+			"selector": "slds-notification",
+			"component": "Notifications",
+			"summary": ""
+		},
+		{
+			"selector": "slds-notification__body",
+			"component": "Notifications",
+			"summary": "The body of the notification"
+		},
+		{
+			"selector": "slds-notification__target",
+			"component": "Notifications",
+			"summary": "Main reminder component"
+		},
+		{
+			"selector": "slds-notification__close",
+			"component": "Notifications",
+			"summary": "Notification close button"
+		},
+		{
+			"selector": "slds-notification__footer",
+			"component": "Notifications",
+			"summary": "Optional notification footer"
+		},
+		{
+			"selector": "slds-accordion",
+			"component": "Accordion",
+			"summary": "Initializes an accordion list with more than one section that will have its display toggled by invoking an interaction on the summary title"
+		},
+		{
+			"selector": "slds-accordion__list-item",
+			"component": "Accordion",
+			"summary": "List item for each accordion section"
+		},
+		{
+			"selector": "slds-accordion__section",
+			"component": "Accordion",
+			"summary": "Each expandable panel inside of an accordion"
+		},
+		{
+			"selector": "slds-accordion__summary",
+			"component": "Accordion",
+			"summary": "Summary title for each expandable panel inside of an accordion"
+		},
+		{
+			"selector": "slds-accordion__summary-action",
+			"component": "Accordion",
+			"summary": "Actionable button inside of accordion summary that would toggle the visibility of each section"
+		},
+		{
+			"selector": "slds-accordion__summary-action-icon",
+			"component": "Accordion",
+			"summary": "Icon inside of actionable button within an accordion section"
+		},
+		{
+			"selector": "slds-accordion__summary-heading",
+			"component": "Accordion",
+			"summary": "Summary title for each expandable panel inside of an accordion"
+		},
+		{
+			"selector": "slds-accordion__content",
+			"component": "Accordion",
+			"summary": "Each expandable panel inside of an accordion"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Accordion",
+			"summary": "Toggle visibility of accordion section + rotate icon"
+		},
+		{
+			"selector": "slds-table",
+			"component": "Data Tables",
+			"summary": "Initializes data table"
+		},
+		{
+			"selector": "slds-no-row-hover",
+			"component": "Data Tables",
+			"summary": "Default Table Row Hover"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Data Tables",
+			"summary": "Selected Table Row + Hover"
+		},
+		{
+			"selector": "slds-cell-wrap",
+			"component": "Data Tables",
+			"summary": "By default, nowrap is applied"
+		},
+		{
+			"selector": "slds-cell-buffer_left",
+			"component": "Data Tables",
+			"summary": "Use to add a left padding buffer to cells"
+		},
+		{
+			"selector": "slds-cell-buffer_right",
+			"component": "Data Tables",
+			"summary": "Use to add a right padding buffer to cells"
+		},
+		{
+			"selector": "slds-has-focus",
+			"component": "Data Tables",
+			"summary": "Focus state on a cell"
+		},
+		{
+			"selector": "slds-table_cell-buffer",
+			"component": "Data Tables",
+			"summary": "Add left and right padding to the first and last cells of a table"
+		},
+		{
+			"selector": "slds-table_bordered",
+			"component": "Data Tables",
+			"summary": "Add vertical borders to a table"
+		},
+		{
+			"selector": "slds-table_col-bordered",
+			"component": "Data Tables",
+			"summary": "Add column borders"
+		},
+		{
+			"selector": "slds-table_striped",
+			"component": "Data Tables",
+			"summary": "Add alternating strips to rows"
+		},
+		{
+			"selector": "slds-table_fixed-layout",
+			"component": "Data Tables",
+			"summary": "Set table to use fixed layout for width and truncation purposes"
+		},
+		{
+			"selector": "slds-is-sortable",
+			"component": "Data Tables",
+			"summary": "If the column is sortable, then let's handle the actionable\nregion of the `<th>` cell"
+		},
+		{
+			"selector": "slds-is-sortable__icon",
+			"component": "Data Tables",
+			"summary": "Icon inside sortable th"
+		},
+		{
+			"selector": "slds-has-button-menu",
+			"component": "Data Tables",
+			"summary": "If the column header has a menu button, then let's add right padding to the\nheader to preserve truncation"
+		},
+		{
+			"selector": "slds-th__action-button",
+			"component": "Data Tables",
+			"summary": "Allows for alignment of button, such as a menu"
+		},
+		{
+			"selector": "slds-is-sorted",
+			"component": "Data Tables",
+			"summary": "Active state of sorted column"
+		},
+		{
+			"selector": "slds-is-sorted_asc",
+			"component": "Data Tables",
+			"summary": "Change direction of arrow"
+		},
+		{
+			"selector": "slds-table_resizable-cols",
+			"component": "Data Tables",
+			"summary": "Resizable data table columns"
+		},
+		{
+			"selector": "slds-is-resizable",
+			"component": "Data Tables",
+			"summary": "Provide an indicator that resizing is available"
+		},
+		{
+			"selector": "slds-resizable",
+			"component": "Data Tables",
+			"summary": "Resizable handle"
+		},
+		{
+			"selector": "slds-resizable__handle",
+			"component": "Data Tables",
+			"summary": "Grab handle to resize column"
+		},
+		{
+			"selector": "slds-resizable__divider",
+			"component": "Data Tables",
+			"summary": "Grab handle divider indicator when resizing column"
+		},
+		{
+			"selector": "slds-th__action",
+			"component": "Data Tables",
+			"summary": "Actionable area inside th"
+		},
+		{
+			"selector": "slds-th__action_form",
+			"component": "Data Tables",
+			"summary": "Allows for alignment of form element, such as a checkbox"
+		},
+		{
+			"selector": "slds-table_header-hidden",
+			"component": "Data Tables",
+			"summary": "Used to remove the top border when a table's header is visually hidden"
+		},
+		{
+			"selector": "slds-table_edit",
+			"component": "Data Tables",
+			"summary": "Inline edit plugin for advanced tables\n\n#### Accessibility\nThe Advanced Data Table and Inline Edit Data Table are based on the semantics,\nroles and interaction model of the [ARIA Grid](http://w3c.github.io/aria/practices/aria-practices.html#grid).\nIn SLDS we overlay the ARIA Grid on top of native HTML table semantics.\n\nThe role of Grid comes with 2 distinct modes, Navigation mode and Actionable\nmode. Both come with very specific keyboard interaction modals. Navigation\nmode is the default mode of the Grid.\n\n**Navigation Mode**\n- Tabbing into the grid focuses the first data cell in the table.\n- The second tab key press takes the user focus out of the grid onto the next focusable element on the page.\n- Once the user has tabbed out of the grid, tabbing back into the grid will return focus to the last cell the user was focused on.\n- Navigation in the grid is accomplished via the arrow keys.\n- No actionable items in cell contents are focusable.\n- Pressing the Enter key on a chosen grid cell, places the entire Grid into Actionable mode.\n\n**Actionable Mode**\n- Once in Actionable mode, all focusable items in the entire grid can be tabbed to.\n- Arrow navigation still takes the user cell to cell in any direction, but focuses on the first actionable item in the cell, if there is one.\n- Pressing the Escape key exits Actionable mode, placing the user back into Navigation mode, keeping the users cursor on the same cell they were focused in.\n- When interacting with a component in a cell, such as a Menu, that also uses the Escape key as an exit action, pressing Escape will take the user back to the triggering element in the current cell. A subsequent press of Escape will return the user to Navigation mode.\n\nFor the purposes of these docs, the Default state of Inline Edit is\nrepresentative of Navigation mode, all other states are assumed to be in Actionable Mode."
+		},
+		{
+			"selector": "slds-cell-error",
+			"component": "Data Tables",
+			"summary": "Cell that has error icon appear within"
+		},
+		{
+			"selector": "slds-cell-edit",
+			"component": "Data Tables",
+			"summary": "Informs a table cell that it has editing capabilities"
+		},
+		{
+			"selector": "slds-is-edited",
+			"component": "Data Tables",
+			"summary": "Informs a cell that it has been edited but not saved"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Data Tables",
+			"summary": "Informs a cell that it has an error inside of it"
+		},
+		{
+			"selector": "slds-cell-edit__button",
+			"component": "Data Tables",
+			"summary": ""
+		},
+		{
+			"selector": "slds-no-cell-focus",
+			"component": "Data Tables",
+			"summary": "Handles children of the table where we don't want any focusable cells"
+		},
+		{
+			"selector": "slds-max-medium-table_stacked",
+			"component": "Data Tables",
+			"summary": "Responsive tables\n\nWhen a table exceeds the width of its container, one responsive option is to wrap the table in a `.slds-scrollable_x` class so that the user can scroll horizontally. View the example small and medium form factor tabs to see the effect.\n\nWhen `.slds-max-medium-table_stacked` is applied to the &ldquo;Grid&rdquo; table, we generate faux `<th>` labels using the `data-label` applied to each cell, and stack the cells instead of lining them up horizontally. This works up until the **medium form factor** breakpoint. After the breakpoint is triggered, the table will lay out horizontally as normal.\n\nWhen `.slds-max-medium-table_stacked` is applied to the &ldquo;Grid&rdquo; table, we generate faux `<th>` labels using the `data-label` applied to each cell, and stack the cells instead of lining them up horizontally. This works up until the **medium form factor** breakpoint. After the breakpoint is triggered, the table will lay out horizontally as normal."
+		},
+		{
+			"selector": "slds-max-medium-table_stacked-horizontal",
+			"component": "Data Tables",
+			"summary": "Creates stacked rows with horizontal cells"
+		},
+		{
+			"selector": "slds-page-header",
+			"component": "Page Headers",
+			"summary": "The page header is a masthead that contains the Title of the page, and supporting details. For large form factors, it may include actions."
+		},
+		{
+			"selector": "slds-page-header__row",
+			"component": "Page Headers",
+			"summary": "Used for creating rows in a page header"
+		},
+		{
+			"selector": "slds-page-header__row_gutters",
+			"component": "Page Headers",
+			"summary": "Used to create rows with gutters in the page header"
+		},
+		{
+			"selector": "slds-page-header__col_title",
+			"component": "Page Headers",
+			"summary": "Used to create a column containing the page title"
+		},
+		{
+			"selector": "slds-page-header__col_actions",
+			"component": "Page Headers",
+			"summary": "Used to create a column containing the page actions"
+		},
+		{
+			"selector": "slds-page-header__col_meta",
+			"component": "Page Headers",
+			"summary": "Used to create a column containing the page meta data"
+		},
+		{
+			"selector": "slds-page-header__col_controls",
+			"component": "Page Headers",
+			"summary": "Used to create a column containing the page controls"
+		},
+		{
+			"selector": "slds-page-header__col_controls",
+			"component": "Page Headers",
+			"summary": "Used to create a column containing the page record details"
+		},
+		{
+			"selector": "slds-page-header__name",
+			"component": "Page Headers",
+			"summary": "Holds all the elements that make up the overall page name"
+		},
+		{
+			"selector": "slds-page-header__name-title",
+			"component": "Page Headers",
+			"summary": "Used to contain the page name title"
+		},
+		{
+			"selector": "slds-page-header__name-switcher",
+			"component": "Page Headers",
+			"summary": "Used to position the list view switcher"
+		},
+		{
+			"selector": "slds-page-header__name-meta",
+			"component": "Page Headers",
+			"summary": "Used to display the meta-text related to the page name"
+		},
+		{
+			"selector": "slds-page-header__meta-text",
+			"component": "Page Headers",
+			"summary": "Contains the page header meta text"
+		},
+		{
+			"selector": "slds-page-header__title",
+			"component": "Page Headers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-page-header__controls",
+			"component": "Page Headers",
+			"summary": "Used to create a row of page header controls"
+		},
+		{
+			"selector": "slds-page-header__control",
+			"component": "Page Headers",
+			"summary": "Used to create spacing between each page header control"
+		},
+		{
+			"selector": "slds-page-header_object-home",
+			"component": "Page Headers",
+			"summary": "The title for the Object Home page header is sorting component.\nThe `.slds-text-focus` class is placed on the media object that\ncontains the title and down icon to simulate a hover and\nfocus state of a link.\n\nThis component is created entirely of existing components\nlike grids, buttons, button groups, and\nicons."
+		},
+		{
+			"selector": "slds-page-header_vertical",
+			"component": "Page Headers",
+			"summary": "Vertical page header record home contains up to seven compact layout fields. They're contained in the `.slds-page-header__detail-row` div.\nThe heading does not truncate. This is typically used in more compact layouts where more vertical space is desired."
+		},
+		{
+			"selector": "slds-page-header__detail-list",
+			"component": "Page Headers",
+			"summary": "Vertical list of detail items"
+		},
+		{
+			"selector": "slds-page-header__detail-item",
+			"component": "Page Headers",
+			"summary": "List items of vertical detail list"
+		},
+		{
+			"selector": "slds-page-header_record-home",
+			"component": "Page Headers",
+			"summary": "Page header record home contains up to four\ncompact layout fields. They're contained in the `.slds-page-header__detail-row` div.\nThat div contains the top and bottom spacing needed for this version of the page header.\n\nWhen text is truncated, the full text should be placed in\na tooltip on hover (currently shown in the title\nattribute). One line truncation is created by using the\n`.slds-truncate` class. Two line truncation must be achieved\nusing JavaScript.\n\nThe page header is located at the top of every record home. It includes the record title and compact layout for a record. Excluding the title, the page header displays 4 compact layout fields. Similar data types can be rolled up and be displayed as a single field.\n\n**Record Title**\n\n- Display Record Type icon to the left of the title\n- Record Type is displayed above the title\n- When required, follow action is displayed to the right of the record title\n- Display one line of text, truncate when the length conflicts with the page level actions\n\nAs shown in Field 3, web addresses and email addresses should be parsed and displayed as hyperlinks linking to the appropriate mailto: or web url. Do not modify the user's input, display as intended.\n\nWhen text is truncated, display full field text in browser tooltip on hover.\n\nDisplay addresses in two lines. Street address on first line, City, State and Postal Code on line 2. For lengthy addresses, truncate each line individually based on the available width of the area using the `.slds-truncate` class. Display the full address via browser tooltip."
+		},
+		{
+			"selector": "slds-page-header__detail-row",
+			"component": "Page Headers",
+			"summary": "Creates margins around the detail section of record home"
+		},
+		{
+			"selector": "slds-page-header__detail-block",
+			"component": "Page Headers",
+			"summary": "Creates margins around the detail section of record home"
+		},
+		{
+			"selector": "slds-page-header_related-list",
+			"component": "Page Headers",
+			"summary": "The Related List page header is similar to the Object Home page header.\nIt includes a breadcrumb component at the top and the title is truncated."
+		},
+		{
+			"selector": "slds-docked-form-footer",
+			"component": "Docked Form Footer",
+			"summary": "The popover should be positioned with JavaScript.\n\nWhen errors are found within a form, the user will be notified with a popover\nwith the page-level errors listed out. Please provide a contextually specific\ntitle for the dialog with the aria-label attribute. e.g. \"Acme Global edit\nform errors\""
+		},
+		{
+			"selector": "slds-drop-zone",
+			"component": "Drop Zone",
+			"summary": "Creates a drop-zone component for screen building"
+		},
+		{
+			"selector": "slds-drop-zone_drag",
+			"component": "Drop Zone",
+			"summary": "Modifier used to indicate that component may be dropped in container"
+		},
+		{
+			"selector": "slds-drop-zone_drag__slot",
+			"component": "Drop Zone",
+			"summary": "Insertion point of drop zone"
+		},
+		{
+			"selector": "slds-drop-zone__label",
+			"component": "Drop Zone",
+			"summary": "Top label of drop zone"
+		},
+		{
+			"selector": "slds-drop-zone__label_container",
+			"component": "Drop Zone",
+			"summary": "Top of populated label of drop zone"
+		},
+		{
+			"selector": "slds-drop-zone__label_button",
+			"component": "Drop Zone",
+			"summary": "Button within drop zone label"
+		},
+		{
+			"selector": "slds-drop-zone__container",
+			"component": "Drop Zone",
+			"summary": "Populated region within drop zone"
+		},
+		{
+			"selector": "slds-is-hovered",
+			"component": "Drop Zone",
+			"summary": "Hover state for a component within a drop zone"
+		},
+		{
+			"selector": "slds-drop-zone__actions",
+			"component": "Drop Zone",
+			"summary": "Action buttons within drop zone"
+		},
+		{
+			"selector": "slds-input",
+			"component": "Input",
+			"summary": "Initializes text input"
+		},
+		{
+			"selector": "[readonly]",
+			"component": "Input",
+			"summary": ""
+		},
+		{
+			"selector": "slds-input_bare",
+			"component": "Input",
+			"summary": "Removes aesthetic nature from an input"
+		},
+		{
+			"selector": "slds-input_counter",
+			"component": "Input",
+			"summary": "Modifier for number input with increment and decrement buttons"
+		},
+		{
+			"selector": "slds-input_height",
+			"component": "Input",
+			"summary": "Used to apply an input size to another element thats a non input\nBecause sometimes I need elements the same height as inputs"
+		},
+		{
+			"selector": "slds-input_borders",
+			"component": "Input",
+			"summary": "Modifier to allow a [readonly] input to have borders"
+		},
+		{
+			"selector": "slds-nav-vertical",
+			"component": "Vertical Navigation",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nav-vertical_compact",
+			"component": "Vertical Navigation",
+			"summary": "Modifer to reduce spacing between navigation items"
+		},
+		{
+			"selector": "slds-nav-vertical_shade",
+			"component": "Vertical Navigation",
+			"summary": "Modifier to adjust list item when vertical navigation is sitting on top of a shaded background"
+		},
+		{
+			"selector": "slds-nav-vertical__title",
+			"component": "Vertical Navigation",
+			"summary": "Section title of the vertical navigation"
+		},
+		{
+			"selector": "slds-nav-vertical__item",
+			"component": "Vertical Navigation",
+			"summary": "List of the vertical navigation"
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Vertical Navigation",
+			"summary": "Active state of a list item within a vertical navigation"
+		},
+		{
+			"selector": "slds-nav-vertical__action",
+			"component": "Vertical Navigation",
+			"summary": "Actionable element inside of vertical navigation list item"
+		},
+		{
+			"selector": "slds-nav-vertical__action_overflow",
+			"component": "Vertical Navigation",
+			"summary": "Actionable element that toggles visibility of overflown list items"
+		},
+		{
+			"selector": "slds-nav-vertical__action-text",
+			"component": "Vertical Navigation",
+			"summary": "Text inside of actionable element that toggles visibility of overflown list items"
+		},
+		{
+			"selector": "slds-nav-vertical_radio-faux",
+			"component": "Vertical Navigation",
+			"summary": "Used for styling the radio button"
+		},
+		{
+			"selector": "slds-nav-vertical__item [type=\"radio\"]",
+			"component": "Vertical Navigation",
+			"summary": "Version of vertical nav that uses radio buttons"
+		},
+		{
+			"selector": "slds-avatar-group",
+			"component": "Avatar Group",
+			"summary": "An image is the preferred format for an avatar"
+		},
+		{
+			"selector": "slds-avatar-grouped",
+			"component": "Avatar Group",
+			"summary": "Variant of an Avatar in an Avatar Group"
+		},
+		{
+			"selector": "slds-avatar-grouped_inverse",
+			"component": "Avatar Group",
+			"summary": "Variant of an Avatar with inverse background in an Avatar Group"
+		},
+		{
+			"selector": "slds-avatar-grouped__primary",
+			"component": "Avatar Group",
+			"summary": "Modifier for the primary Avatar in an Avatar Group"
+		},
+		{
+			"selector": "slds-avatar-grouped__initials",
+			"component": "Avatar Group",
+			"summary": "Modifier for the Avatar that contains User Initials in an Avatar Group"
+		},
+		{
+			"selector": "slds-avatar-grouped__secondary",
+			"component": "Avatar Group",
+			"summary": "Modifier for the secondary Avatar in an Avatar Group"
+		},
+		{
+			"selector": "slds-avatar-group_x-small",
+			"component": "Avatar Group",
+			"summary": "Creates an extra small Avatar Group"
+		},
+		{
+			"selector": "slds-avatar-group_small",
+			"component": "Avatar Group",
+			"summary": "Creates a small Avatar Group"
+		},
+		{
+			"selector": "slds-avatar-group_medium",
+			"component": "Avatar Group",
+			"summary": "Creates a medium Avatar Group"
+		},
+		{
+			"selector": "slds-avatar-group_large",
+			"component": "Avatar Group",
+			"summary": "Creates a large Avatar Group"
+		},
+		{
+			"selector": "slds-scoped-notification",
+			"component": "Scoped Notifications",
+			"summary": ""
+		},
+		{
+			"selector": "slds-scoped-notification_light",
+			"component": "Scoped Notifications",
+			"summary": "This renders a light notification"
+		},
+		{
+			"selector": "slds-scoped-notification_dark",
+			"component": "Scoped Notifications",
+			"summary": "This renders the dark notification"
+		},
+		{
+			"selector": "slds-icon-ellie",
+			"component": "Dynamic Icons",
+			"summary": ""
+		},
+		{
+			"selector": "slds-is-animated",
+			"component": "Dynamic Icons",
+			"summary": "Add .slds-is-animated to the SVG to enhance the icon with an animation."
+		},
+		{
+			"selector": "slds-is-paused",
+			"component": "Dynamic Icons",
+			"summary": "Add .slds-is-paused to the SVG to pause the icon with an animation."
+		},
+		{
+			"selector": "slds-icon-eq",
+			"component": "Dynamic Icons",
+			"summary": ""
+		},
+		{
+			"selector": "slds-is-animated",
+			"component": "Dynamic Icons",
+			"summary": "Turn animation on for animated icon"
+		},
+		{
+			"selector": "slds-icon-eq__bar",
+			"component": "Dynamic Icons",
+			"summary": "Vertical bar for equalizer icon"
+		},
+		{
+			"selector": "slds-icon-help",
+			"component": "Dynamic Icons",
+			"summary": "Hover and click animations for help icon"
+		},
+		{
+			"selector": "slds-icon-help_hover",
+			"component": "Dynamic Icons",
+			"summary": "Modifies hover effect of global help icon"
+		},
+		{
+			"selector": "slds-icon-help_focus",
+			"component": "Dynamic Icons",
+			"summary": "Modifies focus effect of global help icon"
+		},
+		{
+			"selector": "slds-icon-score",
+			"component": "Dynamic Icons",
+			"summary": "Initializes score icon"
+		},
+		{
+			"selector": "slds-icon-score__positive",
+			"component": "Dynamic Icons",
+			"summary": "Positive score icon"
+		},
+		{
+			"selector": "slds-icon-score__negative",
+			"component": "Dynamic Icons",
+			"summary": "Negative score icon"
+		},
+		{
+			"selector": "slds-icon-strength",
+			"component": "Dynamic Icons",
+			"summary": "Initializes strength icon"
+		},
+		{
+			"selector": "slds-is-animated",
+			"component": "Dynamic Icons",
+			"summary": "Add .slds-is-animated to the SVG to enhance the icon with an animation."
+		},
+		{
+			"selector": "slds-is-paused",
+			"component": "Dynamic Icons",
+			"summary": "Add .slds-is-paused to the SVG to pause the icon with an animation."
+		},
+		{
+			"selector": "slds-icon-trend",
+			"component": "Dynamic Icons",
+			"summary": "Initializes trend icon"
+		},
+		{
+			"selector": "slds-is-animated",
+			"component": "Dynamic Icons",
+			"summary": "Add .slds-is-animated to the SVG to enhance the icon with an animation."
+		},
+		{
+			"selector": "slds-is-paused",
+			"component": "Dynamic Icons",
+			"summary": "Add .slds-is-paused to the SVG to pause the icon with an animation."
+		},
+		{
+			"selector": "slds-icon-trend__arrow",
+			"component": "Dynamic Icons",
+			"summary": "Arrow element inside of trend icon"
+		},
+		{
+			"selector": "slds-icon-trend__circle",
+			"component": "Dynamic Icons",
+			"summary": "Circle element inside of trend icon"
+		},
+		{
+			"selector": "slds-icon-typing",
+			"component": "Dynamic Icons",
+			"summary": "Initializes typing icon"
+		},
+		{
+			"selector": "slds-is-animated",
+			"component": "Dynamic Icons",
+			"summary": "Add when you wish to animate the dots"
+		},
+		{
+			"selector": "slds-is-paused",
+			"component": "Dynamic Icons",
+			"summary": "Add when you wish to pause the dots animation"
+		},
+		{
+			"selector": "slds-icon-typing__dot",
+			"component": "Dynamic Icons",
+			"summary": "Dots within the typing icon"
+		},
+		{
+			"selector": "slds-icon-waffle_container",
+			"component": "Dynamic Icons",
+			"summary": "Containing actionable element that holds the waffle icon"
+		},
+		{
+			"selector": "slds-icon-waffle",
+			"component": "Dynamic Icons",
+			"summary": "Element container circles for the waffle icon"
+		},
+		{
+			"selector": "slds-section",
+			"component": "Expandable Section",
+			"summary": "Container for a expandable section"
+		},
+		{
+			"selector": "slds-section__title",
+			"component": "Expandable Section",
+			"summary": "Element containing the title of a section"
+		},
+		{
+			"selector": "slds-section__title-action",
+			"component": "Expandable Section",
+			"summary": "Element containing the action inside of an expandable section title"
+		},
+		{
+			"selector": "slds-section__content",
+			"component": "Expandable Section",
+			"summary": "Element containing the content of an expandable section"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Expandable Section",
+			"summary": "Toggle visibility of section content"
+		},
+		{
+			"selector": "slds-list-builder",
+			"component": "List Builder",
+			"summary": ""
+		},
+		{
+			"selector": "slds-app-launcher__tile",
+			"component": "App Launcher",
+			"summary": "Tile cards that contains the app information, the icon and description"
+		},
+		{
+			"selector": "slds-app-launcher__tile_small",
+			"component": "App Launcher",
+			"summary": "Tile card that containes the just app icon and title"
+		},
+		{
+			"selector": "slds-is-draggable",
+			"component": "App Launcher",
+			"summary": "Add styles associated with drag and drop of a tile"
+		},
+		{
+			"selector": "slds-is-grabbed",
+			"component": "App Launcher",
+			"summary": "Add styles associated with a tile being grabbed in drag and drop interaction"
+		},
+		{
+			"selector": "slds-app-launcher__tile-figure",
+			"component": "App Launcher",
+			"summary": "App image or icon"
+		},
+		{
+			"selector": "slds-app-launcher__tile-figure_small",
+			"component": "App Launcher",
+			"summary": "App image or icon of a small tile"
+		},
+		{
+			"selector": "slds-app-launcher__tile-body",
+			"component": "App Launcher",
+			"summary": "App title and description"
+		},
+		{
+			"selector": "slds-app-launcher__tile-body_small",
+			"component": "App Launcher",
+			"summary": "App title, no description"
+		},
+		{
+			"selector": "slds-dynamic-menu",
+			"component": "Dynamic Menu",
+			"summary": ""
+		},
+		{
+			"selector": "slds-dynamic-menu__header",
+			"component": "Dynamic Menu",
+			"summary": "Headers styles for dynamic menu"
+		},
+		{
+			"selector": "slds-radio",
+			"component": "Radio Group",
+			"summary": "Initializes radio button"
+		},
+		{
+			"selector": "slds-checkbox_button-group",
+			"component": "Checkbox Button Group",
+			"summary": "Initializes checkbox button group"
+		},
+		{
+			"selector": "slds-checkbox_button",
+			"component": "Checkbox Button Group",
+			"summary": "Initializes checkbox inside a button group"
+		},
+		{
+			"selector": "slds-checkbox_button__label",
+			"component": "Checkbox Button Group",
+			"summary": "Creates a custom styled checkbox"
+		},
+		{
+			"selector": "slds-checkbox_faux",
+			"component": "Checkbox Button Group",
+			"summary": "Creates a custom styled checkbox"
+		},
+		{
+			"selector": "slds-popover",
+			"component": "Popovers",
+			"summary": "A dialog popover, `.slds-popover`, can be applied to all variants of a dialog\npopover. It initiates the styles of the popover and enables `.slds-nubbin` to be applied.\n\nA dialog popover requires at least one focusable element."
+		},
+		{
+			"selector": "slds-popover_edit",
+			"component": "Popovers",
+			"summary": "Dialog specific for inline-edit popover"
+		},
+		{
+			"selector": "slds-form-element__label_edit",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-popover__body",
+			"component": "Popovers",
+			"summary": "Applies syles for primary content area of popover"
+		},
+		{
+			"selector": "slds-popover__body_small",
+			"component": "Popovers",
+			"summary": "Applies a max-height and vertical scrolling to a popover body"
+		},
+		{
+			"selector": "slds-popover__header",
+			"component": "Popovers",
+			"summary": "Applies styles for top area of popover"
+		},
+		{
+			"selector": "slds-popover__footer",
+			"component": "Popovers",
+			"summary": "Applies styles for footer area of popover"
+		},
+		{
+			"selector": "slds-popover__footer_form",
+			"component": "Popovers",
+			"summary": "Applies styles to center align content for footer area of a form popover"
+		},
+		{
+			"selector": "slds-popover__close",
+			"component": "Popovers",
+			"summary": "Close button within a popover"
+		},
+		{
+			"selector": "slds-popover_small",
+			"component": "Popovers",
+			"summary": "Width modifier for popover - small"
+		},
+		{
+			"selector": "slds-popover_medium",
+			"component": "Popovers",
+			"summary": "Width modifier for popover - medium"
+		},
+		{
+			"selector": "slds-popover_large",
+			"component": "Popovers",
+			"summary": "Width modifier for popover - large"
+		},
+		{
+			"selector": "slds-popover_full-width",
+			"component": "Popovers",
+			"summary": "Modifier for popover to take 100% width"
+		},
+		{
+			"selector": "slds-popover_hide",
+			"component": "Popovers",
+			"summary": "Modifier to hide a popover"
+		},
+		{
+			"selector": "slds-popover_error",
+			"component": "Popovers",
+			"summary": "Error popovers are used to notify the user of errors on the page\n\nIf the elements within the error popover exceed 150px, use the `.slds-popover__body_scrollable`  modifier on the body element.\n\nIn some cases, such as displaying a list of menu items, padding may not be necessary in the popover body. To remove the padding, add the `slds-p-around_none\" utility class to the body element."
+		},
+		{
+			"selector": "slds-popover__body_scrollable",
+			"component": "Popovers",
+			"summary": "Applies scrollable styles for popovers"
+		},
+		{
+			"selector": "slds-popover_feature",
+			"component": "Popovers",
+			"summary": "Feature components are use to describe notable features"
+		},
+		{
+			"selector": "slds-nubbin_top",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-left",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-right",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-left",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-right",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-top",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-bottom",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-top",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-bottom",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-left-corner",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-left-corner",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-right-corner",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-right-corner",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-top-corner",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-top-corner",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-bottom-corner",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-bottom-corner",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-popover_panel",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-popover_panel__label",
+			"component": "Popovers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-popover_walkthrough",
+			"component": "Popovers",
+			"summary": "Walkthrough components are used to provide an interactive and educational prospect experience for setup."
+		},
+		{
+			"selector": "slds-popover_walkthrough-alt",
+			"component": "Popovers",
+			"summary": "Alternate background for walkthrough non-modal dialog"
+		},
+		{
+			"selector": "slds-popover_warning",
+			"component": "Popovers",
+			"summary": "Warning popovers are used to warn the user about information on the page that deserves caution\n\nIf the elements within the error popover exceed 150px, use the `.slds-popover__body_scrollable` modifier on the body element.\n\nIn some cases, such as displaying a list of menu items, padding may not be necessary in the popover body. To remove the padding, add the `slds-p-around_none\" utility class to the body element."
+		},
+		{
+			"selector": "slds-popover__body_scrollable",
+			"component": "Popovers",
+			"summary": "Applies scrollable styles for popovers"
+		},
+		{
+			"selector": "slds-setup-assistant",
+			"component": "Setup Assistant",
+			"summary": "Setup Assistant component"
+		},
+		{
+			"selector": "slds-setup-assistant__item",
+			"component": "Setup Assistant",
+			"summary": "Creates a Setup Assistant list item"
+		},
+		{
+			"selector": "slds-setup-assistant__step",
+			"component": "Setup Assistant",
+			"summary": "Creates a Setup Assistant step"
+		},
+		{
+			"selector": "slds-setup-assistant__step-summary",
+			"component": "Setup Assistant",
+			"summary": "Setup Assistant step's summary portion"
+		},
+		{
+			"selector": "slds-setup-assistant__step-summary-content",
+			"component": "Setup Assistant",
+			"summary": "Add a right margin to Setup Assistant step's summary content"
+		},
+		{
+			"selector": "slds-setup-assistant__step-summary-title",
+			"component": "Setup Assistant",
+			"summary": "Add bottom padding to Setup Assistant step's summary title"
+		},
+		{
+			"selector": "slds-setup-assistant__step-detail",
+			"component": "Setup Assistant",
+			"summary": "Add left padding before Setup Assistant step's detail portion"
+		},
+		{
+			"selector": "slds-button-group",
+			"component": "Button Groups",
+			"summary": "Creates button group container"
+		},
+		{
+			"selector": "slds-button_last",
+			"component": "Button Groups",
+			"summary": "If the last button in the group is required to be wrapped in a div, apply this class to the div"
+		},
+		{
+			"selector": "slds-button-group-list",
+			"component": "Button Groups",
+			"summary": "Creates button group container for list items"
+		},
+		{
+			"selector": "slds-button_last",
+			"component": "Button Groups",
+			"summary": "If the last button in the group is required to be wrapped in a div, apply this class to the div"
+		},
+		{
+			"selector": "slds-button-group-row",
+			"component": "Button Groups",
+			"summary": "Creates button group container that provides spacing between each button"
+		},
+		{
+			"selector": "slds-button-group-item",
+			"component": "Button Groups",
+			"summary": "Each item inside of a button group row that needs spacing applied to it"
+		},
+		{
+			"selector": "slds-progress",
+			"component": "Progress Indicator",
+			"summary": ""
+		},
+		{
+			"selector": "slds-progress_shade",
+			"component": "Progress Indicator",
+			"summary": "When on a shaded background such as the modal footer"
+		},
+		{
+			"selector": "slds-progress__list",
+			"component": "Progress Indicator",
+			"summary": "An ordered list containing steps of a process"
+		},
+		{
+			"selector": "slds-progress__list-bordered",
+			"component": "Progress Indicator",
+			"summary": "Add borders between progress items"
+		},
+		{
+			"selector": "slds-progress__item",
+			"component": "Progress Indicator",
+			"summary": "A list item for each step of the process"
+		},
+		{
+			"selector": "slds-is-completed",
+			"component": "Progress Indicator",
+			"summary": "Stateful class for a completed step, `.slds-progress__item` should receive a success icon at this point"
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Progress Indicator",
+			"summary": "Stateful class for the active step"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Progress Indicator",
+			"summary": "Indicates error state for a step in the progress"
+		},
+		{
+			"selector": "slds-progress__item_content",
+			"component": "Progress Indicator",
+			"summary": "Support content in line with progress marker"
+		},
+		{
+			"selector": "slds-progress__marker",
+			"component": "Progress Indicator",
+			"summary": "Dot indicator for each step"
+		},
+		{
+			"selector": "slds-progress__marker_icon",
+			"component": "Progress Indicator",
+			"summary": "Modifier that notifies the marker indicator that the step has been completed and its getting an icon"
+		},
+		{
+			"selector": "slds-progress__marker_icon-success",
+			"component": "Progress Indicator",
+			"summary": "Turn completed stage checkmark green"
+		},
+		{
+			"selector": "slds-progress_vertical",
+			"component": "Progress Indicator",
+			"summary": ""
+		},
+		{
+			"selector": "slds-progress_success",
+			"component": "Progress Indicator",
+			"summary": "Creates a green bar for the vertical variant"
+		},
+		{
+			"selector": "slds-panel",
+			"component": "Panels",
+			"summary": "Panel component"
+		},
+		{
+			"selector": "slds-panel__section",
+			"component": "Panels",
+			"summary": "Contains sub sections of a panel"
+		},
+		{
+			"selector": "slds-panel__actions",
+			"component": "Panels",
+			"summary": "Contains form actions at the bottom of a panel"
+		},
+		{
+			"selector": "slds-panel__header",
+			"component": "Panels",
+			"summary": "Header element of a panel"
+		},
+		{
+			"selector": "slds-panel__header_custom",
+			"component": "Panels",
+			"summary": "Modifier that notifies panel header that something other than a title and close button exist"
+		},
+		{
+			"selector": "slds-panel__header_align-center",
+			"component": "Panels",
+			"summary": "Adjusts styling when the title of the header is centered"
+		},
+		{
+			"selector": "slds-panel__header-title",
+			"component": "Panels",
+			"summary": "Title of the header panel"
+		},
+		{
+			"selector": "slds-panel__close",
+			"component": "Panels",
+			"summary": "Close button of a panel"
+		},
+		{
+			"selector": "slds-panel__back",
+			"component": "Panels",
+			"summary": "Back button of a panel drilled in"
+		},
+		{
+			"selector": "slds-panel__body",
+			"component": "Panels",
+			"summary": "Body element of a panel"
+		},
+		{
+			"selector": "slds-panel_docked",
+			"component": "Panels",
+			"summary": "Modifier that changes the display of a panel to dock to the viewport"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Panels",
+			"summary": "Toggles visibility of panel"
+		},
+		{
+			"selector": "slds-panel_docked-left",
+			"component": "Panels",
+			"summary": "Modifier that changes the position of a panel to the left"
+		},
+		{
+			"selector": "slds-panel_docked-right",
+			"component": "Panels",
+			"summary": "Modifier that changes the position of a panel to the right"
+		},
+		{
+			"selector": "slds-panel_filters",
+			"component": "Panels",
+			"summary": ""
+		},
+		{
+			"selector": "slds-popover_tooltip",
+			"component": "Tooltips",
+			"summary": "The tooltip should be positioned with JavaScript.\n\nYou can include inline help tooltips for form elements and any focusable items, such as anchor links, buttons, etc. If your tooltips are available on hover, also make sure that they’re available on keyboard focus. To allow screen readers to access the tooltip, the HTML form field element must  have an `aria-describedby` attribute that points to the tooltip `ID` of the tooltip."
+		},
+		{
+			"selector": "slds-rise-from-ground",
+			"component": "Tooltips",
+			"summary": "Toggles on tooltip"
+		},
+		{
+			"selector": "slds-fall-into-ground",
+			"component": "Tooltips",
+			"summary": "Toggles off tooltip"
+		},
+		{
+			"selector": "slds-slide-from-bottom-to-top",
+			"component": "Tooltips",
+			"summary": "Slides tooltip from bottom to top"
+		},
+		{
+			"selector": "slds-slide-from-top-to-bottom",
+			"component": "Tooltips",
+			"summary": "Slides tooltip from top to bottom"
+		},
+		{
+			"selector": "slds-slide-from-right-to-left",
+			"component": "Tooltips",
+			"summary": "Slides tooltip from right to left"
+		},
+		{
+			"selector": "slds-slide-from-left-to-right",
+			"component": "Tooltips",
+			"summary": "Slides tooltip from left to right"
+		},
+		{
+			"selector": "slds-breadcrumb",
+			"component": "Breadcrumbs",
+			"summary": "Create breadcrumbs component"
+		},
+		{
+			"selector": "slds-breadcrumb__item",
+			"component": "Breadcrumbs",
+			"summary": "Item of the breadcrumb list"
+		},
+		{
+			"selector": "slds-file-selector",
+			"component": "File Selector",
+			"summary": ""
+		},
+		{
+			"selector": "slds-file-selector__dropzone",
+			"component": "File Selector",
+			"summary": "Region that a file can be dropped within"
+		},
+		{
+			"selector": "slds-has-drag-over",
+			"component": "File Selector",
+			"summary": ""
+		},
+		{
+			"selector": "slds-file-selector__input",
+			"component": "File Selector",
+			"summary": "Hidden input element"
+		},
+		{
+			"selector": "slds-file-selector__button",
+			"component": "File Selector",
+			"summary": "Faux button"
+		},
+		{
+			"selector": "slds-file-selector_files",
+			"component": "File Selector",
+			"summary": "Modifications based on context\n\nSingle Line\nDedicated dropzone when there are multiple dropzones in the form or when\nthe input is positioned among other form inputs."
+		},
+		{
+			"selector": "slds-file-selector__body",
+			"component": "File Selector",
+			"summary": "Container for file selector content, specifically within the dropzone"
+		},
+		{
+			"selector": "slds-file-selector__text",
+			"component": "File Selector",
+			"summary": "Descriptive call back text"
+		},
+		{
+			"selector": "slds-file-selector_images",
+			"component": "File Selector",
+			"summary": "Multi Line / Image\n\nUse as a dedicated dropzone for image files only. May require a\ncropping control."
+		},
+		{
+			"selector": "slds-file-selector_integrated",
+			"component": "File Selector",
+			"summary": "Invisible Dropzone (Container)\n\nUse when an entire container should be droppable.\nThe container should have a visible boundary, like a modal, composer, or page."
+		},
+		{
+			"selector": "slds-file-selector__dropzone_integrated",
+			"component": "File Selector",
+			"summary": "Specific to integrated file selector — region that a file can be dropped within"
+		},
+		{
+			"selector": "slds-has-drag",
+			"component": "File Selector",
+			"summary": "Informs dropzone that file has been dragged into the viewport"
+		},
+		{
+			"selector": "slds-has-drag-over",
+			"component": "File Selector",
+			"summary": "Informs dropzone that file has been dragged into its region"
+		},
+		{
+			"selector": "slds-file-selector__body_integrated",
+			"component": "File Selector",
+			"summary": "Specific to integrated file selector — container for file selector\ncontent, specifically within the dropzone"
+		},
+		{
+			"selector": "slds-file-selector__text_integrated",
+			"component": "File Selector",
+			"summary": "Specific to integrated file selector — Descriptive call back text"
+		},
+		{
+			"selector": "slds-badge",
+			"component": "Badges",
+			"summary": "Create badge component"
+		},
+		{
+			"selector": "slds-badge_inverse",
+			"component": "Badges",
+			"summary": "Change badge color to a dark with light text"
+		},
+		{
+			"selector": "slds-badge_lightest",
+			"component": "Badges",
+			"summary": "Change badge color to white with normal text"
+		},
+		{
+			"selector": "slds-badge__icon",
+			"component": "Badges",
+			"summary": "Adds an icon to badge"
+		},
+		{
+			"selector": "slds-badge__icon_inverse",
+			"component": "Badges",
+			"summary": "Change badge icon fill color to inverse"
+		},
+		{
+			"selector": "slds-badge__icon_left",
+			"component": "Badges",
+			"summary": "Adds an icon to the left of the badge text"
+		},
+		{
+			"selector": "slds-badge__icon_right",
+			"component": "Badges",
+			"summary": "Adds an icon to the right of the badge text"
+		},
+		{
+			"selector": "slds-illustration",
+			"component": "Illustration",
+			"summary": "Initiates an illustration component"
+		},
+		{
+			"selector": "slds-illustration_small",
+			"component": "Illustration",
+			"summary": "Applies width and height values for small illustrations"
+		},
+		{
+			"selector": "slds-illustration_large",
+			"component": "Illustration",
+			"summary": "Applies width and height values for large illustrations"
+		},
+		{
+			"selector": "slds-progress-ring",
+			"component": "Progress Ring",
+			"summary": "Progress Ring component"
+		},
+		{
+			"selector": "slds-progress-ring__progress",
+			"component": "Progress Ring",
+			"summary": "Progress indicator"
+		},
+		{
+			"selector": "slds-progress-ring__path",
+			"component": "Progress Ring",
+			"summary": ""
+		},
+		{
+			"selector": "slds-progress-ring__content",
+			"component": "Progress Ring",
+			"summary": "Progress ring content area"
+		},
+		{
+			"selector": "slds-progress-ring_warning",
+			"component": "Progress Ring",
+			"summary": "Warning colors"
+		},
+		{
+			"selector": "slds-progress-ring_expired",
+			"component": "Progress Ring",
+			"summary": "Expired colors"
+		},
+		{
+			"selector": "slds-progress-ring_complete",
+			"component": "Progress Ring",
+			"summary": "Complete colors"
+		},
+		{
+			"selector": "slds-progress-ring_large",
+			"component": "Progress Ring",
+			"summary": "Larger ring size"
+		},
+		{
+			"selector": "slds-progress-ring_active-step",
+			"component": "Progress Ring",
+			"summary": "Blue progress ring"
+		},
+		{
+			"selector": "slds-progress-bar",
+			"component": "Progress Bar",
+			"summary": ""
+		},
+		{
+			"selector": "slds-progress-bar_x-small",
+			"component": "Progress Bar",
+			"summary": "Creates a progress bar height at the smaller .125rem (2px) size"
+		},
+		{
+			"selector": "slds-progress-bar_small",
+			"component": "Progress Bar",
+			"summary": "Creates a progress bar height at the smaller .25rem (4px) size"
+		},
+		{
+			"selector": "slds-progress-bar_medium",
+			"component": "Progress Bar",
+			"summary": "Creates a progress bar height at the smaller .5rem (8px) size"
+		},
+		{
+			"selector": "slds-progress-bar_large",
+			"component": "Progress Bar",
+			"summary": "Creates a progress bar height at the smaller .75rem (12px) size"
+		},
+		{
+			"selector": "slds-progress-bar_circular",
+			"component": "Progress Bar",
+			"summary": "Adds a border radius to the progress bar to give it a circular look"
+		},
+		{
+			"selector": "slds-progress-bar__value",
+			"component": "Progress Bar",
+			"summary": "Fill up blue bar inside of the progress bar"
+		},
+		{
+			"selector": "slds-progress-bar__value_success",
+			"component": "Progress Bar",
+			"summary": "Create a green progress bar"
+		},
+		{
+			"selector": "slds-progress-bar_vertical",
+			"component": "Progress Bar",
+			"summary": "Create a vertical progress bar"
+		},
+		{
+			"selector": "slds-form-element",
+			"component": "Form Element",
+			"summary": "Creates layout for a form element"
+		},
+		{
+			"selector": "slds-form-element__control",
+			"component": "Form Element",
+			"summary": "Wrapper to any form display element"
+		},
+		{
+			"selector": "slds-form-element__icon",
+			"component": "Form Element",
+			"summary": "When an icon sits within a form element wrapper and adjacent to another element inside that wrapper such as a .form-element__label"
+		},
+		{
+			"selector": "slds-form-element__help",
+			"component": "Form Element",
+			"summary": "Creates inline help styles, sits below .form-element__control"
+		},
+		{
+			"selector": "slds-form-element_edit",
+			"component": "Form Element",
+			"summary": "Modifier on slds-form-element that it needs to reserve space for the inline-edit trigger button"
+		},
+		{
+			"selector": "slds-form-element_readonly",
+			"component": "Form Element",
+			"summary": "When a form element is in view mode, we modify some styling"
+		},
+		{
+			"selector": "slds-form-element__legend",
+			"component": "Form Element",
+			"summary": "The form element label when applied to a legend element"
+		},
+		{
+			"selector": "slds-form-element__legend_has-tooltip",
+			"component": "Form Element",
+			"summary": "Aligns the legend properly when there is an info tooltip"
+		},
+		{
+			"selector": "slds-form-element__addon",
+			"component": "Form Element",
+			"summary": "Fixed text that sits to the left or right of an input"
+		},
+		{
+			"selector": "slds-form-element__static",
+			"component": "Form Element",
+			"summary": "Initializes read-only form element"
+		},
+		{
+			"selector": "slds-form-element__static_edit",
+			"component": "Form Element",
+			"summary": "Inline Edit on static form element"
+		},
+		{
+			"selector": "slds-required",
+			"component": "Form Element",
+			"summary": "Required asterisk"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Form Element",
+			"summary": "Error styles for form element"
+		},
+		{
+			"selector": "slds-form-element_compound",
+			"component": "Form Element",
+			"summary": "Creates a form that consists of multiple form groups"
+		},
+		{
+			"selector": "slds-form-element_address",
+			"component": "Form Element",
+			"summary": "Creates a form that consists of multiple form groups specific to an address form"
+		},
+		{
+			"selector": "slds-form-element_horizontal",
+			"component": "Form Element",
+			"summary": "Horizontal form elements with label left-aligned to the control"
+		},
+		{
+			"selector": "slds-form-element__undo",
+			"component": "Form Element",
+			"summary": "Container for the undo button icon found inside of slds-form-element"
+		},
+		{
+			"selector": "slds-form-element_stacked",
+			"component": "Form Element",
+			"summary": "Vertical form elements with label stacked on top of control"
+		},
+		{
+			"selector": "slds-input-has-icon",
+			"component": "Form Element",
+			"summary": "Modifier if text input has svg icon adjacent to input"
+		},
+		{
+			"selector": "slds-input__icon",
+			"component": "Form Element",
+			"summary": "Hook for .slds-input-has-icon"
+		},
+		{
+			"selector": "slds-input__icon_left",
+			"component": "Form Element",
+			"summary": "Hook for .slds-input-has-icon--left-right"
+		},
+		{
+			"selector": "slds-input__icon_right",
+			"component": "Form Element",
+			"summary": "Hook for .slds-input-has-icon_left-right"
+		},
+		{
+			"selector": "slds-input-has-icon_left",
+			"component": "Form Element",
+			"summary": "Positions .slds-input__icon to the left of the text input"
+		},
+		{
+			"selector": "slds-input-has-icon_right",
+			"component": "Form Element",
+			"summary": "Positions .slds-input__icon to the right of the text input"
+		},
+		{
+			"selector": "slds-input-has-icon_left-right",
+			"component": "Form Element",
+			"summary": "Positions .slds-input__icon_left to the left of the text input and .slds-input__icon_right to the right of the text input"
+		},
+		{
+			"selector": "slds-input__icon-group",
+			"component": "Form Element",
+			"summary": "Positions two items (icons and/or spinners) on one side or the other of the input"
+		},
+		{
+			"selector": "slds-input__icon-group_right",
+			"component": "Form Element",
+			"summary": "Positions the close icon and spinner on the right side of the input while searching"
+		},
+		{
+			"selector": "slds-input-has-fixed-addon",
+			"component": "Form Element",
+			"summary": "Use on input container to let it know there is fixed text to the left or right of the input"
+		},
+		{
+			"selector": "slds-form",
+			"component": "Form Element",
+			"summary": "Creates layout for a form"
+		},
+		{
+			"selector": "slds-form__row",
+			"component": "Form Element",
+			"summary": "Each row inside of a record form"
+		},
+		{
+			"selector": "slds-form__item",
+			"component": "Form Element",
+			"summary": "Each item inside of a record form row"
+		},
+		{
+			"selector": "slds-is-edited",
+			"component": "Form Element",
+			"summary": "Inidicates if a form element has been edited, but unsaved"
+		},
+		{
+			"selector": "slds-form_horizontal",
+			"component": "Form Element",
+			"summary": "Horizontal form elements with label left-aligned to the control"
+		},
+		{
+			"selector": "slds-form_stacked",
+			"component": "Form Element",
+			"summary": "Vertical form elements with label stacked on top of control"
+		},
+		{
+			"selector": "slds-dropdown-trigger",
+			"component": "Menus",
+			"summary": "Initializes a trigger element around the dropdown"
+		},
+		{
+			"selector": "slds-dropdown-trigger_hover",
+			"component": "Menus",
+			"summary": "If someone is using javascript for click to toggle - this modifier will help"
+		},
+		{
+			"selector": "slds-dropdown-trigger_click",
+			"component": "Menus",
+			"summary": "If someone is using javascript for click to toggle - this modifier will help"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Menus",
+			"summary": "Opens dropdown menu when invoked on click"
+		},
+		{
+			"selector": "slds-dropdown",
+			"component": "Menus",
+			"summary": "Initializes dropdown"
+		},
+		{
+			"selector": "slds-dropdown_left",
+			"component": "Menus",
+			"summary": "Positions dropdown to left side of target"
+		},
+		{
+			"selector": "slds-dropdown_right",
+			"component": "Menus",
+			"summary": "Positions dropdown to right side of target"
+		},
+		{
+			"selector": "slds-dropdown_bottom",
+			"component": "Menus",
+			"summary": "Positions dropdown to above target"
+		},
+		{
+			"selector": "slds-dropdown_xx-small",
+			"component": "Menus",
+			"summary": "Sets min-width of 6rem/96px"
+		},
+		{
+			"selector": "slds-dropdown_x-small",
+			"component": "Menus",
+			"summary": "Sets min-width of 12rem/192px"
+		},
+		{
+			"selector": "slds-dropdown_small",
+			"component": "Menus",
+			"summary": "Sets min-width of 15rem/240px"
+		},
+		{
+			"selector": "slds-dropdown_medium",
+			"component": "Menus",
+			"summary": "Sets min-width of 20rem/320px"
+		},
+		{
+			"selector": "slds-dropdown_large",
+			"component": "Menus",
+			"summary": "Sets min-width of 25rem/400px"
+		},
+		{
+			"selector": "slds-dropdown_length-5",
+			"component": "Menus",
+			"summary": "Forces overflow scrolling after 5 list items"
+		},
+		{
+			"selector": "slds-dropdown_length-7",
+			"component": "Menus",
+			"summary": "Forces overflow scrolling after 7 list items"
+		},
+		{
+			"selector": "slds-dropdown_length-10",
+			"component": "Menus",
+			"summary": "Forces overflow scrolling after 10 list items"
+		},
+		{
+			"selector": "slds-dropdown_length-with-icon-5",
+			"component": "Menus",
+			"summary": "Forces overflow scrolling after 5 list items with an icon"
+		},
+		{
+			"selector": "slds-dropdown_length-with-icon-7",
+			"component": "Menus",
+			"summary": "Forces overflow scrolling after 7 list items with an icon"
+		},
+		{
+			"selector": "slds-dropdown_length-with-icon-10",
+			"component": "Menus",
+			"summary": "Forces overflow scrolling after 10 list items with an icon"
+		},
+		{
+			"selector": "slds-dropdown_inverse",
+			"component": "Menus",
+			"summary": "Theme"
+		},
+		{
+			"selector": "slds-dropdown__header",
+			"component": "Menus",
+			"summary": "Adds padding to area above dropdown menu list"
+		},
+		{
+			"selector": "slds-dropdown__item",
+			"component": "Menus",
+			"summary": "Initializes dropdown item"
+		},
+		{
+			"selector": "slds-is-unsaved",
+			"component": "Menus",
+			"summary": "Dirty state for a nav item"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Menus",
+			"summary": "Places a menu item into an errored state"
+		},
+		{
+			"selector": "slds-has-success",
+			"component": "Menus",
+			"summary": "Places a menu item into a success state"
+		},
+		{
+			"selector": "slds-has-warning",
+			"component": "Menus",
+			"summary": "Places a menu item into a warning state"
+		},
+		{
+			"selector": "slds-icon_selected",
+			"component": "Menus",
+			"summary": "If menu contains menuitemcheckbox then this toggles the selected icon when it is selected"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Menus",
+			"summary": "If menu contains menuitemcheckbox then this handles the selected states"
+		},
+		{
+			"selector": "slds-has-submenu",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-dropdown_submenu",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-dropdown_submenu-left",
+			"component": "Menus",
+			"summary": "Open submenu to the left of the parent menu item"
+		},
+		{
+			"selector": "slds-dropdown_submenu-right",
+			"component": "Menus",
+			"summary": "Open submenu to the right of the parent menu item"
+		},
+		{
+			"selector": "slds-dropdown_submenu-bottom",
+			"component": "Menus",
+			"summary": "Open submenu along the bottom of the parent menu item"
+		},
+		{
+			"selector": "slds-has-notification",
+			"component": "Menus",
+			"summary": "Creates styles for a Tab Item when its tab has new activity in"
+		},
+		{
+			"selector": "slds-indicator_unread",
+			"component": "Menus",
+			"summary": "Unread notification icon"
+		},
+		{
+			"selector": "slds-nubbin_top",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-left",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-right",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-left",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-right",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-top",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-bottom",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-top",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-bottom",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-left-corner",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-left-corner",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-right-corner",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-right-corner",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-top-corner",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-top-corner",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-bottom-corner",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-bottom-corner",
+			"component": "Menus",
+			"summary": ""
+		},
+		{
+			"selector": "slds-table_tree",
+			"component": "Tree Grid",
+			"summary": "A tree grid is additional semantics that are laid on top of a grid based component via ARIA attributes, to enable hierarchically structured tabular data.\nThe tree grid comes with a very specific keyboard interaction model which **must** be implemented for the component to be screen reader accessible.\n\n#### Accessibility\n\n**Notable attributes**\n\n- `role=\"treegrid\"` should be applied to the `table` element\n- `aria-readonly=\"true\"` should be applied to the `table` element\n- `aria-level=\"n\"` where `n` represents the nesting level of a particular grid row, should be applied to the `tr` element\n- `aria-setsize=\"n\"` where `n` is the number of items for that specific `aria-level` should be applied to the `tr` element\n- `aria-posinset=\"n\"` where `n` represents the position in the `aria-level` set the row is placed at, should be applied to the `tr` element\n- `aria-expanded=\"false\"` should be placed on rows that are collapsed and have child rows\n- `aria-expanded=\"true\"` should be placed on rows that are expanded and have child rows\n- `tabindex=\"0\"` should be placed on the first `tr` in the grid on load, to make the row focusable\n- Every actionable element in the grid should have `tabindex=\"-1\" applied to make them not focusable in the grids navigation mode\n\n**Multi select tree grid**\n\n- `aria-multiselectable=\"true\"` should be placed on the `table` element\n- `aria-selected=\"false\"` should be set by default on all `tr` elements that aren't selected\n_ `aria-selected=\"true\"` should be set only on the `tr` elements that are selected\n\n**Single Select tree grid**\n\n- `aria-selected=\"true\"` should be applied to the `tr` that is selected in the tree grid\n\n\n**Keyboard interaction**\n\n- Overall keyboard interaction should follow the same keyboard modal as the [Advanced and Inline Edit Data Table](/components/data-tables) with some additions\n  - Navigation mode is the default mode. The grid only has a single focusable element at any time and it is either the `tr` or the `td`\n  - Actionable mode is enabled when the user presses the `Enter` key, where actionable elements become focusable in the cell\n  - Actionable mode is exited when the user presses the `Escape` key, and the user is placed back into Navigation Mode on the last cell they were in\n- User focus is initially placed on the first row in the tree grid\n- `Down` arrow key moves the user down one row and moves `tabindex=\"0\"` with it\n- `Up` arrow key moves the user up one row and moves `tabindex=\"0\"` with it\n- `Space` key when focused on a row should select that row by setting `aria-selected=\"true` on the `tr` element\n- `Right` arrow key on a collapsed row, will expand it and update `aria-expanded`\n- `Right` arrow key on an expanded or end row will move the user to the first cell in the row and move `tabindex=\"0\"` with it\n- `Right` arrow key on a cell will move the user to the next cell in the row and move `tabindex=\"0\"` with it\n- `Left` arrow key on a collapsed or end row will move the user to it's parent row and collapse it, if it has one\n- `Left` arrow key on an expanded row will collapse it and update `aria-expanded`\n- `Left` arrow key on a cell will move the user to the previous cell in the row and moves `tabindex=\"0\"` with it\n- `Left` arrow key on the first cell of a row will move the user back to the row  and moves `tabindex=\"0\"` with it"
+		},
+		{
+			"selector": "slds-tree__item",
+			"component": "Tree Grid",
+			"summary": "Initializes a slds tree item"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Tree Grid",
+			"summary": "Selected state for a tree item"
+		},
+		{
+			"selector": "slds-is-focused",
+			"component": "Tree Grid",
+			"summary": "Focus state for a tree item"
+		},
+		{
+			"selector": "slds-is-hovered",
+			"component": "Tree Grid",
+			"summary": "Hover state for a tree item"
+		},
+		{
+			"selector": "slds-is-disabled",
+			"component": "Tree Grid",
+			"summary": "When a branch doesn't have children, apply slds-is-disabled to the button icon"
+		},
+		{
+			"selector": "slds-tree__item-label",
+			"component": "Tree Grid",
+			"summary": "The label text of a tree item or tree branch"
+		},
+		{
+			"selector": "slds-tree__item-meta",
+			"component": "Tree Grid",
+			"summary": "The meta text or secondary text of a tree item"
+		},
+		{
+			"selector": "slds-welcome-mat",
+			"component": "Welcome Mat",
+			"summary": "Welcome Mat component"
+		},
+		{
+			"selector": "slds-modal__container",
+			"component": "Welcome Mat",
+			"summary": "Modal container sizing within Welcome Mat"
+		},
+		{
+			"selector": "slds-welcome-mat__content",
+			"component": "Welcome Mat",
+			"summary": "Content container for the whole Welcome Mat"
+		},
+		{
+			"selector": "slds-welcome-mat__info",
+			"component": "Welcome Mat",
+			"summary": "Container element for the informational side of the Welcome Mat"
+		},
+		{
+			"selector": "slds-welcome-mat__info-content",
+			"component": "Welcome Mat",
+			"summary": "Content container for the informational side of the Welcome Mat. Centers in container space."
+		},
+		{
+			"selector": "slds-welcome-mat__info-title",
+			"component": "Welcome Mat",
+			"summary": "Title element for the informational side of the Welcome Mat"
+		},
+		{
+			"selector": "slds-welcome-mat__info-description",
+			"component": "Welcome Mat",
+			"summary": "Description container for the informational side of the Welcome Mat"
+		},
+		{
+			"selector": "slds-welcome-mat__info-progress",
+			"component": "Welcome Mat",
+			"summary": "Text description of walkthrough progress"
+		},
+		{
+			"selector": "slds-welcome-mat__info-badge-container",
+			"component": "Welcome Mat",
+			"summary": "Badge container for Welcome Mat Trailhead Progress Info. Overrides properties for the check icon, specific for this variant."
+		},
+		{
+			"selector": "slds-welcome-mat__info-badge",
+			"component": "Welcome Mat",
+			"summary": "Badge for the Trailhead Progress Info."
+		},
+		{
+			"selector": "slds-welcome-mat__info-progress_complete",
+			"component": "Welcome Mat",
+			"summary": "Modifier for Completed progress. Shows completed checkmark."
+		},
+		{
+			"selector": "slds-welcome-mat__tiles",
+			"component": "Welcome Mat",
+			"summary": "Container element for the Actions side of the Welcome Mat."
+		},
+		{
+			"selector": "slds-welcome-mat__tile",
+			"component": "Welcome Mat",
+			"summary": "Welcome Mat Tile item. Shows an actionable step a user can take to complete a greater objective. Based on a SLDS Visual Picker."
+		},
+		{
+			"selector": "slds-welcome-mat__tile-figure",
+			"component": "Welcome Mat",
+			"summary": "Figure element for Welcome Mat Tile item, based on SLDS Media Object figure."
+		},
+		{
+			"selector": "slds-welcome-mat__tile-title",
+			"component": "Welcome Mat",
+			"summary": "Title element for Welcome Mat Tile item."
+		},
+		{
+			"selector": "slds-welcome-mat__tile-body",
+			"component": "Welcome Mat",
+			"summary": "Body element for Welcome Mat Tile item, based on SLDS Media Object body."
+		},
+		{
+			"selector": "slds-welcome-mat__tile-description",
+			"component": "Welcome Mat",
+			"summary": "Description element for Welcome Mat Tile item."
+		},
+		{
+			"selector": "slds-welcome-mat__tile-icon-container",
+			"component": "Welcome Mat",
+			"summary": "Icon Container for Welcome Mat Tile item."
+		},
+		{
+			"selector": "slds-welcome-mat__tile_complete",
+			"component": "Welcome Mat",
+			"summary": "Complete modifier class for Welcome Mat Tile item."
+		},
+		{
+			"selector": "slds-welcome-mat__tiles_info-only",
+			"component": "Welcome Mat",
+			"summary": "Sets tile area of Welcome Mat to read only"
+		},
+		{
+			"selector": "slds-welcome-mat_info-only",
+			"component": "Welcome Mat",
+			"summary": "Creates Welcome Mat Info Only"
+		},
+		{
+			"selector": "slds-welcome-mat__tile_info-only",
+			"component": "Welcome Mat",
+			"summary": "Welcome Mat Tile with only info item. Shows informational content. Based on a SLDS Media Object."
+		},
+		{
+			"selector": "slds-welcome-mat_splash",
+			"component": "Welcome Mat",
+			"summary": "Creates Welcome Mat Full Width"
+		},
+		{
+			"selector": "slds-welcome-mat_trailhead",
+			"component": "Welcome Mat",
+			"summary": "The Trailhead Connected variant should be used when users can achieve\na badge in Trailhead for completing all steps in the current Welcome Mat.\n\nOnly Trailhead Connected Mats may have the Trailhead font for the header."
+		},
+		{
+			"selector": "slds-tree_container",
+			"component": "Trees",
+			"summary": "A tree is composed of two core elements `.slds-tree` and `.slds-tree__item`. The tree wrapper, the outer most parent `ul`, will receive the class `.slds-tree`. This class will be used for scoping a tree, which allows for particular styling based on states in which the tree may enter.\n\nA tree will need helper classes added and removed to help structure the layout. Each child node list item needs an `aria-level` attribute with its value being the number of levels deep it is nested to indicate the distinct grouping is nested within.\n\nWhenever the tree has a nested group, the nested `ul` element should receive the ARIA role `group`. The parent `li[role=\"treeitem\"]` requires the `aria-expanded` attribute to be applied. Toggling `aria-expanded` to `true` or `false` will show or hide the child `group`. The parent `li[role=\"treeitem\"]` also requires `aria-label` to be applied and set to the tree items text value, this ensures child groups are't announced to screen readers as you interact with that branch.\n\nWhen ever a `role=\"treeitem\"` node is selected, `aria-selected=\"true\"` needs to be applied to display the selected styles.\n\nIn our example, we are using a chevron icon on tree branches to help indicate to the user what action clicking the tree branch will perform, whether opening or closing it. The effect of rotating the icon 90° to indicate open/closed status is achieved by applying the ARIA attribute `aria-expanded` to the `treeitem`. `aria-hidden=\"true\"` and `tabindex=\"-1\"` must be placed on the toggle button.\n\nTree items can only contain text values, no actionable elements, apart from our toggle button, can be placed inside a Tree item.\n\nTrees can only contain a single focusable tree item and `tabindex=\"0\"` must be placed on the `li[role=\"treeitem]` that takes current focus. Every other actionable and non-actionable element must be made unfocusable by adding `tabindex=\"-1\"` or removing `tabindex`, respectively.\n\nWhen implementing collapsed rows, we suggest showing the content DOM nodes within each collapsed row only once the row is expanded for performance reasons. You can additionally toggle the hidden row with `slds-show` and `slds-hide` if you intend to keep all of the content in the DOM.\n\nYou can add metatext (see: metatext state) to any tree item, which adds a smaller, second line of text below tree node labels to provide supplemental information (to provide users with added context, aid with identification/disambiguation). To add metatext, include an additional `span` within the treeitem with the class `slds-tree__item-meta`. We've added an additional parent span around the label/title and metatext to ensure the spacing works properly when metatext is included. If adding metatext to a tree item with child nodes (i.e. a branch), be sure to update the `aria-label` to include the metatext. For example: `aria-label=\"Tree Branch Label: Tree Branch Metatext\"`\n\n#### Accessibility\n\n**Interaction requirements**\n\n- Only a single action per tree item\n- Only 1 focusabled item per Tree\n- Actionable elements in a tree item are mouse only and should not be focusable, they should be presentational and should be hidden from screen readers and keyboard users\n- Focus is placed on the entire `li[role=\"treeitem\"]`. If that item has child items, focus must include those as well.\n\n**Notable attributes**\n\n- `role=\"tree\"` is placed on the `ul`\n- `role=\"tree\"` element also has `aria-labelledby` applied which points to the trees heading element\n- `role=\"treeitem\"` is placed on the tree `li` elements\n- `aria-level` is applied to `treeitem` elements to indicate their nesting depth\n- `aria-expanded` is applied to `treeitem` elements that have child tree nodes. It is set to `true` or `false`\n- `aria-label` is applied to `treeitem` elements that have child tree nodes. Be sure to add any metatext to the label, if applicable\n- `aria-selected=\"true\"` is applied to `treeitem` elements that are selected\n- `tabindex=\"0\"` is applied to the `treeitem` that is in focus\n- `role=\"group\"` is applied to child tree node containers, `ul`\n\n**Keyboard navigation**\n\n- Clicking on a tree item creates a selection\n- `Up` and `Down` arrow keys move `:focus` **and** `aria-selected`. Previous selections are cleared\n- `Right` arrow key to expand collapsed node.\n- `Left` arrow key to collapse expanded node.\n- `Left` arrow key on an end child node, collapses the group and moves `:focus` and `aria-selected` to the parent `treeitem`\n- `Enter` performs the default action on an end tree item (if there is one).\n- `Ctrl` + `Up` and `Ctrl` + `Down` moves focus. Current selection is maintained\n- `Ctrl` + `Space` will add or remove the currently focused tree item to the selection\n\n#### Filtering\n\nWhen filtering a tree you should couple the tree with a search input. The search input will control the contents of the tree and as such should the attribute `aria-controls` added to it. The value of the `aria-controls` attribute should be the ID of the tree it controls. The search input should also be of type `search`.\n\nUpon typing in the input the tree should start filtering immediately, expanding all nodes that have matching tree items to display, and highlighting the search term in each of the matching items. The highlight is provided by wrapping the term in `<mark />` elements."
+		},
+		{
+			"selector": "slds-tree",
+			"component": "Trees",
+			"summary": "Initializes a slds tree"
+		},
+		{
+			"selector": "slds-tree__item",
+			"component": "Trees",
+			"summary": "Initializes a slds tree item"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Trees",
+			"summary": "Selected state for a tree item"
+		},
+		{
+			"selector": "slds-is-focused",
+			"component": "Trees",
+			"summary": "Focus state for a tree item"
+		},
+		{
+			"selector": "slds-is-hovered",
+			"component": "Trees",
+			"summary": "Hover state for a tree item"
+		},
+		{
+			"selector": "slds-is-disabled",
+			"component": "Trees",
+			"summary": "When a branch doesn't have children, apply slds-is-disabled to the button icon"
+		},
+		{
+			"selector": "slds-tree__item-label",
+			"component": "Trees",
+			"summary": "The label text of a tree item or tree branch"
+		},
+		{
+			"selector": "slds-tree__item-meta",
+			"component": "Trees",
+			"summary": "The meta text or secondary text of a tree item"
+		},
+		{
+			"selector": "[role=\"treeitem\"]",
+			"component": "Trees",
+			"summary": "Styles the focus and selected state for any tree item that has role=\"treeitem\""
+		},
+		{
+			"selector": "slds-tree__group-header",
+			"component": "Trees",
+			"summary": "Initializes a slds tree group header"
+		},
+		{
+			"selector": "slds-feed",
+			"component": "Feeds",
+			"summary": "A discussion feed consists of a list of posts. A `.slds-feed__item` contains a post and comments related to that post."
+		},
+		{
+			"selector": "slds-feed__list",
+			"component": "Feeds",
+			"summary": ""
+		},
+		{
+			"selector": "slds-feed__item",
+			"component": "Feeds",
+			"summary": ""
+		},
+		{
+			"selector": "slds-feed__item-comments",
+			"component": "Feeds",
+			"summary": "Container for feed item comments"
+		},
+		{
+			"selector": "slds-post",
+			"component": "Feeds",
+			"summary": ""
+		},
+		{
+			"selector": "slds-post__header",
+			"component": "Feeds",
+			"summary": "Header region of a feed post"
+		},
+		{
+			"selector": "slds-post__content",
+			"component": "Feeds",
+			"summary": "Content region of a feed post"
+		},
+		{
+			"selector": "slds-post__footer",
+			"component": "Feeds",
+			"summary": "Footer region of a feed post"
+		},
+		{
+			"selector": "slds-post__footer-actions-list",
+			"component": "Feeds",
+			"summary": "Footer region that contains quick action items for post"
+		},
+		{
+			"selector": "slds-post__footer-action",
+			"component": "Feeds",
+			"summary": "Action items within the feed post footer"
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Feeds",
+			"summary": "Active state for like button"
+		},
+		{
+			"selector": "slds-post__footer-meta-list",
+			"component": "Feeds",
+			"summary": "Footer region that contains read only items for post"
+		},
+		{
+			"selector": "slds-vertical-tabs",
+			"component": "Vertical Tabs",
+			"summary": "The default Vertical Tabs component renders a list of tabs and their\nrelated content. The tab list is not truncated by default, but truncation\ncan be added with a modifier class on the link elements."
+		},
+		{
+			"selector": "slds-vertical-tabs__nav",
+			"component": "Vertical Tabs",
+			"summary": "Tab navigation container element"
+		},
+		{
+			"selector": "slds-vertical-tabs__nav-item",
+			"component": "Vertical Tabs",
+			"summary": "Tab navigation item"
+		},
+		{
+			"selector": "slds-vertical-tabs__link",
+			"component": "Vertical Tabs",
+			"summary": "Tab Navigation Link"
+		},
+		{
+			"selector": "slds-vertical-tabs__left-icon",
+			"component": "Vertical Tabs",
+			"summary": "Left icon inside of vertical tabs nav item"
+		},
+		{
+			"selector": "slds-vertical-tabs__right-icon",
+			"component": "Vertical Tabs",
+			"summary": "Right icon inside of vertical tabs nav item"
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Vertical Tabs",
+			"summary": "Active state for a tab navigation item"
+		},
+		{
+			"selector": "slds-has-focus",
+			"component": "Vertical Tabs",
+			"summary": "Focus state for a tab navigation item"
+		},
+		{
+			"selector": "slds-vertical-tabs__content",
+			"component": "Vertical Tabs",
+			"summary": "Tab Content Container"
+		},
+		{
+			"selector": "slds-radio_button-group",
+			"component": "Radio Button Group",
+			"summary": "Initializes radio button"
+		},
+		{
+			"selector": "slds-radio_button",
+			"component": "Radio Button Group",
+			"summary": ""
+		},
+		{
+			"selector": "slds-radio_faux",
+			"component": "Radio Button Group",
+			"summary": "Create styled button when adjacent to the input[radio] element"
+		},
+		{
+			"selector": "slds-radio_button__label",
+			"component": "Radio Button Group",
+			"summary": "Label element inside of a radio button"
+		},
+		{
+			"selector": "slds-utility-bar_container",
+			"component": "Docked Utility Bar",
+			"summary": "Fixed bar at the bottom of viewport, that contains items.\n\nIf the utility bar item is active and its panel is popped open in a new window, use `.slds-utility-bar__item_pop-out` on the\n`.slds-utility-bar__item`. This will add a visual indicator to communicate that the panel is opened in a new window."
+		},
+		{
+			"selector": "slds-utility-bar",
+			"component": "Docked Utility Bar",
+			"summary": "Fixed bar at the bottom of viewport, contains items"
+		},
+		{
+			"selector": "slds-indicator_unread",
+			"component": "Docked Utility Bar",
+			"summary": "Notification indicator"
+		},
+		{
+			"selector": "slds-utility-bar__item",
+			"component": "Docked Utility Bar",
+			"summary": "Items that invoke specific utility bar panel"
+		},
+		{
+			"selector": "slds-utility-bar__item_pop-out",
+			"component": "Docked Utility Bar",
+			"summary": "Modifier to add pop out element"
+		},
+		{
+			"selector": "slds-has-notification",
+			"component": "Docked Utility Bar",
+			"summary": "Creates styles for a utility bar item when it has a notification within its panel"
+		},
+		{
+			"selector": "slds-indicator_unread",
+			"component": "Docked Utility Bar",
+			"summary": "Unread notification icon"
+		},
+		{
+			"selector": "slds-utility-bar__action",
+			"component": "Docked Utility Bar",
+			"summary": "Button that invokes utility panel"
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Docked Utility Bar",
+			"summary": ""
+		},
+		{
+			"selector": "slds-utility-bar__text",
+			"component": "Docked Utility Bar",
+			"summary": "Container for utility bar item text, allows for multi-line text output"
+		},
+		{
+			"selector": "slds-utility-panel",
+			"component": "Docked Utility Bar",
+			"summary": "Container of the utility panel"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Docked Utility Bar",
+			"summary": ""
+		},
+		{
+			"selector": "slds-publisher",
+			"component": "Publishers",
+			"summary": "The discussion feed publisher is found at the top of a feed stream. It contains\nbasic and advanced publishing capibilities.\n\nThe discussion feed is in a collapsed state by default. There are 3 states\nof the discussion feed that provide different feedback to the user. First,\nthe collapsed state, this indicates the user has not interacted with the\ndiscussion feed publisher. When the user initiates an interaction with the\npublisher, by either focusing of the textara or clicking the \"Share\" button,\nthrough javascript the class of `slds-is-active` should be applied to the\n`slds-publisher` div. This class will expand the publisher box and display\nadditional publisher actions.\n\nDuring the active state, before the user has begun typing or attaching\nadditional content, the \"Share\" button should be disabled by applying the\n`disabled` attribute to the `<textarea>`. When the user begins typing, the\n`disabled` attribute should be toggled off."
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Publishers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-publisher__input",
+			"component": "Publishers",
+			"summary": "Abstraction of the text input styles"
+		},
+		{
+			"selector": "slds-publisher__actions",
+			"component": "Publishers",
+			"summary": "Bottom row of actionable items"
+		},
+		{
+			"selector": "slds-publisher__toggle-visibility",
+			"component": "Publishers",
+			"summary": ""
+		},
+		{
+			"selector": "slds-publisher_comment",
+			"component": "Publishers",
+			"summary": "The comment publisher is found at the bottom of a discussion feed comment\nthread. It contains basic publishing capibilities.\n\nThe comment publisher is in a collapsed state by default. There are 4 states\nof the discussion feed that provide different feedback to the user. First,\nthe collapsed state, this indicates the user has not interacted with the\ncomment publisher. When the user initiates an interaction with the publisher,\nby either focusing of the textara or clicking the \"Comment\" button, through\njavascript the class of `slds-is-active` should be applied to the\n`slds-publisher` element. This class will expand the publisher box and\ndisplay additional publisher actions.\n\nDue to the implementation of the comment publisher design, we used a faux\ntextarea container and we'll need to apply the our focus state to that custom\ncontainer. Using javascript, the class `slds-has-focus` should be applied to\nthe `slds-publisher` element when the user interacts with `<textarea>`. When\nthe user loses focus on the `<textarea>`, the class `slds-has-focus` should\nbe toggled off from the `slds-publisher` element.\n\nDuring the active state, before the user has begun typing or attaching\nadditional content, the \"Comment\" button should be disabled by applying the\n`disabled` attribute to the `<textarea>`. When the user begins typing, the\n`disabled` attribute should be toggled off."
+		},
+		{
+			"selector": "slds-has-focus",
+			"component": "Publishers",
+			"summary": "Applies focus to comment publisher container when inside `textarea`"
+		},
+		{
+			"selector": "slds-datepicker",
+			"component": "Datepickers",
+			"summary": "Initiates a datepicker component"
+		},
+		{
+			"selector": "slds-day",
+			"component": "Datepickers",
+			"summary": "Style for calendar days"
+		},
+		{
+			"selector": "slds-is-today",
+			"component": "Datepickers",
+			"summary": "Indicates today"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Datepickers",
+			"summary": "Indicates selected days"
+		},
+		{
+			"selector": "slds-datepicker__filter",
+			"component": "Datepickers",
+			"summary": "Aligns filter items horizontally"
+		},
+		{
+			"selector": "slds-datepicker__month_filter",
+			"component": "Datepickers",
+			"summary": "Spaces out month filter"
+		},
+		{
+			"selector": "slds-datepicker__month",
+			"component": "Datepickers",
+			"summary": "Container of the month table"
+		},
+		{
+			"selector": "slds-disabled-text",
+			"component": "Datepickers",
+			"summary": "Indicates days that are in previous/next months"
+		},
+		{
+			"selector": "slds-has-multi-selection",
+			"component": "Datepickers",
+			"summary": "If you desire a multi-select date range, the selected cell will need to have\n`.slds-is-selected-multi` applied to the `<td>`.\n\nIf you are selecting multiple dates within the same week, the class `slds-has-multi-selection`\nshould be added to the `<tr>`.\n\nIf you are selecting multiple dates spanning over two or more weeks, you will\nneed to add the class `.slds-has-multi-row-selection` to each `<tr>` that has\nselected dates."
+		},
+		{
+			"selector": "slds-has-multi-row-selection",
+			"component": "Datepickers",
+			"summary": "Class on row to notify that more than one date will be selected with multiple weeks"
+		},
+		{
+			"selector": "slds-is-selected-multi",
+			"component": "Datepickers",
+			"summary": "Indicates if the selected days are apart of a date range"
+		},
+		{
+			"selector": "slds-file",
+			"component": "Files",
+			"summary": "A figure component is a self-contained unit of content, such as an image with an optional caption. The figure component should NOT be used with icons or logos. A figure can optionally be cropped to a specific ratio such as 16x9, 4x3 and 1x1 with the use of `.slds-image__crop` and passing in a ratio class such as `.slds-image__crop_16-by-9`."
+		},
+		{
+			"selector": "slds-file_loading",
+			"component": "Files",
+			"summary": "A decorator class that prevents hover styles from being applied to Files in loading state"
+		},
+		{
+			"selector": "slds-has-title",
+			"component": "Files",
+			"summary": "A decorator class that allows the hover icon to be positioned properly when File has a title"
+		},
+		{
+			"selector": "slds-file__crop",
+			"component": "Files",
+			"summary": "Set crop boundaries to a file component, set to 16:9 by default"
+		},
+		{
+			"selector": "slds-file__crop_1-by-1",
+			"component": "Files",
+			"summary": "Crops file to a ratio of 1:1"
+		},
+		{
+			"selector": "slds-file__crop_16-by-9",
+			"component": "Files",
+			"summary": "Crops file to a ratio of 16:9"
+		},
+		{
+			"selector": "slds-file__crop_4-by-3",
+			"component": "Files",
+			"summary": "Crops file to a ratio of 4:3"
+		},
+		{
+			"selector": "slds-file__figure",
+			"component": "Files",
+			"summary": "Figure element that contains the image of a File"
+		},
+		{
+			"selector": "slds-file__figure_portrait",
+			"component": "Files",
+			"summary": "Modifying class if the image in a figure is in portrait orientation"
+		},
+		{
+			"selector": "slds-file__title",
+			"component": "Files",
+			"summary": "Image caption associated to a file"
+		},
+		{
+			"selector": "slds-file__title_overlay",
+			"component": "Files",
+			"summary": "Adds overlay to file"
+		},
+		{
+			"selector": "slds-file__title_card",
+			"component": "Files",
+			"summary": "Creates card title bar on file"
+		},
+		{
+			"selector": "slds-file__title_scrim",
+			"component": "Files",
+			"summary": "Creates gradient scrim bar on file"
+		},
+		{
+			"selector": "slds-file-has-actions",
+			"component": "Files",
+			"summary": "Hack to accomodate for text truncation next to actions menu buttons"
+		},
+		{
+			"selector": "slds-file_overlay",
+			"component": "Files",
+			"summary": "If text sits on top of image, apply an overlay with this class"
+		},
+		{
+			"selector": "slds-file_card",
+			"component": "Files",
+			"summary": "Change style of image to a card look"
+		},
+		{
+			"selector": "slds-file__icon",
+			"component": "Files",
+			"summary": "When only image type is available, this class help position the file type icon"
+		},
+		{
+			"selector": "slds-file__actions-menu",
+			"component": "Files",
+			"summary": "This positions the action menu on the title bar"
+		},
+		{
+			"selector": "slds-file__external-icon",
+			"component": "Files",
+			"summary": "This adds an external icon to the top left side of the card"
+		},
+		{
+			"selector": "slds-file__loading-icon",
+			"component": "Files",
+			"summary": "This changes the color of the loading icon"
+		},
+		{
+			"selector": "slds-file_center-icon",
+			"component": "Files",
+			"summary": "This vertically centers the icon when there is no title bar"
+		},
+		{
+			"selector": "slds-global-header_container",
+			"component": "Global Header",
+			"summary": "Container that fixes the global header to the top of the viewport,\ncontains global header element"
+		},
+		{
+			"selector": "slds-global-header",
+			"component": "Global Header",
+			"summary": ""
+		},
+		{
+			"selector": "slds-global-header__item",
+			"component": "Global Header",
+			"summary": "A region within the global header"
+		},
+		{
+			"selector": "slds-global-header__button_icon",
+			"component": "Global Header",
+			"summary": "Button icons on the global header"
+		},
+		{
+			"selector": "slds-global-header__button_icon-actions",
+			"component": "Global Header",
+			"summary": "Button icon specifically for global actions"
+		},
+		{
+			"selector": "slds-global-header__button_icon-favorites",
+			"component": "Global Header",
+			"summary": "Button icon specifically for global actions"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Global Header",
+			"summary": "Selected state for favorites button"
+		},
+		{
+			"selector": "slds-is-disabled",
+			"component": "Global Header",
+			"summary": "Disabled state for favorites button"
+		},
+		{
+			"selector": "global-header__icon",
+			"component": "Global Header",
+			"summary": "Deal with sizing for global header icons"
+		},
+		{
+			"selector": "slds-global-header__logo",
+			"component": "Global Header",
+			"summary": "Container of the global header logo"
+		},
+		{
+			"selector": "slds-global-header__item_search",
+			"component": "Global Header",
+			"summary": "Region that contains the search input, handles sizing"
+		},
+		{
+			"selector": "slds-global-search__form-element div",
+			"component": "Global Header",
+			"summary": "Primary combobox that contains the search input, handles sizing"
+		},
+		{
+			"selector": "slds-listbox_selection-group",
+			"component": "Global Header",
+			"summary": "The container of pill selections found inside of a combobox group"
+		},
+		{
+			"selector": "slds-is-expanded",
+			"component": "Global Header",
+			"summary": "Expanded state of a selection group"
+		},
+		{
+			"selector": "slds-listbox-toggle",
+			"component": "Global Header",
+			"summary": "Toggle button to show all of the pill selections"
+		},
+		{
+			"selector": "slds-backdrop",
+			"component": "Global Header",
+			"summary": "Creates the shaded backdrop used behind the modal."
+		},
+		{
+			"selector": "slds-backdrop_open",
+			"component": "Global Header",
+			"summary": "Allows the backdrop to be visible."
+		},
+		{
+			"selector": "slds-global-actions",
+			"component": "Global Header",
+			"summary": "Global actions component wrapper"
+		},
+		{
+			"selector": "slds-global-actions__item",
+			"component": "Global Header",
+			"summary": "List item for each global action"
+		},
+		{
+			"selector": "slds-global-actions__item-action",
+			"component": "Global Header",
+			"summary": "The actionable button inside of a global actions list item"
+		},
+		{
+			"selector": "slds-global-actions__avatar",
+			"component": "Global Header",
+			"summary": "User profile action icon"
+		},
+		{
+			"selector": "slds-global-actions__task",
+			"component": "Global Header",
+			"summary": "Task action icon"
+		},
+		{
+			"selector": "slds-global-actions__notifications",
+			"component": "Global Header",
+			"summary": "Notification action icon"
+		},
+		{
+			"selector": "slds-global-actions__favorites",
+			"component": "Global Header",
+			"summary": "Favorites action button group"
+		},
+		{
+			"selector": "slds-global-actions__favorites-action",
+			"component": "Global Header",
+			"summary": "Star icon inside of favorites button group"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Global Header",
+			"summary": "Selected/clicked state on favorites button"
+		},
+		{
+			"selector": "slds-is-disabled",
+			"component": "Global Header",
+			"summary": "Disabled state on favorites button"
+		},
+		{
+			"selector": "slds-global-actions__favorites-more",
+			"component": "Global Header",
+			"summary": "More dropdown icon inside of favorites button group"
+		},
+		{
+			"selector": "slds-notification-badge",
+			"component": "Global Header",
+			"summary": "Notification counter badge"
+		},
+		{
+			"selector": "slds-summary-detail",
+			"component": "Summary Detail",
+			"summary": "Initializes a summary detail"
+		},
+		{
+			"selector": "slds-summary-detail__content",
+			"component": "Summary Detail",
+			"summary": "Styles the position of the toggle icon"
+		},
+		{
+			"selector": "slds-summary-detail__content",
+			"component": "Summary Detail",
+			"summary": "Styles the visibility of the detail content"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Summary Detail",
+			"summary": "Toggle visibility of the detail section + rotate icon"
+		},
+		{
+			"selector": "slds-split-view_container",
+			"component": "Split View",
+			"summary": "Wrapper of split view"
+		},
+		{
+			"selector": "slds-is-closed",
+			"component": "Split View",
+			"summary": "Modifier to rotate the left arrow icon on close"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Split View",
+			"summary": "Toggles open/close state of split view container"
+		},
+		{
+			"selector": "slds-split-view",
+			"component": "Split View",
+			"summary": ""
+		},
+		{
+			"selector": "slds-split-view__header",
+			"component": "Split View",
+			"summary": "Header of split view"
+		},
+		{
+			"selector": "slds-split-view__list-header",
+			"component": "Split View",
+			"summary": "Column headers"
+		},
+		{
+			"selector": "slds-split-view__list-item",
+			"component": "Split View",
+			"summary": "Each row of the list of split view"
+		},
+		{
+			"selector": "slds-indicator_unread",
+			"component": "Split View",
+			"summary": "Unread states"
+		},
+		{
+			"selector": "slds-split-view__list-item-action",
+			"component": "Split View",
+			"summary": "Actionable row of split view"
+		},
+		{
+			"selector": "slds-split-view__toggle-button",
+			"component": "Split View",
+			"summary": "Expand/Collapse button to toggle open/close state of split view"
+		},
+		{
+			"selector": "slds-is-closed",
+			"component": "Split View",
+			"summary": "Modifier to rotate the left arrow icon on close"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Split View",
+			"summary": "Toggles open/close state of split view container"
+		},
+		{
+			"selector": "slds-color-picker",
+			"component": "Color Picker",
+			"summary": "The base variant is the fully featured color picker, with a direct text\ninput, and a button-triggered popover, which has tabs with both a list\nof predefined color options (swatches), as well as an interactive tool\nfor custom color configuration."
+		},
+		{
+			"selector": "slds-color-picker__summary",
+			"component": "Color Picker",
+			"summary": "'Summary' element for color selection."
+		},
+		{
+			"selector": "slds-color-picker__summary-label",
+			"component": "Color Picker",
+			"summary": "Label for summary input"
+		},
+		{
+			"selector": "slds-color-picker__button",
+			"component": "Color Picker",
+			"summary": "Button that toggles the Color Picker Selector"
+		},
+		{
+			"selector": "slds-color-picker__summary-input",
+			"component": "Color Picker",
+			"summary": "Input field for summary UI"
+		},
+		{
+			"selector": "slds-color-picker__selector",
+			"component": "Color Picker",
+			"summary": "The selector subcomponent. Extends upon a .slds-popover"
+		},
+		{
+			"selector": "slds-color-picker__swatches",
+			"component": "Color Picker",
+			"summary": "Swatch container"
+		},
+		{
+			"selector": "slds-color-picker__swatch",
+			"component": "Color Picker",
+			"summary": "Color Picker swatch"
+		},
+		{
+			"selector": "slds-swatch",
+			"component": "Color Picker",
+			"summary": "A swatch"
+		},
+		{
+			"selector": "slds-color-picker__custom",
+			"component": "Color Picker",
+			"summary": "Custom picker selection container"
+		},
+		{
+			"selector": "slds-color-picker__custom-range",
+			"component": "Color Picker",
+			"summary": "Custom picker range element"
+		},
+		{
+			"selector": "slds-color-picker__range-indicator",
+			"component": "Color Picker",
+			"summary": ""
+		},
+		{
+			"selector": "slds-color-picker__hue-and-preview",
+			"component": "Color Picker",
+			"summary": "Container element for the hue slider and preview swatch"
+		},
+		{
+			"selector": "slds-color-picker__hue-slider",
+			"component": "Color Picker",
+			"summary": "The slide input that controls the hue"
+		},
+		{
+			"selector": "slds-swatch",
+			"component": "Color Picker",
+			"summary": "A swatch"
+		},
+		{
+			"selector": "slds-color-picker__custom-inputs",
+			"component": "Color Picker",
+			"summary": "The group of direct input elements"
+		},
+		{
+			"selector": "slds-color-picker__selector-footer",
+			"component": "Color Picker",
+			"summary": "Footer for the Color Selector Picker"
+		},
+		{
+			"selector": "slds-color-picker_custom-only",
+			"component": "Color Picker",
+			"summary": "The Custom-Only variant should only render the custom color selection tool\nin the Color Picker popover. It should not be inside a tabset."
+		},
+		{
+			"selector": "slds-color-picker_predefined-only",
+			"component": "Color Picker",
+			"summary": "The Predefined Only variant should only render the predefined colors\nselection in the Color Picker popover. It should not be inside a tabset."
+		},
+		{
+			"selector": "slds-color-picker_swatches-only",
+			"component": "Color Picker",
+			"summary": "The Swatches Only variant should only render a group of individual swatches.\nIt should not render any of the main chrome of the color picker UI (no Summary\nsection, no Popover, no Tabset), it should only render the Color Picker swatches\nselector. This component should be rendered inside a menu.\n\n### Accessibility Notes\n\nThe accessibility requirements for this Variant are slightly different from\nthe others:\n\n#### `.slds-color-picker__swatches`\n\nThis element _needs_ a `role` of `menu`.\n\n#### `.slds-color-picker__swatch-trigger`\n\nThis element _needs_ a `role` of `option`"
+		},
+		{
+			"selector": "slds-expression",
+			"component": "Expression",
+			"summary": "Creates an Expression Component"
+		},
+		{
+			"selector": "slds-expression__options",
+			"component": "Expression",
+			"summary": "Condition options"
+		},
+		{
+			"selector": "slds-expression__legend",
+			"component": "Expression",
+			"summary": "Legend for expression row"
+		},
+		{
+			"selector": "slds-expression__legend_group",
+			"component": "Expression",
+			"summary": "Modifies a legend when placed within a expression group"
+		},
+		{
+			"selector": "slds-expression__row",
+			"component": "Expression",
+			"summary": "Defines an expression row"
+		},
+		{
+			"selector": "slds-expression__row_group",
+			"component": "Expression",
+			"summary": "Modifies a row when placed within a expression group"
+		},
+		{
+			"selector": "slds-expression__buttons",
+			"component": "Expression",
+			"summary": "Action buttons for conditional expressions"
+		},
+		{
+			"selector": "slds-expression__group",
+			"component": "Expression",
+			"summary": "Group of conditional expressions"
+		},
+		{
+			"selector": "slds-expression__custom-logic",
+			"component": "Expression",
+			"summary": "The Custom Logic variant allows users to manually type their custom logic into an input\nfield, which references a numbered expression."
+		},
+		{
+			"selector": "slds-expression_formula__rte",
+			"component": "Expression",
+			"summary": "The Formula variant allows users to write free-form custom logic by using insertion\ncomboboxes and/or typing freely."
+		},
+		{
+			"selector": "slds-filters",
+			"component": "Expression",
+			"summary": "The narrow expression is used for in-context logic building, where users are able to\nimmediately preview the results of their conditional logic,like a list or report."
+		},
+		{
+			"selector": "slds-filters__header",
+			"component": "Expression",
+			"summary": "Filters Header"
+		},
+		{
+			"selector": "slds-filters__body",
+			"component": "Expression",
+			"summary": "Filters Body"
+		},
+		{
+			"selector": "slds-filters__footer",
+			"component": "Expression",
+			"summary": "Filters Footer"
+		},
+		{
+			"selector": "slds-filters__item",
+			"component": "Expression",
+			"summary": "Filterable Item"
+		},
+		{
+			"selector": "slds-is-new",
+			"component": "Expression",
+			"summary": "Indicates that a filter is new and hasn't been saved"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Expression",
+			"summary": "Indicates that a filter has an error"
+		},
+		{
+			"selector": "slds-is-locked",
+			"component": "Expression",
+			"summary": "Indicates that a filter is locked"
+		},
+		{
+			"selector": "slds-filters__group",
+			"component": "Expression",
+			"summary": "Filters Group"
+		},
+		{
+			"selector": "slds-chat",
+			"component": "Chat",
+			"summary": "This component is used to display a current or past chat session between a customer and a service agent.\nIt appears in the form of a \"Log\""
+		},
+		{
+			"selector": "slds-chat-list",
+			"component": "Chat",
+			"summary": "The chat payload should be displayed in the form of a list. Each item in the list has a number of vertical and horizontal spacing rules based on its type"
+		},
+		{
+			"selector": "slds-chat-listitem",
+			"component": "Chat",
+			"summary": "Handles spacing and direction of items in the list"
+		},
+		{
+			"selector": "slds-chat-listitem_outbound",
+			"component": "Chat",
+			"summary": "Modifier used to style outbound message list items"
+		},
+		{
+			"selector": "slds-chat-listitem_inbound",
+			"component": "Chat",
+			"summary": "Modifier used to style inbound message list items"
+		},
+		{
+			"selector": "slds-chat-listitem_bookend",
+			"component": "Chat",
+			"summary": "Modifier used for spacing bookend items"
+		},
+		{
+			"selector": "slds-chat-listitem_event",
+			"component": "Chat",
+			"summary": "Modifier used for spacing event items"
+		},
+		{
+			"selector": "slds-chat-message",
+			"component": "Chat",
+			"summary": "Chat logs are mainly made up of chat messages between an agent and a customer"
+		},
+		{
+			"selector": "slds-chat-message_faux-avatar",
+			"component": "Chat",
+			"summary": "Used for when customer avatars are used in consequtive inbound messages to align the message body with the previous message"
+		},
+		{
+			"selector": "slds-chat-avatar",
+			"component": "Chat",
+			"summary": "Used to style avatars in chat logs"
+		},
+		{
+			"selector": "slds-chat-avatar__intials",
+			"component": "Chat",
+			"summary": "Used to style the avatar intials for chat"
+		},
+		{
+			"selector": "slds-chat-message__body",
+			"component": "Chat",
+			"summary": "Used to contain and align chat messages with their avatars"
+		},
+		{
+			"selector": "slds-chat-message__image_loading",
+			"component": "Chat",
+			"summary": ""
+		},
+		{
+			"selector": "slds-chat-message__text",
+			"component": "Chat",
+			"summary": "Used to style the chat text from agent or customer"
+		},
+		{
+			"selector": "slds-chat-icon",
+			"component": "Chat",
+			"summary": "Used to style icons with a chat log"
+		},
+		{
+			"selector": "slds-chat-message__text_inbound",
+			"component": "Chat",
+			"summary": "Used for any specific inbound text styling"
+		},
+		{
+			"selector": "slds-chat-message__text_outbound",
+			"component": "Chat",
+			"summary": "Used for any specific outbound text styling"
+		},
+		{
+			"selector": "slds-chat-message__text_outbound-agent",
+			"component": "Chat",
+			"summary": "Used for any specific outbound (from another agent) text styling"
+		},
+		{
+			"selector": "slds-chat-message__text_unsupported-type",
+			"component": "Chat",
+			"summary": "Used for an inbound message that is not a supported message type"
+		},
+		{
+			"selector": "slds-chat-message__text_delivery-failure",
+			"component": "Chat",
+			"summary": "Used for an inbound message that fails to deliver"
+		},
+		{
+			"selector": "slds-chat-message__text_delivery-failure-reason",
+			"component": "Chat",
+			"summary": "Element that contains feedback for why inbound message failed"
+		},
+		{
+			"selector": "slds-chat-message__text_sneak-peek",
+			"component": "Chat",
+			"summary": "Used when sneak peek is enabled for customer messages"
+		},
+		{
+			"selector": "slds-chat-message__file",
+			"component": "Chat",
+			"summary": ""
+		},
+		{
+			"selector": "slds-chat-message__file_inbound",
+			"component": "Chat",
+			"summary": "Used for any specific inbound file styling"
+		},
+		{
+			"selector": "slds-chat-message__meta",
+			"component": "Chat",
+			"summary": "Used to style chat message meta data"
+		},
+		{
+			"selector": "slds-chat-message__action",
+			"component": "Chat",
+			"summary": "Used to style chat message resend action"
+		},
+		{
+			"selector": "slds-chat-icon",
+			"component": "Chat",
+			"summary": "Used to style icons with a chat log"
+		},
+		{
+			"selector": "slds-chat-event",
+			"component": "Chat",
+			"summary": "During any chat, certain events can occur which need to be displayed to the user"
+		},
+		{
+			"selector": "slds-chat-event__rule",
+			"component": "Chat",
+			"summary": "Used to style the horizontal rules on an event"
+		},
+		{
+			"selector": "slds-chat-event__body",
+			"component": "Chat",
+			"summary": "Used for styling the event body text"
+		},
+		{
+			"selector": "slds-chat-icon",
+			"component": "Chat",
+			"summary": "Used to style icons with a chat log"
+		},
+		{
+			"selector": "slds-chat-event__agent-message",
+			"component": "Chat",
+			"summary": "Used to style any messages from an agent in the event"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Chat",
+			"summary": "Modifier to indicate the event was an error"
+		},
+		{
+			"selector": "slds-chat-bookend",
+			"component": "Chat",
+			"summary": "Chat sessions are started and stopped with bookends to the conversation"
+		},
+		{
+			"selector": "slds-chat-icon",
+			"component": "Chat",
+			"summary": "Used to style icons with a chat log"
+		},
+		{
+			"selector": "slds-chat-bookend_stop",
+			"component": "Chat",
+			"summary": "Modifier for bookends which stop a chat session"
+		},
+		{
+			"selector": "slds-chat_past",
+			"component": "Chat",
+			"summary": "Past chat logs are displayed differently for ease of scanning"
+		},
+		{
+			"selector": "slds-avatar",
+			"component": "Avatar",
+			"summary": "An image is the preferred format for an avatar"
+		},
+		{
+			"selector": "slds-avatar_group-image-small",
+			"component": "Avatar",
+			"summary": "Uses the small group image as the avatar icon"
+		},
+		{
+			"selector": "slds-avatar_group-image-medium",
+			"component": "Avatar",
+			"summary": "Uses the medium group image as the avatar icon"
+		},
+		{
+			"selector": "slds-avatar_group-image-large",
+			"component": "Avatar",
+			"summary": "Uses the large group image as the avatar icon"
+		},
+		{
+			"selector": "slds-avatar_profile-image-small",
+			"component": "Avatar",
+			"summary": "Uses the small user avatar image as the avatar icon"
+		},
+		{
+			"selector": "slds-avatar_profile-image-medium",
+			"component": "Avatar",
+			"summary": "Uses the medium user avatar image as the avatar icon"
+		},
+		{
+			"selector": "slds-avatar_profile-image-large",
+			"component": "Avatar",
+			"summary": "Uses the large user avatar image as the avatar icon"
+		},
+		{
+			"selector": "slds-avatar_x-small",
+			"component": "Avatar",
+			"summary": "Size modifier for avatars - X-Small"
+		},
+		{
+			"selector": "slds-avatar_small",
+			"component": "Avatar",
+			"summary": "Size modifier for avatars - Small"
+		},
+		{
+			"selector": "slds-avatar_medium",
+			"component": "Avatar",
+			"summary": "Size modifier for avatars - Medium"
+		},
+		{
+			"selector": "slds-avatar_large",
+			"component": "Avatar",
+			"summary": "Size modifier for avatars - Large"
+		},
+		{
+			"selector": "slds-avatar_circle",
+			"component": "Avatar",
+			"summary": "Make avatar a circle"
+		},
+		{
+			"selector": "slds-avatar__initials",
+			"component": "Avatar",
+			"summary": "If an image is unavailable, up to two letters can be used instead.\nIf the record name contains two words, like first and last name, use\nthe first capitalized letter of each. For records that only have a\nsingle word name, use the first two letters of that word using one\ncapital and one lower case letter. The background color should match\nthe entity or object icon. If no image or initials are available,\nthe fallback should be the icon for the entity or object."
+		},
+		{
+			"selector": "slds-avatar-grouped__initials",
+			"component": "Avatar",
+			"summary": "Modifier for the initials Avatar in an Avatar Group"
+		},
+		{
+			"selector": "slds-avatar__initials_inverse",
+			"component": "Avatar",
+			"summary": "Used for initials that are dark text on light background"
+		},
+		{
+			"selector": "slds-combobox-group",
+			"component": "Lookups",
+			"summary": "Container for a combobox group"
+		},
+		{
+			"selector": "slds-combobox_object-switcher",
+			"component": "Lookups",
+			"summary": "Modifier that identifies the combobox as the object switcher, applies specific interactions for its context"
+		},
+		{
+			"selector": "slds-has-selection",
+			"component": "Lookups",
+			"summary": "Modifier that notifies the combobox group that a selection has been made"
+		},
+		{
+			"selector": "slds-combobox-addon_start",
+			"component": "Lookups",
+			"summary": "The first combobox in the combobox group"
+		},
+		{
+			"selector": "slds-combobox-addon_end",
+			"component": "Lookups",
+			"summary": "The last combobox in the combobox group"
+		},
+		{
+			"selector": "slds-listbox_selection-group",
+			"component": "Lookups",
+			"summary": "The container of pill selections found inside of a combobox group"
+		},
+		{
+			"selector": "slds-is-expanded",
+			"component": "Lookups",
+			"summary": "Expanded state of a selection group"
+		},
+		{
+			"selector": "slds-listbox-toggle",
+			"component": "Lookups",
+			"summary": "Toggle button to show all of the pill selections"
+		},
+		{
+			"selector": "slds-combobox",
+			"component": "Lookups",
+			"summary": "Container that manages layout when a listbox of pill options sit next to a combobox search input"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Lookups",
+			"summary": "Opens listbox dropdown"
+		},
+		{
+			"selector": "slds-combobox__form-element",
+			"component": "Lookups",
+			"summary": "Form element with combobox input"
+		},
+		{
+			"selector": "slds-combobox__input-entity-icon",
+			"component": "Lookups",
+			"summary": "If readonly selection is an entity, use this class"
+		},
+		{
+			"selector": "slds-combobox__input-value",
+			"component": "Lookups",
+			"summary": "Class to target styling the value of a combobox input"
+		},
+		{
+			"selector": "slds-combobox__input",
+			"component": "Lookups",
+			"summary": "Input field within a combobox"
+		},
+		{
+			"selector": "slds-has-focus",
+			"component": "Lookups",
+			"summary": "Force focus state of the input"
+		},
+		{
+			"selector": "slds-has-icon_left",
+			"component": "Lookups",
+			"summary": "Modifier to the combobox when an SVG icon sits adjacent to the combobox form element"
+		},
+		{
+			"selector": "slds-combobox-group",
+			"component": "Lookups",
+			"summary": "Container that manages layout when a listbox of pill options sit next to a combobox search input"
+		},
+		{
+			"selector": "slds-combobox_object-switcher",
+			"component": "Lookups",
+			"summary": "Modifier that identifies the combobox as the object switcher, applies specific interactions for its context"
+		},
+		{
+			"selector": "slds-has-selection",
+			"component": "Lookups",
+			"summary": "Modifier that notifies the combobox group that a selection has been made"
+		},
+		{
+			"selector": "slds-combobox-addon_start",
+			"component": "Lookups",
+			"summary": "The first combobox in the combobox group"
+		},
+		{
+			"selector": "slds-combobox-addon_end",
+			"component": "Lookups",
+			"summary": "The last combobox in the combobox group"
+		},
+		{
+			"selector": "slds-listbox_selection-group",
+			"component": "Lookups",
+			"summary": "The container of pill selections found inside of a combobox group"
+		},
+		{
+			"selector": "slds-is-expanded",
+			"component": "Lookups",
+			"summary": "Expanded state of a selection group"
+		},
+		{
+			"selector": "slds-listbox-toggle",
+			"component": "Lookups",
+			"summary": "Toggle button to show all of the pill selections"
+		},
+		{
+			"selector": "slds-spinner",
+			"component": "Spinners",
+			"summary": ""
+		},
+		{
+			"selector": "slds-spinner__dot-a",
+			"component": "Spinners",
+			"summary": "This creates two of the circles"
+		},
+		{
+			"selector": "slds-spinner__dot-b",
+			"component": "Spinners",
+			"summary": "This creates two of the circles"
+		},
+		{
+			"selector": "slds-spinner_delayed",
+			"component": "Spinners",
+			"summary": "Set a delay of 300ms on spinner"
+		},
+		{
+			"selector": "slds-spinner_brand",
+			"component": "Spinners",
+			"summary": "This creates the blue brand spinner"
+		},
+		{
+			"selector": "slds-spinner_inverse",
+			"component": "Spinners",
+			"summary": "This creates the inverse spinner"
+		},
+		{
+			"selector": "slds-spinner_xx-small",
+			"component": "Spinners",
+			"summary": "This is the extra extra small spinner"
+		},
+		{
+			"selector": "slds-spinner_x-small",
+			"component": "Spinners",
+			"summary": "This is the extra small spinner"
+		},
+		{
+			"selector": "slds-spinner_small",
+			"component": "Spinners",
+			"summary": "This is the small spinner"
+		},
+		{
+			"selector": "slds-spinner_medium",
+			"component": "Spinners",
+			"summary": "This is the medium spinner"
+		},
+		{
+			"selector": "slds-spinner_large",
+			"component": "Spinners",
+			"summary": "This is the large spinner"
+		},
+		{
+			"selector": "slds-pill",
+			"component": "Pills",
+			"summary": "Initializes pill"
+		},
+		{
+			"selector": "slds-pill_bare",
+			"component": "Pills",
+			"summary": "Modifier that removes border and background from a pill"
+		},
+		{
+			"selector": "slds-pill__label",
+			"component": "Pills",
+			"summary": "Line of text inside a pill"
+		},
+		{
+			"selector": "slds-pill__icon_container",
+			"component": "Pills",
+			"summary": "Initializes pill icon or avatar that sits to the left of the label"
+		},
+		{
+			"selector": "slds-pill__remove",
+			"component": "Pills",
+			"summary": "Initializes remove icon in pill that sits to the right of the label"
+		},
+		{
+			"selector": "slds-pill_link",
+			"component": "Pills",
+			"summary": "Creates a pill with a hyperlink"
+		},
+		{
+			"selector": "slds-pill__action",
+			"component": "Pills",
+			"summary": "Actionable element inside of pill with hyperlink"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Pills",
+			"summary": "Pill error styles"
+		},
+		{
+			"selector": "slds-listbox [role=\"listbox\"]",
+			"component": "Pills",
+			"summary": "A Listbox of Pills is a way to display a list of selected options when performing user input, usually from a multi-select [Combobox](/components/combobox), [Lookup](/components/lookups) or [Picklist](/components/picklist).\n\n#### Accessibility\n\n**Interaction requirements**\n\n- Only 1 focusabled Pill per set of Pills\n- The remove button must not be a focusable element, but can be clickable\n- Delete with a keyboard is performed with the `Backspace` or `Delete` key when focused on a pill\n\n**Notable attributes**\n\n- `role=\"listbox\"` is placed on the `ul`\n- `aria-label` is applied to `listbox` to describe what the list of options are to the user\n- `aria-orientation=\"horizontal\"` is applied to the `listbox` to describe the left to right direction of the pills\n- `role=\"presentation\"` is placed on the `li` elements\n- `role=\"option\"` is placed on the `slds-pill` elements\n- `aria-selected=\"true\"` is applied to all `option` elements, this is because they have all be selected\n- `tabindex=\"0\"` is applied to the `option` that is in focus last. By default it is placed on the first `option`\n\n**Keyboard navigation**\n\n- The first `option` in the list will be take user focus initially, when tabbed to\n- `Right` arrow key will move focus to the next pill in the list\n- `Left` arrow key will move focus to the previous pill in the list\n- `Left` arrow key when on the first `option` should cycle user focus to the last `option`\n- `Right` arrow key when on the last `option` should cycle user focus to the first `option`\n- `Delete` or `Backspace` key when focused on an `option` should remove that `option`. Focus should then be placed on the nearest `option`\n  - When on the last `option`, place user focus on the previous `option`\n  - When on the first `option`, place user focus on the next `option`\n  - When on the only `option`, place user focus on the `listbox` or any `input` element the `option` might be associated with"
+		},
+		{
+			"selector": "slds-icon_container",
+			"component": "Icons",
+			"summary": "Container for icons"
+		},
+		{
+			"selector": "slds-avatar-grouped__icon",
+			"component": "Icons",
+			"summary": "Modifier for the icon Avatar in an Avatar Group"
+		},
+		{
+			"selector": "slds-icon-action-",
+			"component": "Icons",
+			"summary": "Action icons"
+		},
+		{
+			"selector": "slds-icon_container_circle",
+			"component": "Icons",
+			"summary": "Circle container for icons"
+		},
+		{
+			"selector": "slds-icon",
+			"component": "Icons",
+			"summary": ""
+		},
+		{
+			"selector": "slds-icon_xx-small",
+			"component": "Icons",
+			"summary": ""
+		},
+		{
+			"selector": "slds-icon_x-small",
+			"component": "Icons",
+			"summary": ""
+		},
+		{
+			"selector": "slds-icon_small",
+			"component": "Icons",
+			"summary": ""
+		},
+		{
+			"selector": "slds-icon_large",
+			"component": "Icons",
+			"summary": ""
+		},
+		{
+			"selector": "slds-icon-text-default",
+			"component": "Icons",
+			"summary": "Changes the icon fill color to match the default state"
+		},
+		{
+			"selector": "slds-icon-text-warning",
+			"component": "Icons",
+			"summary": "Changes the icon fill color to match the warning state"
+		},
+		{
+			"selector": "slds-icon-text-success",
+			"component": "Icons",
+			"summary": "Changes the icon fill color to match the success state"
+		},
+		{
+			"selector": "slds-icon-text-error",
+			"component": "Icons",
+			"summary": "Changes the icon fill color to match the error state"
+		},
+		{
+			"selector": "slds-icon-text-light",
+			"component": "Icons",
+			"summary": ""
+		},
+		{
+			"selector": "slds-icon-custom-",
+			"component": "Icons",
+			"summary": "Custom icons have a rounded square shape and use a class on the container\nfor the background color."
+		},
+		{
+			"selector": "slds-icon-doctype-",
+			"component": "Icons",
+			"summary": "Container for icons"
+		},
+		{
+			"selector": "slds-icon-standard-",
+			"component": "Icons",
+			"summary": "Standard icons have a rounded square shape and use a class on the container\nfor the background color."
+		},
+		{
+			"selector": "slds-textarea",
+			"component": "Textarea",
+			"summary": "Initialize textarea"
+		},
+		{
+			"selector": "slds-brand-band",
+			"component": "Brand Band",
+			"summary": ""
+		},
+		{
+			"selector": "slds-brand-band_cover",
+			"component": "Brand Band",
+			"summary": "Changes background image to be set to cover rather than contain"
+		},
+		{
+			"selector": "slds-brand-band_small",
+			"component": "Brand Band",
+			"summary": "Sets height of brand band to"
+		},
+		{
+			"selector": "slds-brand-band_medium",
+			"component": "Brand Band",
+			"summary": "Sets height of brand band to"
+		},
+		{
+			"selector": "slds-brand-band_large",
+			"component": "Brand Band",
+			"summary": "Sets height of brand band to"
+		},
+		{
+			"selector": "slds-brand-band_none",
+			"component": "Brand Band",
+			"summary": "Removes image but keeps page background"
+		},
+		{
+			"selector": "slds-brand-band_group",
+			"component": "Brand Band",
+			"summary": "Uses the group banner image as the page background image"
+		},
+		{
+			"selector": "slds-brand-band_user",
+			"component": "Brand Band",
+			"summary": "Uses the user profile banner image as the page background image"
+		},
+		{
+			"selector": "slds-timepicker",
+			"component": "Timepicker",
+			"summary": "Initializes a timepicker"
+		},
+		{
+			"selector": "slds-docked-composer",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-has-focus",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-is-closed",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-docked-composer__header",
+			"component": "Docked Composer",
+			"summary": "Bar at the top of the composer that contains actionable items to invoke,\nsuch as minimizing, popping out the composer and removing the composer."
+		},
+		{
+			"selector": "slds-docked-composer__body",
+			"component": "Docked Composer",
+			"summary": "Primary area within docked composer that contains specific task"
+		},
+		{
+			"selector": "slds-docked-composer__body_form",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-email-composer",
+			"component": "Docked Composer",
+			"summary": "Initiazes email composer inside of a docked composer"
+		},
+		{
+			"selector": "slds-email-composer__combobox",
+			"component": "Docked Composer",
+			"summary": "Modifier combobox when used inside of email composer"
+		},
+		{
+			"selector": "slds-email-composer__recipient",
+			"component": "Docked Composer",
+			"summary": "Provides styles for recipient labels inside of email composer"
+		},
+		{
+			"selector": "slds-docked-composer__lead",
+			"component": "Docked Composer",
+			"summary": "Within the docked composer body, the lead is the first region"
+		},
+		{
+			"selector": "slds-docked-composer__toolbar",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-docked-composer__footer",
+			"component": "Docked Composer",
+			"summary": "Bar at the bottom of the composer that contains actionable items to\ninvoke, such as saving, associating relationships and adding content."
+		},
+		{
+			"selector": "slds-docked-composer_overflow",
+			"component": "Docked Composer",
+			"summary": "When the number of docked composer exceed the width of the viewport, this class modifies the docked composer styles"
+		},
+		{
+			"selector": "slds-dropdown",
+			"component": "Docked Composer",
+			"summary": "Initializes dropdown"
+		},
+		{
+			"selector": "slds-dropdown_left",
+			"component": "Docked Composer",
+			"summary": "Positions dropdown to left side of target"
+		},
+		{
+			"selector": "slds-dropdown_right",
+			"component": "Docked Composer",
+			"summary": "Positions dropdown to right side of target"
+		},
+		{
+			"selector": "slds-dropdown_bottom",
+			"component": "Docked Composer",
+			"summary": "Positions dropdown to above target"
+		},
+		{
+			"selector": "slds-dropdown_xx-small",
+			"component": "Docked Composer",
+			"summary": "Sets min-width of 6rem/96px"
+		},
+		{
+			"selector": "slds-dropdown_x-small",
+			"component": "Docked Composer",
+			"summary": "Sets min-width of 12rem/192px"
+		},
+		{
+			"selector": "slds-dropdown_small",
+			"component": "Docked Composer",
+			"summary": "Sets min-width of 15rem/240px"
+		},
+		{
+			"selector": "slds-dropdown_medium",
+			"component": "Docked Composer",
+			"summary": "Sets min-width of 20rem/320px"
+		},
+		{
+			"selector": "slds-dropdown_large",
+			"component": "Docked Composer",
+			"summary": "Sets min-width of 25rem/400px"
+		},
+		{
+			"selector": "slds-dropdown_length-5",
+			"component": "Docked Composer",
+			"summary": "Forces overflow scrolling after 5 list items"
+		},
+		{
+			"selector": "slds-dropdown_length-7",
+			"component": "Docked Composer",
+			"summary": "Forces overflow scrolling after 7 list items"
+		},
+		{
+			"selector": "slds-dropdown_length-10",
+			"component": "Docked Composer",
+			"summary": "Forces overflow scrolling after 10 list items"
+		},
+		{
+			"selector": "slds-dropdown_length-with-icon-5",
+			"component": "Docked Composer",
+			"summary": "Forces overflow scrolling after 5 list items with an icon"
+		},
+		{
+			"selector": "slds-dropdown_length-with-icon-7",
+			"component": "Docked Composer",
+			"summary": "Forces overflow scrolling after 7 list items with an icon"
+		},
+		{
+			"selector": "slds-dropdown_length-with-icon-10",
+			"component": "Docked Composer",
+			"summary": "Forces overflow scrolling after 10 list items with an icon"
+		},
+		{
+			"selector": "slds-dropdown_inverse",
+			"component": "Docked Composer",
+			"summary": "Theme"
+		},
+		{
+			"selector": "slds-dropdown__header",
+			"component": "Docked Composer",
+			"summary": "Adds padding to area above dropdown menu list"
+		},
+		{
+			"selector": "slds-dropdown__item",
+			"component": "Docked Composer",
+			"summary": "Initializes dropdown item"
+		},
+		{
+			"selector": "slds-is-unsaved",
+			"component": "Docked Composer",
+			"summary": "Dirty state for a nav item"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Docked Composer",
+			"summary": "Places a menu item into an errored state"
+		},
+		{
+			"selector": "slds-has-success",
+			"component": "Docked Composer",
+			"summary": "Places a menu item into a success state"
+		},
+		{
+			"selector": "slds-has-warning",
+			"component": "Docked Composer",
+			"summary": "Places a menu item into a warning state"
+		},
+		{
+			"selector": "slds-icon_selected",
+			"component": "Docked Composer",
+			"summary": "If menu contains menuitemcheckbox then this toggles the selected icon when it is selected"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Docked Composer",
+			"summary": "If menu contains menuitemcheckbox then this handles the selected states"
+		},
+		{
+			"selector": "slds-has-submenu",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-dropdown_submenu",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-dropdown_submenu-left",
+			"component": "Docked Composer",
+			"summary": "Open submenu to the left of the parent menu item"
+		},
+		{
+			"selector": "slds-dropdown_submenu-right",
+			"component": "Docked Composer",
+			"summary": "Open submenu to the right of the parent menu item"
+		},
+		{
+			"selector": "slds-dropdown_submenu-bottom",
+			"component": "Docked Composer",
+			"summary": "Open submenu along the bottom of the parent menu item"
+		},
+		{
+			"selector": "slds-has-notification",
+			"component": "Docked Composer",
+			"summary": "Creates styles for a Tab Item when its tab has new activity in"
+		},
+		{
+			"selector": "slds-indicator_unread",
+			"component": "Docked Composer",
+			"summary": "Unread notification icon"
+		},
+		{
+			"selector": "slds-nubbin_top",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-left",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-right",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-left",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-right",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-top",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-bottom",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-top",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-bottom",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-left-corner",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-left-corner",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_top-right-corner",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_bottom-right-corner",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-top-corner",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-top-corner",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_left-bottom-corner",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-nubbin_right-bottom-corner",
+			"component": "Docked Composer",
+			"summary": ""
+		},
+		{
+			"selector": "slds-tabs_scoped",
+			"component": "Scoped Tabs",
+			"summary": "A scoped tabset style has a closed container with a defined border. Initialize\na scoped tab set by applying the `.slds-tab_scoped` class to the containing\n`<div>` around the tab list and tab panels. The `<ul>` element also requires\nthe class `.slds-tab_scoped__nav` to prevent styles from bleeding into nested tabs."
+		},
+		{
+			"selector": "slds-tabs_scoped__nav",
+			"component": "Scoped Tabs",
+			"summary": "Creates the container for the default tabs"
+		},
+		{
+			"selector": "slds-tabs_scoped__item",
+			"component": "Scoped Tabs",
+			"summary": "Styles each list item as a single tab"
+		},
+		{
+			"selector": "slds-tabs_scoped__link",
+			"component": "Scoped Tabs",
+			"summary": "Styles each actionable element inside each tab item"
+		},
+		{
+			"selector": "slds-tabs_scoped__overflow-button",
+			"component": "Scoped Tabs",
+			"summary": "List item containing the overflow button menu"
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Scoped Tabs",
+			"summary": "Active state for a tab item"
+		},
+		{
+			"selector": "slds-tabs_scoped__content",
+			"component": "Scoped Tabs",
+			"summary": "Styles each tab content wrapper"
+		},
+		{
+			"selector": "slds-tabs_medium",
+			"component": "Scoped Tabs",
+			"summary": "Medium sized tabs"
+		},
+		{
+			"selector": "slds-tabs_large",
+			"component": "Scoped Tabs",
+			"summary": "Large sized tabs"
+		},
+		{
+			"selector": "slds-visual-picker",
+			"component": "Visual Picker",
+			"summary": "Initializes a visual picker component"
+		},
+		{
+			"selector": "slds-visual-picker__figure",
+			"component": "Visual Picker",
+			"summary": "Visual container for icon and text"
+		},
+		{
+			"selector": "slds-is-not-selected",
+			"component": "Visual Picker",
+			"summary": "Non-selected state"
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Visual Picker",
+			"summary": "Selected state"
+		},
+		{
+			"selector": "slds-visual-picker__icon",
+			"component": "Visual Picker",
+			"summary": "Icon within visual picker"
+		},
+		{
+			"selector": "slds-visual-picker__text",
+			"component": "Visual Picker",
+			"summary": "Text within visual picker"
+		},
+		{
+			"selector": "slds-visual-picker_medium",
+			"component": "Visual Picker",
+			"summary": "Size modifier to adjust to the default size of medium"
+		},
+		{
+			"selector": "slds-visual-picker_large",
+			"component": "Visual Picker",
+			"summary": "Size modifier to adjust to the size of large"
+		},
+		{
+			"selector": "slds-visual-picker__body",
+			"component": "Visual Picker",
+			"summary": "Text area that sits outside the visual picker"
+		},
+		{
+			"selector": "slds-visual-picker__text-check",
+			"component": "Visual Picker",
+			"summary": "Checkmark that is visibily toggled when input is checked"
+		},
+		{
+			"selector": "slds-visual-picker_vertical",
+			"component": "Visual Picker",
+			"summary": "Initializes a vertical visual picker component"
+		},
+		{
+			"selector": "slds-box_link",
+			"component": "Visual Picker",
+			"summary": "Checkmark that is visibily toggled when input is checked"
+		},
+		{
+			"selector": "slds-checkbox_add-button",
+			"component": "Checkbox Button",
+			"summary": "Initializes checkbox add button"
+		},
+		{
+			"selector": "slds-checkbox_faux",
+			"component": "Checkbox Button",
+			"summary": "Creates a custom styled checkbox"
+		},
+		{
+			"selector": "slds-trial-header",
+			"component": "Trial Bar",
+			"summary": "Sets styles for trial header bar"
+		},
+		{
+			"selector": "slds-select",
+			"component": "Select",
+			"summary": "Initializes select"
+		},
+		{
+			"selector": "slds-notify_alert",
+			"component": "Alert",
+			"summary": "Initializes alert notification"
+		},
+		{
+			"selector": "slds-notify__close",
+			"component": "Alert",
+			"summary": "Alert close button"
+		},
+		{
+			"selector": "slds-map_container",
+			"component": "Map",
+			"summary": "Map container"
+		},
+		{
+			"selector": "slds-map",
+			"component": "Map",
+			"summary": "3rd party map element found inside of the map container"
+		},
+		{
+			"selector": "slds-rich-text-editor",
+			"component": "Rich Text Editor",
+			"summary": "The default rich text editor contains a minimal amount of text formatting capabilities."
+		},
+		{
+			"selector": "slds-rich-text-editor__toolbar",
+			"component": "Rich Text Editor",
+			"summary": "Container for Rich Text Editor Toolbar"
+		},
+		{
+			"selector": "slds-rich-text-editor__col",
+			"component": "Rich Text Editor",
+			"summary": "Container for Rich Text Editor Toolbar"
+		},
+		{
+			"selector": "slds-rich-text-editor__col_grow",
+			"component": "Rich Text Editor",
+			"summary": "Container for Rich Text Editor Toolbar"
+		},
+		{
+			"selector": "slds-rich-text-editor__toolbar-bottom",
+			"component": "Rich Text Editor",
+			"summary": "Container for Rich Text Editor Bottom Toolbar"
+		},
+		{
+			"selector": "slds-rich-text-editor__select",
+			"component": "Rich Text Editor",
+			"summary": "Container for Rich Text Editor Combobox"
+		},
+		{
+			"selector": "slds-has-focus",
+			"component": "Rich Text Editor",
+			"summary": "Focus state for rich text editor"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Rich Text Editor",
+			"summary": "Error state for rich text editor"
+		},
+		{
+			"selector": "slds-combobox_container",
+			"component": "Combobox",
+			"summary": "Container that manages layout when a listbox of pill options sit next to a combobox search input"
+		},
+		{
+			"selector": "slds-has-selection",
+			"component": "Combobox",
+			"summary": "Apply when a combobox has a selection"
+		},
+		{
+			"selector": "slds-has-icon-only",
+			"component": "Combobox",
+			"summary": "Icon only variant of a combobox"
+		},
+		{
+			"selector": "slds-combobox",
+			"component": "Combobox",
+			"summary": "Container around form element with combobox input"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Combobox",
+			"summary": "Opens listbox dropdown"
+		},
+		{
+			"selector": "slds-combobox__form-element",
+			"component": "Combobox",
+			"summary": "Form element with combobox input"
+		},
+		{
+			"selector": "slds-combobox__input-entity-icon",
+			"component": "Combobox",
+			"summary": "If readonly selection is an entity, use this class"
+		},
+		{
+			"selector": "slds-combobox__input-value",
+			"component": "Combobox",
+			"summary": "Class to target styling the value of a combobox input"
+		},
+		{
+			"selector": "slds-combobox__input",
+			"component": "Combobox",
+			"summary": "Input field within a combobox"
+		},
+		{
+			"selector": "slds-has-focus",
+			"component": "Combobox",
+			"summary": "Force focus state of the input"
+		},
+		{
+			"selector": "slds-has-icon_left",
+			"component": "Combobox",
+			"summary": "Modifier to the combobox when an SVG icon sits adjacent to the combobox form element"
+		},
+		{
+			"selector": "slds-combobox_container__icon",
+			"component": "Combobox",
+			"summary": "Icon that is a direct sibling of a combobox container. This is not the same as an input icon."
+		},
+		{
+			"selector": "slds-has-selection",
+			"component": "Combobox",
+			"summary": "Modifier that notifies the combobox group that a selection has been made"
+		},
+		{
+			"selector": "slds-has-inline-listbox",
+			"component": "Combobox",
+			"summary": "If combo has a selection model that requires a listbox of pills to be displayed\ninside of a combobox"
+		},
+		{
+			"selector": "slds-combobox_container__icon",
+			"component": "Combobox",
+			"summary": "SVG icon that sits adjacent to the combobox form element"
+		},
+		{
+			"selector": " slds-combobox[aria-haspopup=“dialog”]",
+			"component": "Combobox",
+			"summary": ""
+		},
+		{
+			"selector": "slds-has-inline-listbox",
+			"component": "Combobox",
+			"summary": "Container that manages layout when a listbox of pill options sit next to a combobox search input"
+		},
+		{
+			"selector": "slds-has-object-switcher",
+			"component": "Combobox",
+			"summary": "Container that manages layout when a listbox of pill options sit next to a combobox search input"
+		},
+		{
+			"selector": "[readonly]",
+			"component": "Combobox",
+			"summary": "Container that manages layout when a listbox of pill options sit next to a combobox search input"
+		},
+		{
+			"selector": "slds-listbox_selection-group",
+			"component": "Combobox",
+			"summary": "The container of pill selections found inside of a combobox group"
+		},
+		{
+			"selector": "slds-is-expanded",
+			"component": "Combobox",
+			"summary": "Expanded state of a selection group"
+		},
+		{
+			"selector": "slds-listbox-toggle",
+			"component": "Combobox",
+			"summary": "Toggle button to show all of the pill selections"
+		},
+		{
+			"selector": "slds-combobox-group",
+			"component": "Combobox",
+			"summary": "Container for a combobox group"
+		},
+		{
+			"selector": "slds-combobox_object-switcher",
+			"component": "Combobox",
+			"summary": "Modifier that identifies the combobox as the object switcher, applies specific interactions for its context"
+		},
+		{
+			"selector": "slds-has-selection",
+			"component": "Combobox",
+			"summary": "Modifier that notifies the combobox group that a selection has been made"
+		},
+		{
+			"selector": "slds-combobox-addon_start",
+			"component": "Combobox",
+			"summary": "The first combobox in the combobox group"
+		},
+		{
+			"selector": "slds-combobox-addon_end",
+			"component": "Combobox",
+			"summary": "The last combobox in the combobox group"
+		},
+		{
+			"selector": "slds-listbox_selection-group",
+			"component": "Combobox",
+			"summary": "The container of pill selections found inside of a combobox group"
+		},
+		{
+			"selector": "slds-is-expanded",
+			"component": "Combobox",
+			"summary": "Expanded state of a selection group"
+		},
+		{
+			"selector": "slds-listbox-toggle",
+			"component": "Combobox",
+			"summary": "Toggle button to show all of the pill selections"
+		},
+		{
+			"selector": "slds-combobox-group",
+			"component": "Combobox",
+			"summary": "Container that manages layout when a listbox of pill options sit next to a combobox search input"
+		},
+		{
+			"selector": "slds-combobox_object-switcher",
+			"component": "Combobox",
+			"summary": "Modifier that identifies the combobox as the object switcher, applies specific interactions for its context"
+		},
+		{
+			"selector": "slds-has-selection",
+			"component": "Combobox",
+			"summary": "Modifier that notifies the combobox group that a selection has been made"
+		},
+		{
+			"selector": "slds-combobox-addon_start",
+			"component": "Combobox",
+			"summary": "The first combobox in the combobox group"
+		},
+		{
+			"selector": "slds-combobox-addon_end",
+			"component": "Combobox",
+			"summary": "The last combobox in the combobox group"
+		},
+		{
+			"selector": "slds-listbox_selection-group",
+			"component": "Combobox",
+			"summary": "The container of pill selections found inside of a combobox group"
+		},
+		{
+			"selector": "slds-is-expanded",
+			"component": "Combobox",
+			"summary": "Expanded state of a selection group"
+		},
+		{
+			"selector": "slds-listbox-toggle",
+			"component": "Combobox",
+			"summary": "Toggle button to show all of the pill selections"
+		},
+		{
+			"selector": "slds-checkbox_toggle",
+			"component": "Checkbox Toggle",
+			"summary": "Initializes checkbox toggle"
+		},
+		{
+			"selector": "slds-checkbox_faux",
+			"component": "Checkbox Toggle",
+			"summary": "Creates a custom styled checkbox"
+		},
+		{
+			"selector": "slds-checkbox_faux_container",
+			"component": "Checkbox Toggle",
+			"summary": "Container for faux checkbox element"
+		},
+		{
+			"selector": "slds-checkbox_off",
+			"component": "Checkbox Toggle",
+			"summary": "Container for text to show when checkbox is toggle off"
+		},
+		{
+			"selector": "slds-checkbox_off",
+			"component": "Checkbox Toggle",
+			"summary": "Container for text to show when checkbox is toggle on"
+		},
+		{
+			"selector": "slds-context-bar",
+			"component": "Global Navigation",
+			"summary": "Navigation bar wrapper"
+		},
+		{
+			"selector": "slds-context-bar__primary",
+			"component": "Global Navigation",
+			"summary": "Primary zone"
+		},
+		{
+			"selector": "slds-context-bar__secondary",
+			"component": "Global Navigation",
+			"summary": "Secondary zone"
+		},
+		{
+			"selector": "slds-context-bar__vertical-divider",
+			"component": "Global Navigation",
+			"summary": "Manually add a vertical divider between elements"
+		},
+		{
+			"selector": "slds-context-bar__item",
+			"component": "Global Navigation",
+			"summary": "Any item on the horizontal axis of the context nav bar\n\nInteractions such as hovers + active are defaults, bottom of the\nfile deals with light / dark theme thresholds"
+		},
+		{
+			"selector": "slds-has-focus",
+			"component": "Global Navigation",
+			"summary": "Toggled focused class applied via JavaScript"
+		},
+		{
+			"selector": "slds-has-success",
+			"component": "Global Navigation",
+			"summary": "Success notification on a tab"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Global Navigation",
+			"summary": "Error notification on a tab"
+		},
+		{
+			"selector": "slds-has-warning",
+			"component": "Global Navigation",
+			"summary": "Warning notification on a tab"
+		},
+		{
+			"selector": "slds-context-bar__label-action",
+			"component": "Global Navigation",
+			"summary": "Actionable Text Links"
+		},
+		{
+			"selector": "slds-context-bar__app-name",
+			"component": "Global Navigation",
+			"summary": "Styles for application name region"
+		},
+		{
+			"selector": "slds-is-unsaved",
+			"component": "Global Navigation",
+			"summary": "Dirty state for a nav item"
+		},
+		{
+			"selector": "slds-has-notification",
+			"component": "Global Navigation",
+			"summary": "Notifications style - Styling a tab or overflow item to indicate the tab has unread activity"
+		},
+		{
+			"selector": "slds-indicator_unread",
+			"component": "Global Navigation",
+			"summary": "Unread notification icon"
+		},
+		{
+			"selector": "slds-indicator_unsaved",
+			"component": "Global Navigation",
+			"summary": "Unsaved indicator - This can probably be used in other locations as well"
+		},
+		{
+			"selector": "slds-context-bar__object-switcher",
+			"component": "Global Navigation",
+			"summary": "Styles for object switcher region"
+		},
+		{
+			"selector": "slds-indicator-container",
+			"component": "Global Navigation",
+			"summary": "Used to reserve spacing for tab indicators"
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Global Navigation",
+			"summary": "Active state of an item"
+		},
+		{
+			"selector": "slds-context-bar__item_divider-left",
+			"component": "Global Navigation",
+			"summary": "Add a left border to a context bar item"
+		},
+		{
+			"selector": "slds-context-bar__item_divider-right",
+			"component": "Global Navigation",
+			"summary": "Add a right border to a context bar item"
+		},
+		{
+			"selector": "slds-context-bar__icon-action",
+			"component": "Global Navigation",
+			"summary": "Actionable Icons"
+		},
+		{
+			"selector": "slds-context-bar_tabs",
+			"component": "Global Navigation",
+			"summary": "#### Accessibility\n\n**Communicating Status to Screen Readers**\n\nWhen communitcatin tab status updates to the user, unread, warning, error and success notifications should  all employ the same technique to communicate that update to users of assistive technology, who would be otherwise unaware of that status change.\n\nYou should use a single hidden ARIA live region for the entire sub tabs block, the contents of which gets updated each time a sub tab changes its status. The contents should contain a description of the status level and the name of the tab the status change event occured in. The markup would look something like:\n\n`<div className=\"slds-assistive-text\" aria-live=\"polite\">...</div>`\n\nUpon clearing the status on a given tab, you should clear the message from the live region.\n\n**Unread status**\n\nIn order to inform screen readers of new activity in a tab, 2 things should occur.\n\n1. The `title` attribute and `aria-label` on the element that displays the red dot should read **\"New Activity\"**. This will update the text content of the tab to include the \"New Activity\" text: \"New Activity Chat - Customer\".\n\n2. The hidden live region as described above, should have its content updated to **\"New Activity in Tab: [Tab Name Here]\"** to alert the user of new activity in that particular sub tab.\n\n`<span aria-label=\"New Activity\" className=\"slds-indicator_unread\" title=\"New Activity\"></span>`\n\n`<div className=\"slds-assistive-text\" aria-live=\"polite\">New activity in Tab: Chat - Customer</div>`\n\n**Warning, Error and Success Tabs**\n\nWhen you wish to draw attention to a particular tab because something has occurred in that tab that corresponds to an alert level, you can use the `slds-has-warning`, `slds-has-error` or `slds-has-success` class to change the background color and introduce a short pulsing animation to draw attention from the user.\n\nThe icon is updated to match the corresponding alert level, to give an extra way to communicate the level of the status without relying on the use of color alone.\n\nIn this example we show that something inside the tab is about to break a service level agreement in 30 seconds, and we wish to draw the users attention to it to take action.\n\nUpdate the hidden live region with a message that informs the user of the status level, the message and the offending sub tab **[level]: [message] in tab: [tab_name]**.\n\n`<div className=\"slds-assistive-text\" aria-live=\"polite\">Warning: SLA agreement in 30 seconds in tab: Chat - Customer</div>`"
+		},
+		{
+			"selector": "slds-context-bar__item_tab",
+			"component": "Global Navigation",
+			"summary": "Context bar tab items"
+		},
+		{
+			"selector": "slds-is-pinned",
+			"component": "Global Navigation",
+			"summary": "Pinned state - toggles visibility of elements inside of tab"
+		},
+		{
+			"selector": "slds-has-sub-tabs",
+			"component": "Global Navigation",
+			"summary": "Modifier that notifies a parent component that it has sub tabs inside of it"
+		},
+		{
+			"selector": "slds-tabs_default",
+			"component": "Tabs",
+			"summary": "Initializes a default tablist"
+		},
+		{
+			"selector": "slds-tabs_default__nav",
+			"component": "Tabs",
+			"summary": "Creates the container for the default tabs"
+		},
+		{
+			"selector": "slds-tabs_default__item",
+			"component": "Tabs",
+			"summary": "Styles each list item as a single tab"
+		},
+		{
+			"selector": "slds-tabs__item_overflow",
+			"component": "Tabs",
+			"summary": "A tab item that has an overflow menu"
+		},
+		{
+			"selector": "slds-is-active",
+			"component": "Tabs",
+			"summary": "Active state for a tab item"
+		},
+		{
+			"selector": "slds-has-focus",
+			"component": "Tabs",
+			"summary": "Focus state for a tab item"
+		},
+		{
+			"selector": "slds-has-notification",
+			"component": "Tabs",
+			"summary": "Creates styles for a Tab Item when its tab has new activity in"
+		},
+		{
+			"selector": "slds-indicator_unread",
+			"component": "Tabs",
+			"summary": "Unread notification icon"
+		},
+		{
+			"selector": "slds-is-unsaved",
+			"component": "Tabs",
+			"summary": "Creates styles for a Tab Item when its in an unsaved or dirty state"
+		},
+		{
+			"selector": "slds-tabs_default__link",
+			"component": "Tabs",
+			"summary": "Styles each actionable element inside each tab item"
+		},
+		{
+			"selector": "slds-tabs_default__overflow-button",
+			"component": "Tabs",
+			"summary": "List item containing the overflow button menu"
+		},
+		{
+			"selector": "slds-tabs__left-icon",
+			"component": "Tabs",
+			"summary": ""
+		},
+		{
+			"selector": "slds-tabs__right-icon",
+			"component": "Tabs",
+			"summary": ""
+		},
+		{
+			"selector": "slds-tabs_default__content",
+			"component": "Tabs",
+			"summary": "Styles each tab content wrapper"
+		},
+		{
+			"selector": "slds-tabs_medium",
+			"component": "Tabs",
+			"summary": "Medium sized tabs"
+		},
+		{
+			"selector": "slds-tabs_large",
+			"component": "Tabs",
+			"summary": "Large sized tabs"
+		},
+		{
+			"selector": "slds-sub-tabs",
+			"component": "Tabs",
+			"summary": "Subtabs"
+		},
+		{
+			"selector": "slds-sub-tabs__item",
+			"component": "Tabs",
+			"summary": "Subtab item"
+		},
+		{
+			"selector": "slds-indicator-container",
+			"component": "Tabs",
+			"summary": "Used to reserve spacing for tab indicators"
+		},
+		{
+			"selector": "slds-has-success",
+			"component": "Tabs",
+			"summary": "Success notification on a sub tab"
+		},
+		{
+			"selector": "slds-has-error",
+			"component": "Tabs",
+			"summary": "Error notification on a sub tab"
+		},
+		{
+			"selector": "slds-has-warning",
+			"component": "Tabs",
+			"summary": "Warning notification on a sub tab"
+		},
+		{
+			"selector": "slds-tabs-mobile__container",
+			"component": "Tabs",
+			"summary": "Container to hold mobile tabs and their panels"
+		},
+		{
+			"selector": "slds-panel_animated",
+			"component": "Tabs",
+			"summary": "Modifier that changes the display of a panel to hide out of view and animate in when opened"
+		},
+		{
+			"selector": "slds-tabs-mobile",
+			"component": "Tabs",
+			"summary": "Styles the list of tabs for the mobile tab set"
+		},
+		{
+			"selector": "slds-tabs-mobile__item",
+			"component": "Tabs",
+			"summary": "Styles each list item as a single drill-in tab"
+		},
+		{
+			"selector": "slds-combobox-picklist",
+			"component": "Picklist",
+			"summary": ""
+		},
+		{
+			"selector": "slds-button_icon",
+			"component": "Button Icons",
+			"summary": "Creates a button that looks like a plain icon"
+		},
+		{
+			"selector": "slds-button_icon-container",
+			"component": "Button Icons",
+			"summary": "Default width + height for button icon with containers"
+		},
+		{
+			"selector": "slds-button_icon-border",
+			"component": "Button Icons",
+			"summary": "Transparent themed button icon - Button icon has a border with a transparent background"
+		},
+		{
+			"selector": "slds-button_icon-border-inverse",
+			"component": "Button Icons",
+			"summary": "Button icon with border and transparent background, to be used on an inversed background"
+		},
+		{
+			"selector": "slds-button_icon-brand",
+			"component": "Button Icons",
+			"summary": "Branded button icon - Button icon has a filled background with the brand color"
+		},
+		{
+			"selector": "slds-button_icon-border-filled",
+			"component": "Button Icons",
+			"summary": "Neutral themed button icon - Button icon has a border with a filled background"
+		},
+		{
+			"selector": "slds-button_icon-inverse",
+			"component": "Button Icons",
+			"summary": "Bare button icon with no border or background, to be used on an inversed background"
+		},
+		{
+			"selector": "slds-button_icon-error",
+			"component": "Button Icons",
+			"summary": "Error state - Typically used in conjunction with an error toolip"
+		},
+		{
+			"selector": "slds-button_icon-current-color",
+			"component": "Button Icons",
+			"summary": "Apply the current color to the icon contained within"
+		},
+		{
+			"selector": "slds-button_icon-small",
+			"component": "Button Icons",
+			"summary": "Changes a button icon container to be 24x24px"
+		},
+		{
+			"selector": "slds-button_icon-x-small",
+			"component": "Button Icons",
+			"summary": "Changes a button icon container to be 20x20px"
+		},
+		{
+			"selector": "slds-button_icon-xx-small",
+			"component": "Button Icons",
+			"summary": "Changes a button icon container to be 16x16px"
+		},
+		{
+			"selector": "slds-button_icon-more",
+			"component": "Button Icons",
+			"summary": "Creates a button menu icon container that has borders and a filled background"
+		},
+		{
+			"selector": "slds-button_icon-container-more",
+			"component": "Button Icons",
+			"summary": "Creates a button menu icon container that has no borders"
+		},
+		{
+			"selector": "slds-button__icon_hint",
+			"component": "Button Icons",
+			"summary": "A parent class must be put on anything that contains a .slds-button__icon_hint so that the child reacts when the parent is hovered."
+		},
+		{
+			"selector": "slds-button__icon_inverse-hint",
+			"component": "Button Icons",
+			"summary": "A parent class must be put on anything that contains a .slds-button__icon_inverse-hint so that the child reacts when the parent is hovered. This is for a dark background."
+		},
+		{
+			"selector": "slds-is-selected",
+			"component": "Button Icons",
+			"summary": "The stateful button requires the `.slds-button--icon-border` class in addition to the `.slds-button` class.\n\nThe stateful inverse button works just like the stateful button. It requires the `.slds-button--icon-border-inverse` class in addition to the `.slds-button` class.\n\nStateful icons can be toggled on and off and retain their state. JavaScript is used to add the `.slds-is-selected` class to the button when activated.\n\n#### Accessibility\n\nFor accessibility, implement the [ARIA Toggle Button](http://w3c.github.io/aria-practices/#button) concept.\n- Similar to a mute button, the button represents a pressed or unpressed state.\n- Button text doesn't change per state\n- `aria-pressed` is set to `true` or `false`, depending its state"
+		},
+		{
+			"selector": "slds-button_icon-border-filled",
+			"component": "Button Icons",
+			"summary": "Creates a button icon inside of a filled container with a border"
+		},
+		{
+			"selector": "slds-button_icon-border-inverse",
+			"component": "Button Icons",
+			"summary": "Creates a button icon inside of a transparent container with a border on an inversed background"
+		},
+		{
+			"selector": "slds-button_icon-border",
+			"component": "Button Icons",
+			"summary": "Creates a button icon inside of a transparent container with a border"
+		},
+		{
+			"selector": "slds-button_icon-brand",
+			"component": "Button Icons",
+			"summary": "Creates a brand button icon"
+		},
+		{
+			"selector": "slds-button_icon-inverse",
+			"component": "Button Icons",
+			"summary": "Creates a button icon inside of a transparent container with a border on an inversed background"
+		},
+		{
+			"selector": "slds-button_icon-container",
+			"component": "Button Icons",
+			"summary": "Creates a button icon inside of a transparent container"
+		},
+		{
+			"selector": "slds-builder-header_container",
+			"component": "Builder Header",
+			"summary": "Container that fixes the builder header to the top of the viewport, contains builder header element"
+		},
+		{
+			"selector": "slds-builder-header",
+			"component": "Builder Header",
+			"summary": "Creates builder specific global header"
+		},
+		{
+			"selector": "slds-builder-header__item",
+			"component": "Builder Header",
+			"summary": "Direct child descendant item of the builder header"
+		},
+		{
+			"selector": "slds-builder-header__item-label",
+			"component": "Builder Header",
+			"summary": "Label inside of a header item"
+		},
+		{
+			"selector": "slds-builder-header__item-action",
+			"component": "Builder Header",
+			"summary": "Action or label inside of a header item"
+		},
+		{
+			"selector": "slds-builder-header__nav",
+			"component": "Builder Header",
+			"summary": "Container around builder header's nav region"
+		},
+		{
+			"selector": "slds-builder-header__nav-list",
+			"component": "Builder Header",
+			"summary": "List containing navigation items of a builder header"
+		},
+		{
+			"selector": "slds-builder-header__nav-item",
+			"component": "Builder Header",
+			"summary": "Items of the builder headers nav"
+		},
+		{
+			"selector": "slds-builder-header__utilities",
+			"component": "Builder Header",
+			"summary": "Container around builder header's utiltity region containing the back and help links"
+		},
+		{
+			"selector": "slds-builder-toolbar",
+			"component": "Builder Header",
+			"summary": "Builder header toolbar"
+		},
+		{
+			"selector": "slds-builder-toolbar__actions",
+			"component": "Builder Header",
+			"summary": "Region of Builder header toolbar that contains the document actions"
+		},
+		{
+			"selector": "slds-builder-toolbar__item-group",
+			"component": "Builder Header",
+			"summary": "Region containing button icon groups of Builder header toolbar"
+		},
+		{
+			"selector": "slds-timeline__item_expandable",
+			"component": "Activity Timeline",
+			"summary": "Create each expandable activity timeline item in a list"
+		},
+		{
+			"selector": "slds-timeline__item_details",
+			"component": "Activity Timeline",
+			"summary": "Class to show and hide details"
+		},
+		{
+			"selector": "slds-is-open",
+			"component": "Activity Timeline",
+			"summary": "Toggles the visibility of the timeline item"
+		},
+		{
+			"selector": "slds-timeline__item_call",
+			"component": "Activity Timeline",
+			"summary": "Applies line connector for a call timeline item"
+		},
+		{
+			"selector": "slds-timeline__item_email",
+			"component": "Activity Timeline",
+			"summary": "Applies line connector for an email timeline item"
+		},
+		{
+			"selector": "slds-timeline__item_event",
+			"component": "Activity Timeline",
+			"summary": "Applies line connector for an event timeline item"
+		},
+		{
+			"selector": "slds-timeline__item_task",
+			"component": "Activity Timeline",
+			"summary": "Applies line connector for a task timeline item"
+		},
+		{
+			"selector": "slds-timeline__icon",
+			"component": "Activity Timeline",
+			"summary": "Icon associated with timeline item"
+		},
+		{
+			"selector": "slds-timeline__details-action-icon",
+			"component": "Activity Timeline",
+			"summary": "Icon inside of actionable button within an expandable timeline item"
+		}
+	]
+}
