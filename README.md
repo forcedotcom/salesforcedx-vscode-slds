@@ -1,6 +1,6 @@
 # SLDS VS Code Extension
 
-This extension simplifies working with Salesforce Lightning Design System (SLDS) in Aura and Lightning:
+This extension simplifies working with [Salesforce Lightning Design System (SLDS)](https://www.lightningdesignsystem.com/) in Aura and Lightning:
 
 ![The SLDS VS Code Extension at work!](https://media.giphy.com/media/RkbvNrnAsU3GkImW2r/source.gif)
 
