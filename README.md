@@ -1,3 +1,14 @@
-The actual VS Code extension. This includes the LSP and Core code via JAR for now.
+# SLDS VS Code Extension
 
-This extension provides code-editing features for writing and validating Salesforce Lightning Design System (SLDS) in Aura and Lightning markup, JS and CSS. This includes validation with recommended tokens and utility classes, syntax highlighting, code completion and context awareness.
+This extension simplifies working with Salesforce Lightning Design System (SLDS) in Aura and Lightning:
+
+![The SLDS VS Code Extension at work!](https://media.giphy.com/media/RkbvNrnAsU3GkImW2r/source.gif)
+
+With this extension, you get: 
+
+ - Validation with recommended tokens and utility classes
+ - Syntax highlighting
+ - Code completion
+ - Context awareness
+
+We'd love to hear from you! If you have any comments/questions/feedback, please [file an issue](https://github.com/forcedotcom/salesforcedx-vscode-slds/issues) or post in our [wiki](https://github.com/forcedotcom/salesforcedx-vscode-slds/wiki).
