@@ -16,9 +16,15 @@ We'd love to hear from you! If you have any comments/questions/feedback, please 
 ## Brought to you by:
 
 😀 [Ambreen Hasan](https://twitter.com/)
+
 🙃 [Billy Ma](https://twitter.com/)
+
 😆 [Donia Robinson](https://twitter.com/)
+
 😉 [John Earle](https://twitter.com/)
+
 😂 [Kirupa Chinnathambi](https://twitter.com/)
+
 😊 [Matt Holland](https://twitter.com/)
+
 😁 [Sarah Mei](https://twitter.com/)
