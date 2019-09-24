@@ -21,4 +21,4 @@ We'd love to hear from you! If you have any comments/questions/feedback, please 
 😉 [John Earle](https://twitter.com/)\
 😂 [Kirupa Chinnathambi](https://twitter.com/)\
 😊 [Matt Holland](https://twitter.com/)\
-😁 [Sarah Mei](https://twitter.com/)\
+😁 [Sarah Mei](https://twitter.com/)
