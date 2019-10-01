@@ -22,7 +22,8 @@ const outputChannel : vscode.OutputChannel = vscode.window.createOutputChannel(`
 export function activate(context: vscode.ExtensionContext) {
 	// Telemetry service
 	telemetryService.showTelemetryMessage();
-	
+	const extensionHRStart = process.hrtime();
+
 	// SLDS validation language client
 	outputChannel.append(`Starting SLDS ... `);
 	const languageClient : LanguageClient = createLanguageClient(context, outputChannel);
@@ -45,12 +46,16 @@ export function activate(context: vscode.ExtensionContext) {
 	// SLDS var tokens completion provider
 	let varTokens : Disposable = varTokensProvider.register(context);
 	context.subscriptions.push(varTokens);
-	
+
 	// SLDS aura tokens completion provider
 	let auraTokens : Disposable = auraTokensProvider.register(context);
 	context.subscriptions.push(auraTokens);
+
+	// send activationEvent
+	telemetryService.sendExtensionActivationEvent(extensionHRStart);
 }
 
 export function deactivate(): Thenable<void> | undefined {
+	telemetryService.sendExtensionDeactivationEvent()
 	return;
 }

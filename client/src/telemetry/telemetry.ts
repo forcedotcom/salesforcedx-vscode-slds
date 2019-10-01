@@ -76,6 +76,17 @@ export class TelemetryService {
       this.setTelemetryMessageShowed();
     }
   }
+
+  public sendExtensionActivationEvent(hrstart: [number, number]): void {
+    if (this.reporter !== undefined && this.isTelemetryEnabled) {
+      const startupTime = this.getEndHRTime(hrstart);
+      this.reporter.sendTelemetryEvent('activationEvent', {
+        extensionName: EXTENSION_NAME,
+        startupTime
+      });
+    }
+  }
+
   public sendExtensionDeactivationEvent(): void {
     if (this.reporter !== undefined && this.isTelemetryEnabled()) {
       this.reporter.sendTelemetryEvent('deactivationEvent', {
