@@ -82,7 +82,7 @@ export class TelemetryService {
       const startupTime = this.getEndHRTime(hrstart);
       this.reporter.sendTelemetryEvent('activationEvent', {
         extensionName: EXTENSION_NAME,
-        startupTime
+        startupTime: startupTime
       });
     }
   }
@@ -99,7 +99,7 @@ export class TelemetryService {
     if (this.reporter !== undefined && this.isTelemetryEnabled) {
       this.reporter.sendTelemetryEvent('coreError', {
         extensionName: EXTENSION_NAME,
-        errorMsg
+        errorMessage: errorMsg
       });
     }
   }
