@@ -130,4 +130,9 @@ export class TelemetryService {
     }
   }
 
+  private getEndHRTime(hrstart: [number, number]): string {
+    const hrend = process.hrtime(hrstart);
+    return util.format('%d%d', hrend[0], hrend[1] / 1000000);
+  }
+
 }
