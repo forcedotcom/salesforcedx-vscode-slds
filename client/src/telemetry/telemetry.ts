@@ -76,6 +76,17 @@ export class TelemetryService {
       this.setTelemetryMessageShowed();
     }
   }
+
+  public sendExtensionActivationEvent(hrstart: [number, number]): void {
+    if (this.reporter !== undefined && this.isTelemetryEnabled) {
+      const startupTime = this.getEndHRTime(hrstart);
+      this.reporter.sendTelemetryEvent('activationEvent', {
+        extensionName: EXTENSION_NAME,
+        startupTime: startupTime
+      });
+    }
+  }
+
   public sendExtensionDeactivationEvent(): void {
     if (this.reporter !== undefined && this.isTelemetryEnabled()) {
       this.reporter.sendTelemetryEvent('deactivationEvent', {
@@ -88,7 +99,7 @@ export class TelemetryService {
     if (this.reporter !== undefined && this.isTelemetryEnabled) {
       this.reporter.sendTelemetryEvent('coreError', {
         extensionName: EXTENSION_NAME,
-        errorMsg
+        errorMessage: errorMsg
       });
     }
   }
@@ -117,6 +128,11 @@ export class TelemetryService {
     if (this.reporter !== undefined) {
       this.reporter.dispose().catch(err => console.log(err));
     }
+  }
+
+  private getEndHRTime(hrstart: [number, number]): string {
+    const hrend = process.hrtime(hrstart);
+    return util.format('%d%d', hrend[0], hrend[1] / 1000000);
   }
 
 }
