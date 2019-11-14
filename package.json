@@ -1,126 +1,125 @@
 {
-    "name": "slds-validation-vscode",
-    "displayName": "slds-validation-vscode",
-    "publisher": "bma",
-    "description": "Salesforce Design System Vscode Extension",
-    "version": "0.0.4",
-    "repository": {
-        "type": "git",
-        "url": "https://git.soma.salesforce.com/bma/slds-validation-vscode"
-    },
-    "engines": {
-        "vscode": "^1.30.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "salesforce-vscode-slds",
+  "displayName": "Lightning Design System",
+  "publisher": "salesforce",
+  "description": "Salesforce Lightning Design System",
+  "version": "1.0.0",
+  "preview": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forcedotcom/salesforcedx-vscode-slds"
+  },
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./client/out/extension",
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:html",
+    "onLanguage:css"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "slds.enable",
+        "title": "Enable",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable",
+        "title": "Disable",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:density",
+        "title": "Enable Density Tokens & Classes",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:density",
+        "title": "Disable Density Tokens & Classes",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:utility",
+        "title": "Enable Utility Classes",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:utility",
+        "title": "Disable Utility Classes",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:bem",
+        "title": "Enable BEM Suggestion",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:bem",
+        "title": "Disable BEM Suggestion",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:deprecated",
+        "title": "Enable Deprecated Suggestion",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:deprecated",
+        "title": "Disable Deprecated Suggestion",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:invalid",
+        "title": "Enable Invalid Suggestion",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:invalid",
+        "title": "Disable Invalid Suggestion",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:override",
+        "title": "Enable Override Detection",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:override",
+        "title": "Disable Override Detection",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:designToken",
+        "title": "Enable Design Token Suggestion",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:designToken",
+        "title": "Disable Design Token Suggestion",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:autoSuggest",
+        "title": "Enable Auto-Suggestion",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:autoSuggest",
+        "title": "Disable Auto-Suggestion",
+        "category": "SLDS"
+      }
     ],
-    "main": "./client/out/extension",
-    "activationEvents": [
-        "onLanguage:javascript",
-        "onLanguage:html",
-        "onLanguage:css"
-    ],
-    "contributes": {
-        "commands": [
-            {
-                "command": "slds.enable",
-                "title": "Enable",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.disable",
-                "title": "Disable",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.enable:density",
-                "title": "Enable Density Tokens & Classes",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.disable:density",
-                "title": "Disable Density Tokens & Classes",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.enable:utility",
-                "title": "Enable Utility Classes",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.disable:utility",
-                "title": "Disable Utility Classes",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.enable:bem",
-                "title": "Enable BEM Suggestion",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.disable:bem",
-                "title": "Disable BEM Suggestion",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.enable:deprecated",
-                "title": "Enable Deprecated Suggestion",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.disable:deprecated",
-                "title": "Disable Deprecated Suggestion",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.enable:invalid",
-                "title": "Enable Invalid Suggestion",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.disable:invalid",
-                "title": "Disable Invalid Suggestion",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.enable:override",
-                "title": "Enable Override Detection",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.disable:override",
-                "title": "Disable Override Detection",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.enable:designToken",
-                "title": "Enable Design Token Suggestion",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.disable:designToken",
-                "title": "Disable Design Token Suggestion",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.enable:autoSuggest",
-                "title": "Enable Auto-Suggestion",
-                "category": "SLDS"
-            },
-            {
-                "command": "slds.disable:autoSuggest",
-                "title": "Disable Auto-Suggestion",
-                "category": "SLDS"
-            }
-        ],
-        "languages": [
-            {
-                "id": "html",
-                "extensions": [
-                    ".cmp",
-                    ".app"
-                ]
-            }
+    "languages": [
+      {
+        "id": "html",
+        "extensions": [
+          ".cmp",
+          ".app"
         ]
     },
     "devDependencies": {
