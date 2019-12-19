@@ -6,6 +6,7 @@
  */
 
 import vscode = require('vscode');
+import util = require('util');
 import { sfdxCoreSettings } from '../settings';
 import TelemetryReporter from './telemetryReporter';
 import {
