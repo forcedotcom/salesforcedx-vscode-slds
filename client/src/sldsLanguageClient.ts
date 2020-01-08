@@ -108,7 +108,7 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 			}
 
 			args.push('-jar');
-			args.push(path.resolve(context.extensionPath, 'lsp-0.0.1-executable.jar'));
+			args.push(path.resolve(context.extensionPath, 'lsp-0.0.2-executable.jar'));
 			args.push(`--PORT=${port.toString()}`);
 
 			let process = child_process.spawn(javaExecutablePath, args, options);
