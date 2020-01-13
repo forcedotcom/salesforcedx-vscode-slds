@@ -57,7 +57,7 @@ jobs:
 workflows:
   version: 2.1
 
-  # run a build and a windows test on every commit
+  # run a build on every commit
   commit-workflow:
     jobs:
       - build-all
