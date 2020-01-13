@@ -1,0 +1,58 @@
+#
+# CircleCI configuration for salesforcedx-vscode-slds
+#
+#
+version: 2.1
+
+orbs:
+  win: circleci/windows@2.2.0
+
+commands:
+  build-artifacts:
+    description: 'Building and archiving extension artifacts.'
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-v0-{{ checksum "package.json" }}
+      - run: npm install
+      - run:
+          name: 'Compile in production mode'
+          environment:
+            - NODE_ENV: production
+          command: |
+            npm run compile
+      - run:
+          name: 'Packaging extensions'
+          command: npm run vscode:package
+      - run:
+          name: 'Staging artifacts'
+          command: |
+            mkdir extensions
+            find . -name "*.vsix" -type f -exec cp {} ./extensions \;
+      - store_artifacts:
+          path: ./extensions
+      - save_cache:
+          key: dependency-cache-v0-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
+jobs:
+  build-all:
+    description: 'Build artifacts in a non-Windows environment'
+    docker:
+      - image: circleci/node:10.2.0
+    environment:
+      - SFDX_URL_LINUX: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+      - SFDX_AUTOUPDATE_DISABLE: true
+      - SFDX_USE_GENERIC_UNIX_KEYCHAIN: true
+      - SFDX_DOMAIN_RETRY: 300
+    steps:
+      - build-artifacts
+
+workflows:
+  version: 2.1
+
+  # run a build on every commit
+  commit-workflow:
+    jobs:
+      - build-all
