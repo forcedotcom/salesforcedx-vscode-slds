@@ -21,6 +21,6 @@ We'd love to hear from you! If you have any comments/questions/feedback, please 
 🙃 [Billy Ma](https://www.linkedin.com/in/billyma/)\
 😆 [Donia Robinson](https://www.linkedin.com/in/doniarobinson)\
 😉 [John Earle](https://www.linkedin.com/in/johnearle1/)\
-😂 Kirupa Chinnathambi \
-😊 Matt Holland \
+😂 [Kirupa Chinnathambi](https://twitter.com/kirupa) \
+😊 [Matt Holland](https://www.linkedin.com/in/jmattholland)\
 😁 [Sarah Mei](https://twitter.com/sarahmei)
