@@ -33,6 +33,26 @@ export class TelemetryService {
     return TelemetryService.instance;
   }
 
+  public initializeService(context: vscode.ExtensionContext, machineId: string): void {
+    this.context = context;
+    const isDevMode = machineId === 'someValue.machineId';
+    // TelemetryReporter is not initialized if user has disabled telemetry setting.
+    if (this.reporter === undefined && this.isTelemetryEnabled() && !isDevMode) {
+      const extensionPackage = require(this.context.asAbsolutePath(
+        './package.json'
+      ));
+
+      this.reporter = new TelemetryReporter(
+        'salesforcedx-vscode-slds',
+        extensionPackage.version,
+        extensionPackage.aiKey,
+        true
+      );
+
+      this.context.subscriptions.push(this.reporter);
+    }
+  }
+
   public isTelemetryEnabled(): boolean {
     return sfdxCoreSettings.getTelemetryEnabled();
   }
