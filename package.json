@@ -1,6 +1,6 @@
 {
   "name": "salesforce-vscode-slds",
-  "displayName": "Lightning Design System",
+  "displayName": "SLDS Validator",
   "publisher": "salesforce",
   "description": "Salesforce Lightning Design System",
   "version": "1.0.0",
