@@ -21,6 +21,7 @@ const outputChannel : vscode.OutputChannel = vscode.window.createOutputChannel(`
 
 export function activate(context: vscode.ExtensionContext) {
 	// Telemetry service
+	telemetryService.initializeService(context);
 	telemetryService.showTelemetryMessage();
 	const extensionHRStart = process.hrtime();
 

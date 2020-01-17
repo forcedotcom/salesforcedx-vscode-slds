@@ -1,9 +1,11 @@
 {
   "name": "salesforce-vscode-slds",
-  "displayName": "Lightning Design System",
+  "displayName": "SLDS Validator",
   "publisher": "salesforce",
   "description": "Salesforce Lightning Design System",
   "version": "1.0.0",
+  "aiKey": "7344b284-73e5-420e-b680-73333da3e067",
+  "icon": "images/slds_rocket.png",
   "preview": true,
   "repository": {
     "type": "git",
@@ -125,16 +127,16 @@
     ]
   },
   "devDependencies": {
-      "@salesforce/dev-config": "1.4.1",
-      "@types/node": "^10.12.12",
-      "typescript": "^3.2.2",
-      "vsce": "^1.71.0"
+    "@salesforce/dev-config": "1.4.1",
+    "@types/node": "^10.12.12",
+    "typescript": "^3.2.2",
+    "vsce": "^1.71.0"
   },
   "scripts": {
-      "vscode:package": "vsce package",
-      "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
-      "compile": "tsc -b",
-      "watch": "tsc -b -w",
-      "postinstall": "cd client && npm install && cd .."
+    "vscode:package": "vsce package",
+    "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w",
+    "postinstall": "cd client && npm install && cd .."
   }
 }
