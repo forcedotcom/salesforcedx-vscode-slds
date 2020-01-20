@@ -1,7 +1,7 @@
 {
   "name": "salesforce-vscode-slds",
   "displayName": "SLDS Validator",
-  "publisher": "salesforce",
+  "publisher": "slds",
   "description": "Salesforce Lightning Design System",
   "version": "1.0.0",
   "aiKey": "7344b284-73e5-420e-b680-73333da3e067",
