@@ -18,7 +18,7 @@ Before you set up the SLDS Validator, make sure that you have these essentials:
  - [Visual Studio Code](https://code.visualstudio.com/download) v1.26 or later
 
 
-**This extension can be installed as a [standalone](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode) or via the [Salesforce Extension Pack](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode).**
+**This extension can be installed as a [standalone](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforce-vscode-slds) or via the [Salesforce Extension Pack](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode).**
 
 ## Documentation
 
