@@ -36,6 +36,46 @@ commands:
           paths:
             - node_modules
 
+  build-win:
+    description: 'Build for Windows.'
+    steps:
+      - run: git config --global core.autocrlf false
+      - checkout
+      - restore_cache:
+          keys:
+            - dependency-cache-win3-{{ checksum "package.json" }}
+            # if cache for exact version of 'package.json' is not present, then load the most recent cache
+            - dependency-cache-win3-
+      - run:
+          name: 'Install node'
+          shell: bash.exe
+          command: |
+            nvm install $NODE_VERSION
+            nvm use $NODE_VERSION
+            nvm install-latest-npm
+      - run:
+          name: 'Install dependent modules'
+          shell: bash.exe
+          command: |
+            npm config set scripts-prepend-node-path true
+            npm install
+            npm install -g sfdx-cli@7.45.1
+            npm install -g codecov
+            npm install -g junit-merge
+      - run:
+          name: 'Compile'
+          shell: bash.exe
+          command: npm run compile
+      - save_cache:
+          key: dependency-cache-win3-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: 'Run lint'
+          shell: bash.exe
+          command: |
+            npm run lint
+
 jobs:
   build-all:
     description: 'Build artifacts in a non-Windows environment'
@@ -49,6 +89,64 @@ jobs:
     steps:
       - build-artifacts
 
+  run-tests:
+    description: 'Run tests on Windows'
+    executor: win/default
+    environment:
+      - SFDX_AUTOUPDATE_DISABLE: true
+      - SFDX_DOMAIN_RETRY: 300
+      - NODE_VERSION: '12.4.0'
+    parameters:
+      run-unit-tests:
+        type: boolean
+        default: true
+    steps:
+      - build-win
+      - when:
+          condition: << parameters.run-unit-tests >>
+          steps:
+            - run:
+                name: 'Running unit tests'
+                shell: cmd.exe
+                command: npm run test:unit
+      - unless:
+          condition: << parameters.run-unit-tests >>
+          steps:
+            - run:
+                name: 'Authenticate to the default DevHub'
+                shell: bash.exe
+                command: |
+                  echo $SFDX_CI_DEVHUB_JWTKEY | base64 --decode > devhub.key
+                  sfdx force:auth:jwt:grant --clientid ${SFDX_CI_DEVHUB_CLIENTID} --username ${SFDX_CI_DEVHUB_USERNAME} --jwtkeyfile devhub.key --setdefaultdevhubusername --setalias devhub
+                  rm devhub.key
+            - run:
+                name: 'Running integration tests'
+                shell: cmd.exe
+                command: npm run test:integration-tests-without-system-tests
+      - run:
+          name: 'Aggregate test results'
+          shell: bash.exe
+          command: |
+            npm run aggregateJUnit
+            junit-merge -d junit-aggregate -o junit-aggregate.xml
+      - store_test_results:
+          path: ./junit-aggregate/
+      - run:
+          name: 'Generate code coverage'
+          shell: bash.exe
+          command: |
+            codecov --disable=gcov
+      - run:
+          name: 'Fail build for test failures'
+          shell: powershell.exe
+          command: |
+            [xml]$results = Get-Content junit-aggregate.xml
+            $failure = $results.SelectSingleNode("//failure")
+            if ($failure -ne $null) {
+              Write-Host "Forcing build failure due to test failure(s) :'("
+              $host.SetShouldExit(1)
+            }
+
 workflows:
   version: 2.1
 
@@ -56,3 +154,6 @@ workflows:
   commit-workflow:
     jobs:
       - build-all
+      - run-tests:
+          run-unit-tests: true
+          context: vscode-test
