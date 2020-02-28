@@ -89,63 +89,20 @@ jobs:
     steps:
       - build-artifacts
 
-  run-tests:
-    description: 'Run tests on Windows'
+  package-extension:
+    description: 'Packages extenson in a Windows environment'
     executor: win/default
     environment:
       - SFDX_AUTOUPDATE_DISABLE: true
       - SFDX_DOMAIN_RETRY: 300
       - NODE_VERSION: '12.4.0'
-    parameters:
-      run-unit-tests:
-        type: boolean
-        default: true
     steps:
       - build-win
-      - when:
-          condition: << parameters.run-unit-tests >>
-          steps:
-            - run:
-                name: 'Running unit tests'
-                shell: cmd.exe
-                command: npm run test:unit
-      - unless:
-          condition: << parameters.run-unit-tests >>
-          steps:
-            - run:
-                name: 'Authenticate to the default DevHub'
-                shell: bash.exe
-                command: |
-                  echo $SFDX_CI_DEVHUB_JWTKEY | base64 --decode > devhub.key
-                  sfdx force:auth:jwt:grant --clientid ${SFDX_CI_DEVHUB_CLIENTID} --username ${SFDX_CI_DEVHUB_USERNAME} --jwtkeyfile devhub.key --setdefaultdevhubusername --setalias devhub
-                  rm devhub.key
-            - run:
-                name: 'Running integration tests'
-                shell: cmd.exe
-                command: npm run test:integration-tests-without-system-tests
       - run:
-          name: 'Aggregate test results'
+          name: 'Packaging extension'
           shell: bash.exe
           command: |
-            npm run aggregateJUnit
-            junit-merge -d junit-aggregate -o junit-aggregate.xml
-      - store_test_results:
-          path: ./junit-aggregate/
-      - run:
-          name: 'Generate code coverage'
-          shell: bash.exe
-          command: |
-            codecov --disable=gcov
-      - run:
-          name: 'Fail build for test failures'
-          shell: powershell.exe
-          command: |
-            [xml]$results = Get-Content junit-aggregate.xml
-            $failure = $results.SelectSingleNode("//failure")
-            if ($failure -ne $null) {
-              Write-Host "Forcing build failure due to test failure(s) :'("
-              $host.SetShouldExit(1)
-            }
+            npm run vscode:package
 
 workflows:
   version: 2.1
@@ -154,6 +111,4 @@ workflows:
   commit-workflow:
     jobs:
       - build-all
-      - run-tests:
-          run-unit-tests: true
-          context: vscode-test
+      - package-extension
