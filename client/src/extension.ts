@@ -57,6 +57,6 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export function deactivate(): Thenable<void> | undefined {
-	telemetryService.sendExtensionDeactivationEvent()
+	telemetryService.sendExtensionDeactivationEvent();
 	return;
 }

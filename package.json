@@ -137,6 +137,7 @@
     "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
     "compile": "tsc -b",
     "watch": "tsc -b -w",
-    "postinstall": "cd client && npm install && cd .."
+    "postinstall": "cd client && npm install && cd ..",
+    "lint": "tslint --project tslint.json"
   }
 }
