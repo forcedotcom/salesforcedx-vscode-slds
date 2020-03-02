@@ -59,7 +59,7 @@ commands:
           command: |
             npm config set scripts-prepend-node-path true
             npm install
-            npm install -g sfdx-cli@7.45.1
+            npm install -g sfdx-cli@latest
             npm install -g codecov
             npm install -g junit-merge
       - run:
