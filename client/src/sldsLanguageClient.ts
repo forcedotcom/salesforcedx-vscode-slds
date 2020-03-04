@@ -99,7 +99,7 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 			const { port } = server.address() as net.AddressInfo;
 			console.log('Listening on port ' + port);
 
-			let args = []
+			let args = [];
 			
 			if (DEBUG) {
 				args.push('-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044');
@@ -128,7 +128,7 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 			outputChannel.appendLine(`Storing LSP server log in '${logFile}'`);
 		});
 	});
-};
+}
 
 function createClientOptions(outputChannel: OutputChannel): LanguageClientOptions {
 	// Options to control the language client
@@ -146,6 +146,6 @@ function createClientOptions(outputChannel: OutputChannel): LanguageClientOption
 export function createLanguageClient(context: ExtensionContext, outputChannel: OutputChannel): LanguageClient {
 	let serverOptions = createServerOptions(context, outputChannel);
 	let clientOptions = createClientOptions(outputChannel);
-	let client = new LanguageClient('sldsValidation', 'SLDS Validation', serverOptions, clientOptions)
+	let client = new LanguageClient('sldsValidation', 'SLDS Validation', serverOptions, clientOptions);
 	return client;
 }

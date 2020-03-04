@@ -36,6 +36,46 @@ commands:
           paths:
             - node_modules
 
+  build-win:
+    description: 'Build for Windows.'
+    steps:
+      - run: git config --global core.autocrlf false
+      - checkout
+      - restore_cache:
+          keys:
+            - dependency-cache-win3-{{ checksum "package.json" }}
+            # if cache for exact version of 'package.json' is not present, then load the most recent cache
+            - dependency-cache-win3-
+      - run:
+          name: 'Install node'
+          shell: bash.exe
+          command: |
+            nvm install $NODE_VERSION
+            nvm use $NODE_VERSION
+            nvm install-latest-npm
+      - run:
+          name: 'Install dependent modules'
+          shell: bash.exe
+          command: |
+            npm config set scripts-prepend-node-path true
+            npm install
+            npm install -g sfdx-cli@latest
+            npm install -g codecov
+            npm install -g junit-merge
+      - run:
+          name: 'Compile'
+          shell: bash.exe
+          command: npm run compile
+      - save_cache:
+          key: dependency-cache-win3-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: 'Run lint'
+          shell: bash.exe
+          command: |
+            npm run lint
+
 jobs:
   build-all:
     description: 'Build artifacts in a non-Windows environment'
@@ -49,6 +89,21 @@ jobs:
     steps:
       - build-artifacts
 
+  package-extension:
+    description: 'Packages extenson in a Windows environment'
+    executor: win/default
+    environment:
+      - SFDX_AUTOUPDATE_DISABLE: true
+      - SFDX_DOMAIN_RETRY: 300
+      - NODE_VERSION: '12.4.0'
+    steps:
+      - build-win
+      - run:
+          name: 'Packaging extension'
+          shell: bash.exe
+          command: |
+            npm run vscode:package
+
 workflows:
   version: 2.1
 
@@ -56,3 +111,4 @@ workflows:
   commit-workflow:
     jobs:
       - build-all
+      - package-extension
