@@ -129,7 +129,11 @@
   "devDependencies": {
     "@salesforce/dev-config": "1.4.1",
     "@types/node": "^10.12.12",
-    "typescript": "^3.2.2",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "typescript": "^3.8.3",
     "vsce": "^1.71.0"
   },
   "scripts": {
@@ -138,6 +142,7 @@
     "compile": "tsc -b",
     "watch": "tsc -b -w",
     "postinstall": "cd client && npm install && cd ..",
-    "lint": "tslint --project tslint.json"
-  }
+    "lint": "eslint --format 'node_modules/eslint-friendly-formatter' client/src/**/*.ts"
+  },
+  "dependencies": {}
 }

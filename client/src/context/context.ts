@@ -8,49 +8,52 @@
 import * as vscode from 'vscode';
 import { ContextKey } from './contextKey';
 import { LanguageClient } from 'vscode-languageclient';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Context } from 'vm';
 
 interface State {
-	key: ContextKey;
-	value: boolean;
+  key: ContextKey;
+  value: boolean;
 }
 
 export class SLDSContext {
-	context : vscode.ExtensionContext;
-	languageClient: LanguageClient;
+  context: vscode.ExtensionContext;
+  languageClient: LanguageClient;
 
-	constructor(context: vscode.ExtensionContext, languageClient: LanguageClient) {
-		this.context = context;
-		this.languageClient = languageClient;
+  constructor(context: vscode.ExtensionContext, languageClient: LanguageClient) {
+    this.context = context;
+    this.languageClient = languageClient;
 
-		this.syncServer();
-	}
+    this.syncServer();
+  }
 
-	private syncServer() : void {
-		this.languageClient.onReady().then(() => {
-			for (var key in  ContextKey) {
-				const contextKey : ContextKey = <ContextKey>key;
-				const value = SLDSContext.isEnable(this.context, contextKey);
-				this.languageClient.sendNotification('state/updateState', {key, value});
-			}
-		});
-	}
+  private syncServer(): void {
+    this.languageClient.onReady().then(() => {
+      for (const key in  ContextKey) {
+        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+        const contextKey: ContextKey = <ContextKey>key;
+        const value = SLDSContext.isEnable(this.context, contextKey);
+        this.languageClient.sendNotification('state/updateState', {key, value});
+      }
+    });
+  }
 
-	public updateState(key: ContextKey, value: boolean) {
-		this.context.globalState.update(key, value);
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  public updateState(key: ContextKey, value: boolean) {
+    this.context.globalState.update(key, value);
 
-		this.languageClient.onReady().then(() => {
-			this.languageClient.sendNotification('state/updateState', {key, value});
-		});
-	}
+    this.languageClient.onReady().then(() => {
+      this.languageClient.sendNotification('state/updateState', {key, value});
+    });
+  }
 
-	public static isEnable(context: vscode.ExtensionContext, ... keys: ContextKey[]) : boolean {
-		for (var key in keys) {
-			if (context.globalState.get(key) === false) {
-				return false;
-			}
-		}
+  public static isEnable(context: vscode.ExtensionContext, ... keys: ContextKey[]): boolean {
+    for (const key in keys) {
+      if (context.globalState.get(key) === false) {
+        return false;
+      }
+    }
 
-		return true;
-	}
+    return true;
+  }
 }
