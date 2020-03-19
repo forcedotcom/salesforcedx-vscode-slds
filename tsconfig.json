@@ -3,12 +3,15 @@
 		"module": "commonjs",
 		"target": "es6",
 		"outDir": "out",
-		"rootDir": "./client/src",
+		"rootDir": "src",
 		"lib": [ "es6" ],
 		"sourceMap": true,
 		"composite": true,
 		"declaration": true
 	},
-	"include": ["./client/src"],
-	"exclude": ["node_modules", ".vscode-test"]
+	"include": ["src"],
+	"exclude": ["node_modules", ".vscode-test"],
+	"references": [{
+		"path": "./client", 
+		"composite": true }]
 }
