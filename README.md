@@ -12,6 +12,8 @@ With this extension, you get:
  - Code completion
  - Context awareness
 
+If you are interested in contributing, please take a look at the [CONTRIBUTING](CONTRIBUTING.md) guide.
+
 ## Prerequisites
 Before you set up the SLDS Validator, make sure that you have these essentials:
  - Java. [These instructions](https://developer.salesforce.com/tools/vscode/en/getting-started/java-setup) will guide you how.

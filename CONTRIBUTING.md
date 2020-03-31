@@ -1,8 +1,9 @@
+## BEFORE YOU CONTRIBUTE:
+
+Create a new issue before starting your project so that we can keep track of what you are trying to add/fix. That way, we can also offer suggestions or let you know if there is already an effort in progress.
+
 ## Contributing
 
-1. Create a new issue before starting your project so that we can keep track of
-   what you are trying to add/fix. That way, we can also offer suggestions or
-   let you know if there is already an effort in progress.
 1. Fork this repository.
 1. The [README](README.md) has details on how to set up your environment.
 1. Create a _topic_ branch in your fork based on the correct branch (the **master** branch, see [Branches section](#branches) below). Note, this step is recommended but technically not required if contributing using a fork.
