@@ -83,7 +83,7 @@ export class TelemetryService {
 		if (showTelemetryMessage) {
 			// Show the message and set telemetry to true;
 			const showButtonText = 'Read more';//nls.localize('telemetry_legal_dialog_button_text');
-			const showMessage =  'You agree that Salesforce Extensions for VS Code may collect usage information, user environment, and crash reports for product improvements. Learn how to [opt out](%s).';//,nls.localize('telemetry_legal_dialog_message',TELEMETRY_OPT_OUT_LINK);
+			const showMessage =  util.format('You agree that Salesforce Extensions for VS Code may collect usage information, user environment, and crash reports for product improvements. Learn how to [opt out](%s).',TELEMETRY_OPT_OUT_LINK);
 			vscode.window
 				.showInformationMessage(showMessage, showButtonText)
 				.then(selection => {
