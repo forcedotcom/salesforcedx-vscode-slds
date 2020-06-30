@@ -8,7 +8,13 @@
 import vscode = require('vscode');
 import util = require('util');
 import { sfdxCoreSettings } from '../settings';
+import {
+	disableCLITelemetry,
+	getRootWorkspacePath,
+	isCLITelemetryAllowed
+} from '../util';
 import TelemetryReporter from './telemetryReporter';
+
 import {
 	TELEMETRY_GLOBAL_VALUE,
 	EXTENSION_NAME,
@@ -25,6 +31,7 @@ export class TelemetryService {
 	private static instance: TelemetryService;
 	private context: vscode.ExtensionContext | undefined;
 	private reporter: TelemetryReporter | undefined;
+	private cliAllowsTelemetry: boolean = true;
 
 	public static getInstance() {
 		if (!TelemetryService.instance) {
@@ -33,8 +40,9 @@ export class TelemetryService {
 		return TelemetryService.instance;
 	}
 
-	public initializeService(context: vscode.ExtensionContext): void {
+	public async initializeService(context: vscode.ExtensionContext): Promise<void> {
 		this.context = context;
+		this.cliAllowsTelemetry = await this.checkCliTelemetry();
 		const machineId = vscode && vscode.env ? vscode.env.machineId : 'someValue.machineId';
 		const isDevMode = machineId === 'someValue.machineId';
 		// TelemetryReporter is not initialized if user has disabled telemetry setting.
@@ -52,10 +60,12 @@ export class TelemetryService {
 
 			this.context.subscriptions.push(this.reporter);
 		}
+
+		this.setCliTelemetryEnabled(this.isTelemetryEnabled());
 	}
 
 	public isTelemetryEnabled(): boolean {
-		return sfdxCoreSettings.getTelemetryEnabled();
+		return sfdxCoreSettings.getTelemetryEnabled() && this.cliAllowsTelemetry;
 	}
 
 	private getHasTelemetryMessageBeenShown(): boolean {
@@ -66,6 +76,16 @@ export class TelemetryService {
 		const sfdxTelemetryState = this.context.globalState.get(TELEMETRY_GLOBAL_VALUE);
 
 		return typeof sfdxTelemetryState === 'undefined';
+	}
+
+	public async checkCliTelemetry(): Promise<boolean> {
+		return await isCLITelemetryAllowed(getRootWorkspacePath());
+	}
+
+	public setCliTelemetryEnabled(isEnabled: boolean) {
+		if (!isEnabled) {
+			disableCLITelemetry();
+		}
 	}
 
 	private setTelemetryMessageShowed(): void {
@@ -83,7 +103,7 @@ export class TelemetryService {
 		if (showTelemetryMessage) {
 			// Show the message and set telemetry to true;
 			const showButtonText = 'Read more';//nls.localize('telemetry_legal_dialog_button_text');
-			const showMessage =  util.format('You agree that Salesforce Extensions for VS Code may collect usage information, user environment, and crash reports for product improvements. Learn how to [opt out](%s).',TELEMETRY_OPT_OUT_LINK);
+			const showMessage = util.format('You agree that Salesforce Extensions for VS Code may collect usage information, user environment, and crash reports for product improvements. Learn how to [opt out](%s).', TELEMETRY_OPT_OUT_LINK);
 			vscode.window
 				.showInformationMessage(showMessage, showButtonText)
 				.then(selection => {
