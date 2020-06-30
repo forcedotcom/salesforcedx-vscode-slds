@@ -5,7 +5,7 @@
   "description": "Salesforce Lightning Design System",
   "version": "1.1.0",
   "aiKey": "7344b284-73e5-420e-b680-73333da3e067",
-  "icon": "images/salesforce_cloud.png",
+  "icon": "images/slds-icon.png",
   "preview": true,
   "repository": {
     "type": "git",
