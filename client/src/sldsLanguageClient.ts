@@ -13,6 +13,7 @@ import * as net from 'net';
 import * as child_process from "child_process";
 import { workspace, ExtensionContext, OutputChannel } from 'vscode';
 import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-languageclient';
+import { Transform, TransformCallback } from 'stream';
 
 declare var v8debug: any;
 const DEBUG = (typeof v8debug === 'object') || startedInDebugMode();
@@ -77,9 +78,27 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 		var server = net.createServer((socket) => {
 			outputChannel.appendLine("SLDS Started");
 
+			const matcher = /("character":1.7976931348623157e\+308)/;
+			const javaMaxIntValue = 2147483647;
+			const replacer = '"character":' + javaMaxIntValue + '}}';
+			
+			// Temporary solution for an LWC plugin issue where the end character range is too large for SLDS LSP server.
+			let filteredDuplex = new class extends Transform {
+				_transform(chunk: any, encoding: string, callback: TransformCallback) {
+					let buf = Buffer.from(chunk).toString();
+					buf = buf.replace(matcher, replacer);
+					chunk = Buffer.from(buf);
+								
+					this.push(chunk, encoding);
+					callback();
+				}
+			} ();
+
+			filteredDuplex.pipe(socket);
+
 			resolve({
 				reader: socket,
-				writer: socket
+				writer: filteredDuplex
 			});
 		})
 		.on('end', () => console.log("Disconnected"))
