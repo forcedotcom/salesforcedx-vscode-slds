@@ -35,31 +35,47 @@ function startedInDebugMode(): boolean {
 // MIT Licensed code from: https://github.com/georgewfraser/vscode-javac
 function findJavaExecutable(binname: string) {
 	binname = correctBinname(binname);
+	
+	// First search if they have an existing java.home Apex setting
+	let javaApexConfig: string | undefined = readJavaConfig();
+	if (javaApexConfig) {
+		const binpath = findBinPath(javaApexConfig, binname);
+		if (binpath) return binpath;
+	}
 
-	// First search each JAVA_HOME bin folder
+	// Then search each JAVA_HOME bin folder
 	if (process.env['JAVA_HOME']) {
-		let workspaces = process.env['JAVA_HOME'].split(path.delimiter);
-		for (let i = 0; i < workspaces.length; i++) {
-			let binpath = path.join(workspaces[i], 'bin', binname);
-			if (fs.existsSync(binpath)) {
-				return binpath;
-			}
-		}
+		const binpath = findBinPath(process.env['JAVA_HOME'], binname);
+		if (binpath) return binpath;
 	}
 
-	// Then search PATH parts
-	if (process.env['PATH']) {
-		let pathparts = process.env['PATH'].split(path.delimiter);
-		for (let i = 0; i < pathparts.length; i++) {
-			let binpath = path.join(pathparts[i], binname);
-			if (fs.existsSync(binpath)) {
-				return binpath;
-			}
-		}
+	// Then search each JDK_HOME bin folder
+	if (process.env['JDK_HOME']) {
+		const binpath = findBinPath(process.env['JDK_HOME'], binname);
+		if (binpath) return binpath;
 	}
 
-	// Else return the binary name directly (this will likely always fail downstream) 
+	// Else return the binary name directly (this will likely always fail downstream)
 	return null;
+}
+
+function findBinPath(config: string, binname: string) {
+	let workspaces = config.split(path.delimiter);
+
+	for (let i = 0; i < workspaces.length; i++) {
+		let binpath = path.join(workspaces[i], 'bin', binname);
+		if (fs.existsSync(binpath)) {
+			return binpath;
+		}
+	}
+
+	return null;
+}
+
+function readJavaConfig(): string {
+	const config = workspace.getConfiguration();
+	// console.log(config.get<string>('salesforcedx-vscode-slds.java.home', ''));
+	return config.get<string>('salesforcedx-vscode-apex.java.home', '');
 }
 
 function correctBinname(binname: string) {
