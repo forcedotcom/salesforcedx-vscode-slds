@@ -1,180 +1,227 @@
 /*
  * Copyright (c) 2018, salesforce.com, inc.
  * All rights reserved.
- * SPDX-License-Identifier: BSD-3-Clause
- * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ * Licensed under the BSD 3-Clause license.
+ * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 
-import vscode = require('vscode');
-import util = require('util');
+import * as util from 'util';
+import { TELEMETRY_OPT_OUT_LINK } from '../constants';
+import { nls } from '../messages';
 import { sfdxCoreSettings } from '../settings';
 import {
-	disableCLITelemetry,
-	getRootWorkspacePath,
-	isCLITelemetryAllowed
+  disableCLITelemetry,
+  getRootWorkspacePath,
+  isCLITelemetryAllowed,
 } from '../util';
 import TelemetryReporter from './telemetryReporter';
+import vscode = require('vscode');
 
-import {
-	TELEMETRY_GLOBAL_VALUE,
-	EXTENSION_NAME,
-	TELEMETRY_OPT_OUT_LINK
-} from '../constants';
+const TELEMETRY_GLOBAL_VALUE = 'sfdxTelemetryMessage';
+const EXTENSION_NAME = 'salesforcedx-vscode-core'; //TODO: change
 
 interface CommandMetric {
-	extensionName: string;
-	commandName: string;
-	executionTime?: string;
+  extensionName: string;
+  commandName: string;
+  executionTime?: string;
+}
+
+export interface Measurements {
+  [key: string]: number;
+}
+
+export interface Properties {
+  [key: string]: string;
+}
+
+export interface TelemetryData {
+  properties?: Properties;
+  measurements?: Measurements;
 }
 
 export class TelemetryService {
-	private static instance: TelemetryService;
-	private context: vscode.ExtensionContext | undefined;
-	private reporter: TelemetryReporter | undefined;
-	private cliAllowsTelemetry: boolean = true;
+  private static instance: TelemetryService;
+  private context: vscode.ExtensionContext | undefined;
+  private reporter: TelemetryReporter | undefined;
+  private cliAllowsTelemetry: boolean = true;
 
-	public static getInstance() {
-		if (!TelemetryService.instance) {
-			TelemetryService.instance = new TelemetryService();
-		}
-		return TelemetryService.instance;
-	}
+  public static getInstance() {
+    if (!TelemetryService.instance) {
+      TelemetryService.instance = new TelemetryService();
+    }
+    return TelemetryService.instance;
+  }
 
-	public async initializeService(context: vscode.ExtensionContext): Promise<void> {
-		this.context = context;
-		this.cliAllowsTelemetry = await this.checkCliTelemetry();
-		const machineId = vscode && vscode.env ? vscode.env.machineId : 'someValue.machineId';
-		const isDevMode = machineId === 'someValue.machineId';
-		// TelemetryReporter is not initialized if user has disabled telemetry setting.
-		if (this.reporter === undefined && this.isTelemetryEnabled() && !isDevMode) {
-			const extensionPackage = require(this.context.asAbsolutePath(
-				'./package.json'
-			));
+  public async initializeService(
+    context: vscode.ExtensionContext,
+    machineId: string
+  ): Promise<void> {
+    this.context = context;
+    this.cliAllowsTelemetry = await this.checkCliTelemetry();
+    const isDevMode = machineId === 'someValue.machineId';
+    // TelemetryReporter is not initialized if user has disabled telemetry setting.
+    if (
+      this.reporter === undefined &&
+      this.isTelemetryEnabled() &&
+      !isDevMode
+    ) {
+      const extensionPackage = require(this.context.asAbsolutePath(
+        './package.json'
+      ));
 
-			this.reporter = new TelemetryReporter(
-				extensionPackage.name,
-				extensionPackage.version,
-				extensionPackage.aiKey,
-				true
-			);
+      this.reporter = new TelemetryReporter(
+        'salesforcedx-vscode',
+        extensionPackage.version,
+        extensionPackage.aiKey,
+        true
+      );
+      this.context.subscriptions.push(this.reporter);
+    }
 
-			this.context.subscriptions.push(this.reporter);
-		}
+    this.setCliTelemetryEnabled(this.isTelemetryEnabled());
+  }
 
-		this.setCliTelemetryEnabled(this.isTelemetryEnabled());
-	}
+  public getReporter(): TelemetryReporter | undefined {
+    return this.reporter;
+  }
 
-	public isTelemetryEnabled(): boolean {
-		return sfdxCoreSettings.getTelemetryEnabled() && this.cliAllowsTelemetry;
-	}
+  public isTelemetryEnabled(): boolean {
+    return sfdxCoreSettings.getTelemetryEnabled() && this.cliAllowsTelemetry;
+  }
 
-	private getHasTelemetryMessageBeenShown(): boolean {
-		if (this.context === undefined) {
-			return true;
-		}
+  private getHasTelemetryMessageBeenShown(): boolean {
+    if (this.context === undefined) {
+      return true;
+    }
 
-		const sfdxTelemetryState = this.context.globalState.get(TELEMETRY_GLOBAL_VALUE);
+    const sfdxTelemetryState = this.context.globalState.get(
+      TELEMETRY_GLOBAL_VALUE
+    );
 
-		return typeof sfdxTelemetryState === 'undefined';
-	}
+    return typeof sfdxTelemetryState === 'undefined';
+  }
 
-	public async checkCliTelemetry(): Promise<boolean> {
-		return await isCLITelemetryAllowed(getRootWorkspacePath());
-	}
+  private setTelemetryMessageShowed(): void {
+    if (this.context === undefined) {
+      return;
+    }
 
-	public setCliTelemetryEnabled(isEnabled: boolean) {
-		if (!isEnabled) {
-			disableCLITelemetry();
-		}
-	}
+    this.context.globalState.update(TELEMETRY_GLOBAL_VALUE, true);
+  }
 
-	private setTelemetryMessageShowed(): void {
-		if (this.context === undefined) {
-			return;
-		}
+  public showTelemetryMessage() {
+    // check if we've ever shown Telemetry message to user
+    const showTelemetryMessage = this.getHasTelemetryMessageBeenShown();
 
-		this.context.globalState.update(TELEMETRY_GLOBAL_VALUE, true);
-	}
+    if (showTelemetryMessage) {
+      // Show the message and set telemetry to true;
+      const showButtonText = nls.localize('telemetry_legal_dialog_button_text');
+      const showMessage = nls.localize(
+        'telemetry_legal_dialog_message',
+        TELEMETRY_OPT_OUT_LINK
+      );
+      vscode.window
+        .showInformationMessage(showMessage, showButtonText)
+        .then((selection) => {
+          // Open disable telemetry link
+          if (selection && selection === showButtonText) {
+            vscode.commands.executeCommand(
+              'vscode.open',
+              vscode.Uri.parse(TELEMETRY_OPT_OUT_LINK)
+            );
+          }
+        });
+      this.setTelemetryMessageShowed();
+    }
+  }
 
-	public showTelemetryMessage() {
-		// check if we've ever shown Telemetry message to user
-		const showTelemetryMessage = this.getHasTelemetryMessageBeenShown();
+  public sendExtensionActivationEvent(hrstart: [number, number]): void {
+    if (this.reporter !== undefined && this.isTelemetryEnabled) {
+      const startupTime = this.getEndHRTime(hrstart);
+      this.reporter.sendTelemetryEvent(
+        'activationEvent',
+        {
+          extensionName: EXTENSION_NAME,
+        },
+        { startupTime }
+      );
+    }
+  }
 
-		if (showTelemetryMessage) {
-			// Show the message and set telemetry to true;
-			const showButtonText = 'Read more';//nls.localize('telemetry_legal_dialog_button_text');
-			const showMessage = util.format('You agree that Salesforce Extensions for VS Code may collect usage information, user environment, and crash reports for product improvements. Learn how to [opt out](%s).', TELEMETRY_OPT_OUT_LINK);
-			vscode.window
-				.showInformationMessage(showMessage, showButtonText)
-				.then(selection => {
-					// Open disable telemetry link
-					if (selection && selection === showButtonText) {
-						vscode.commands.executeCommand(
-							'vscode.open',
-							vscode.Uri.parse(TELEMETRY_OPT_OUT_LINK)
-						);
-					}
-				});
-			this.setTelemetryMessageShowed();
-		}
-	}
+  public sendExtensionDeactivationEvent(): void {
+    if (this.reporter !== undefined && this.isTelemetryEnabled()) {
+      this.reporter.sendTelemetryEvent('deactivationEvent', {
+        extensionName: EXTENSION_NAME,
+      });
+    }
+  }
 
-	public sendExtensionActivationEvent(hrstart: [number, number]): void {
-		if (this.reporter !== undefined && this.isTelemetryEnabled) {
-			const startupTime = this.getEndHRTime(hrstart);
-			this.reporter.sendTelemetryEvent('activationEvent', {
-				extensionName: EXTENSION_NAME,
-				startupTime: startupTime
-			});
-		}
-	}
+  public sendCommandEvent(
+    commandName?: string,
+    hrstart?: [number, number],
+    properties?: Properties,
+    measurements?: Measurements
+  ): void {
+    if (
+      this.reporter !== undefined &&
+      this.isTelemetryEnabled() &&
+      commandName
+    ) {
+      const baseProperties: CommandMetric = {
+        extensionName: EXTENSION_NAME,
+        commandName,
+      };
+      const aggregatedProps = Object.assign(baseProperties, properties);
 
-	public sendExtensionDeactivationEvent(): void {
-		if (this.reporter !== undefined && this.isTelemetryEnabled()) {
-			this.reporter.sendTelemetryEvent('deactivationEvent', {
-				extensionName: EXTENSION_NAME
-			});
-		}
-	}
+      let aggregatedMeasurements: Measurements | undefined;
+      if (hrstart || measurements) {
+        aggregatedMeasurements = Object.assign({}, measurements);
+        if (hrstart) {
+          aggregatedMeasurements.executionTime = this.getEndHRTime(hrstart);
+        }
+      }
+      this.reporter.sendTelemetryEvent(
+        'commandExecution',
+        aggregatedProps,
+        aggregatedMeasurements
+      );
+    }
+  }
 
-	public sendError(errorMsg: string): void {
-		if (this.reporter !== undefined && this.isTelemetryEnabled) {
-			this.reporter.sendTelemetryEvent('coreError', {
-				extensionName: EXTENSION_NAME,
-				errorMessage: errorMsg
-			});
-		}
-	}
+  public sendException(name: string, message: string): void {
+    if (this.reporter !== undefined && this.isTelemetryEnabled) {
+      this.reporter.sendExceptionEvent(name, message);
+    }
+  }
 
-	public sendEventData(
-		eventName: string,
-		properties?: { [key: string]: string },
-		measures?: { [key: string]: number }
-	): void {
-		if (this.reporter !== undefined && this.isTelemetryEnabled) {
-			this.reporter.sendTelemetryEvent(eventName, properties, measures);
-		}
-	}
+  public sendEventData(
+    eventName: string,
+    properties?: { [key: string]: string },
+    measures?: { [key: string]: number }
+  ): void {
+    if (this.reporter !== undefined && this.isTelemetryEnabled) {
+      this.reporter.sendTelemetryEvent(eventName, properties, measures);
+    }
+  }
 
-	public sendErrorEvent(errorMsg: string, callstack: string): void {
-		if (this.reporter !== undefined && this.isTelemetryEnabled) {
-			this.reporter.sendTelemetryEvent('error', {
-				extensionName: EXTENSION_NAME,
-				errorMessage: errorMsg,
-				errorStack: callstack
-			});
-		}
-	}
+  public dispose(): void {
+    if (this.reporter !== undefined) {
+      this.reporter.dispose().catch((err) => console.log(err));
+    }
+  }
 
-	public dispose(): void {
-		if (this.reporter !== undefined) {
-			this.reporter.dispose().catch(err => console.log(err));
-		}
-	}
+  public getEndHRTime(hrstart: [number, number]): number {
+    const hrend = process.hrtime(hrstart);
+    return Number(util.format('%d%d', hrend[0], hrend[1] / 1000000));
+  }
 
-	private getEndHRTime(hrstart: [number, number]): string {
-		const hrend = process.hrtime(hrstart);
-		return util.format('%d%d', hrend[0], hrend[1] / 1000000);
-	}
+  public async checkCliTelemetry(): Promise<boolean> {
+    return await isCLITelemetryAllowed();
+  }
 
+  public setCliTelemetryEnabled(isEnabled: boolean) {
+    if (!isEnabled) {
+      disableCLITelemetry();
+    }
+  }
 }

@@ -7,14 +7,14 @@
 
 import {
   ForceConfigGet,
-  GlobalCliEnvironment
-} from '@salesforce/salesforcedx-utils-vscode/out/src/cli';
+  GlobalCliEnvironment,
+} from '../packages/salesforcedx-utils-vscode/src/cli';
 import { which } from 'shelljs';
 import { window } from 'vscode';
 import {
   ENV_SFDX_DISABLE_TELEMETRY,
   SFDX_CLI_DOWNLOAD_LINK,
-  SFDX_CONFIG_DISABLE_TELEMETRY
+  SFDX_CONFIG_DISABLE_TELEMETRY,
 } from '../constants';
 import { nls } from '../messages';
 
