@@ -38,17 +38,20 @@ function findJavaExecutable(binname: string) {
 	// First search if they have an existing java.home Apex setting
 	let javaApexConfig: string | undefined = readJavaConfig();
 	if (javaApexConfig) {
-		return findBinPath(javaApexConfig, binname);
+		const binpath = findBinPath(javaApexConfig, binname);
+		if (binpath) return binpath;
 	}
 
 	// Then search each JAVA_HOME bin folder
 	if (process.env['JAVA_HOME']) {
-		return findBinPath(process.env['JAVA_HOME'], binname);
+		const binpath = findBinPath(process.env['JAVA_HOME'], binname);
+		if (binpath) return binpath;
 	}
 
 	// Then search each JDK_HOME bin folder
 	if (process.env['JDK_HOME']) {
-		return findBinPath(process.env['JDK_HOME'], binname);
+		const binpath = findBinPath(process.env['JDK_HOME'], binname);
+		if (binpath) return binpath;
 	}
 
 	// Else return the binary name directly (this will likely always fail downstream)
@@ -65,6 +68,7 @@ function findBinPath(config: string, binname: string) {
 		}
 	}
 
+	return null;
 }
 
 function readJavaConfig(): string {
