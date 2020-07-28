@@ -146,7 +146,7 @@
   "scripts": {
     "vscode:package": "vsce package",
     "vscode:prepublish": "npm run compile",
-    "compile": "tsc -watch -p ./",
+    "compile": "tsc -b",
     "watch": "tsc -b -w",
     "postinstall": "cd client && npm install && cd ..",
     "lint": "tslint --project tslint.json",
