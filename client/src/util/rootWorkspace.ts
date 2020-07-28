@@ -8,15 +8,15 @@
 import { workspace, WorkspaceFolder } from 'vscode';
 
 export function hasRootWorkspace(ws: typeof workspace = workspace) {
-  return ws && ws.workspaceFolders && ws.workspaceFolders.length > 0;
+	return ws && ws.workspaceFolders && ws.workspaceFolders.length > 0;
 }
 
 export function getRootWorkspace(): WorkspaceFolder {
-  return hasRootWorkspace()
-    ? workspace.workspaceFolders![0]
-    : ({} as WorkspaceFolder);
+	return hasRootWorkspace()
+		? workspace.workspaceFolders![0]
+		: ({} as WorkspaceFolder);
 }
 
 export function getRootWorkspacePath(): string {
-  return getRootWorkspace().uri ? getRootWorkspace().uri.fsPath : '';
+	return getRootWorkspace().uri ? getRootWorkspace().uri.fsPath : '';
 }

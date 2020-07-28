@@ -9,39 +9,39 @@ import { ExtensionContext, Memento } from 'vscode';
 //import * as URI from 'uri-js';
 
 class MockMemento implements Memento {
-  private telemetryGS: boolean;
+	private telemetryGS: boolean;
 
-  constructor(setGlobalState: boolean) {
-    this.telemetryGS = setGlobalState;
-  }
+	constructor(setGlobalState: boolean) {
+		this.telemetryGS = setGlobalState;
+	}
 
-  public get(key: string): any {
-    if (this.telemetryGS === true) {
-      return true;
-    }
-    return undefined;
-  }
+	public get(key: string): any {
+		if (this.telemetryGS === true) {
+			return true;
+		}
+		return undefined;
+	}
 
-  public update(key: string, value: any): Promise<void> {
-    return Promise.resolve();
-  }
+	public update(key: string, value: any): Promise<void> {
+		return Promise.resolve();
+	}
 }
 
 export class MockContext implements ExtensionContext {
-  constructor(mm: boolean) {
-    this.globalState = new MockMemento(mm);
-  }
-  public extensionMode = 2; // Development enumeration member
-  public extensionUri;
-  public environmentVariableCollection;
-  public subscriptions: Array<{ dispose(): any }> = [];
-  public workspaceState!: Memento;
-  public globalState: Memento;
-  public extensionPath: string = 'myExtensionPath';
-  public globalStoragePath = 'globalStatePath';
-  public logPath = 'logPath';
-  public asAbsolutePath(relativePath: string): string {
-    return path.join('../../../package.json'); // this should point to the src/package.json
-  }
-  public storagePath: string = 'myStoragePath';
+	constructor(mm: boolean) {
+		this.globalState = new MockMemento(mm);
+	}
+	public extensionMode = 2; // Development enumeration member
+	public extensionUri;
+	public environmentVariableCollection;
+	public subscriptions: Array<{ dispose(): any }> = [];
+	public workspaceState!: Memento;
+	public globalState: Memento;
+	public extensionPath: string = 'myExtensionPath';
+	public globalStoragePath = 'globalStatePath';
+	public logPath = 'logPath';
+	public asAbsolutePath(relativePath: string): string {
+		return path.join('../../../package.json'); // this should point to the src/package.json
+	}
+	public storagePath: string = 'myStoragePath';
 }
