@@ -143,6 +143,9 @@
     "vsce": "^1.71.0",
     "vscode-test": "^1.4.0"
   },
+  "extensionDependencies": [
+    "salesforce.salesforcedx-utils-vscode"
+  ],
   "scripts": {
     "vscode:package": "vsce package",
     "vscode:prepublish": "npm run compile",

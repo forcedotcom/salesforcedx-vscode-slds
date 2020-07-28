@@ -5,61 +5,66 @@
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 
-import {
-  ForceConfigGet,
-  GlobalCliEnvironment,
-} from '../packages/salesforcedx-utils-vscode/src/cli';
+// import {
+// 	ForceConfigGet,
+// 	GlobalCliEnvironment,
+// } from '../packages/salesforcedx-utils-vscode/src/cli';
+import * as vscode from 'vscode';
+const sfdxUtilsExtension = vscode.extensions.getExtension('salesforce.salesforcedx-utils-vscode');
+const ForceConfigGet = sfdxUtilsExtension.exports.ForceConfigGet;
+const GlobalCliEnvironment = sfdxUtilsExtension.exports.GlobalCliEnvironment;
+
 import { which } from 'shelljs';
 import { window } from 'vscode';
 import {
-  ENV_SFDX_DISABLE_TELEMETRY,
-  SFDX_CLI_DOWNLOAD_LINK,
-  SFDX_CONFIG_DISABLE_TELEMETRY,
+	ENV_SFDX_DISABLE_TELEMETRY,
+	SFDX_CLI_DOWNLOAD_LINK,
+	SFDX_CONFIG_DISABLE_TELEMETRY,
 } from '../constants';
 import { nls } from '../messages';
 
 export function isCLIInstalled(): boolean {
-  let isInstalled = false;
-  try {
-    if (which('sfdx')) {
-      isInstalled = true;
-    }
-  } catch (e) {
-    console.error('An error happened while looking for sfdx cli', e);
-  }
-  return isInstalled;
+	let isInstalled = false;
+	try {
+		if (which('sfdx')) {
+			isInstalled = true;
+		}
+	} catch (e) {
+		console.error('An error happened while looking for sfdx cli', e);
+	}
+	return isInstalled;
 }
 
 export function showCLINotInstalledMessage() {
-  const showMessage = nls.localize(
-    'sfdx_cli_not_found',
-    SFDX_CLI_DOWNLOAD_LINK,
-    SFDX_CLI_DOWNLOAD_LINK
-  );
-  window.showWarningMessage(showMessage);
+	const showMessage = nls.localize(
+		'sfdx_cli_not_found',
+		SFDX_CLI_DOWNLOAD_LINK,
+		SFDX_CLI_DOWNLOAD_LINK
+	);
+	window.showWarningMessage(showMessage);
 }
 
 export function isSFDXContainerMode(): boolean {
-  return process.env.SFDX_CONTAINER_MODE ? true : false;
+	return process.env.SFDX_CONTAINER_MODE ? true : false;
 }
 
 export function disableCLITelemetry() {
-  GlobalCliEnvironment.environmentVariables.set(
-    ENV_SFDX_DISABLE_TELEMETRY,
-    'true'
-  );
+	GlobalCliEnvironment.environmentVariables.set(
+		ENV_SFDX_DISABLE_TELEMETRY,
+		'true'
+	);
 }
 
 export async function isCLITelemetryAllowed(
-  projectPath: string
+	projectPath: string
 ): Promise<boolean> {
-  if (isCLIInstalled()) {
-    const forceConfig = await new ForceConfigGet().getConfig(
-      projectPath,
-      SFDX_CONFIG_DISABLE_TELEMETRY
-    );
-    const disabledConfig = forceConfig.get(SFDX_CONFIG_DISABLE_TELEMETRY) || '';
-    return disabledConfig !== 'true';
-  }
-  return true;
+	if (isCLIInstalled()) {
+		const forceConfig = await new ForceConfigGet().getConfig(
+			projectPath,
+			SFDX_CONFIG_DISABLE_TELEMETRY
+		);
+		const disabledConfig = forceConfig.get(SFDX_CONFIG_DISABLE_TELEMETRY) || '';
+		return disabledConfig !== 'true';
+	}
+	return true;
 }

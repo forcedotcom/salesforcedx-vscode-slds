@@ -5,45 +5,48 @@
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 
-import {
-  BASE_FILE_EXTENSION,
-  BASE_FILE_NAME,
-  Config,
-  DEFAULT_LOCALE,
-  Localization,
-  Message,
-} from '../packages/salesforcedx-utils-vscode/src/i18n';
+import * as vscode from 'vscode';
+const sfdxUtilsExtension = vscode.extensions.getExtension('salesforce.salesforcedx-utils-vscode');
 
-function loadMessageBundle(config?: Config): Message {
-  function resolveFileName(locale: string): string {
-    return locale === DEFAULT_LOCALE
-      ? `${BASE_FILE_NAME}.${BASE_FILE_EXTENSION}`
-      : `${BASE_FILE_NAME}.${locale}.${BASE_FILE_EXTENSION}`;
-  }
+const BASE_FILE_EXTENSION = sfdxUtilsExtension.exports.BASE_FILE_EXTENSION;
+const BASE_FILE_NAME = sfdxUtilsExtension.exports.BASE_FILE_NAME;
+const Config = sfdxUtilsExtension.exports.Config;
+const DEFAULT_LOCALE = sfdxUtilsExtension.exports.DEFAULT_LOCALE;
+const Localization = sfdxUtilsExtension.exports.Localization;
+const Message = sfdxUtilsExtension.exports.Message;
 
-  const base = new Message(
-    require(`./${resolveFileName(DEFAULT_LOCALE)}`).messages
-  );
+console.log(sfdxUtilsExtension.exports);
 
-  if (config && config.locale && config.locale !== DEFAULT_LOCALE) {
-    try {
-      const layer = new Message(
-        require(`./${resolveFileName(config.locale)}`).messages,
-        base
-      );
-      return layer;
-    } catch (e) {
-      console.error(`Cannot find ${config.locale}, defaulting to en`);
-      return base;
-    }
-  } else {
-    return base;
-  }
+function loadMessageBundle(config?: typeof Config): typeof Message {
+	function resolveFileName(locale: string): string {
+		return locale === DEFAULT_LOCALE
+			? `${BASE_FILE_NAME}.${BASE_FILE_EXTENSION}`
+			: `${BASE_FILE_NAME}.${locale}.${BASE_FILE_EXTENSION}`;
+	}
+
+	const base = new Message(
+		require(`./${resolveFileName(DEFAULT_LOCALE)}`).messages
+	);
+
+	if (config && config.locale && config.locale !== DEFAULT_LOCALE) {
+		try {
+			const layer = new Message(
+				require(`./${resolveFileName(config.locale)}`).messages,
+				base
+			);
+			return layer;
+		} catch (e) {
+			console.error(`Cannot find ${config.locale}, defaulting to en`);
+			return base;
+		}
+	} else {
+		return base;
+	}
 }
 
-function getNlsConfig(): Config | undefined {
-  const procNlsConfig = process.env.VSCODE_NLS_CONFIG;
-  return procNlsConfig ? JSON.parse(procNlsConfig) : null;
+function getNlsConfig(): typeof Config | undefined {
+	const procNlsConfig = process.env.VSCODE_NLS_CONFIG;
+	return procNlsConfig ? JSON.parse(procNlsConfig) : null;
 }
 
 export const nls = new Localization(loadMessageBundle(getNlsConfig()));
