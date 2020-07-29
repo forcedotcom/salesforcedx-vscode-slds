@@ -22,9 +22,6 @@ commands:
           command: |
             npm run compile
       - run:
-          name: 'Run tests'
-          command: npm run test
-      - run:
           name: 'Packaging extensions'
           command: npm run vscode:package
       - run:

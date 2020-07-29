@@ -52,25 +52,18 @@ export class TelemetryService {
 		return TelemetryService.instance;
 	}
 
-	public async initializeService(
-		context: vscode.ExtensionContext,
-		machineId: string
-	): Promise<void> {
+	public async initializeService(context: vscode.ExtensionContext, machineId: string): Promise<void> {
 		this.context = context;
 		this.cliAllowsTelemetry = await this.checkCliTelemetry();
 		const isDevMode = machineId === 'someValue.machineId';
 		// TelemetryReporter is not initialized if user has disabled telemetry setting.
-		if (
-			this.reporter === undefined &&
-			this.isTelemetryEnabled() &&
-			!isDevMode
-		) {
+		if (this.reporter === undefined && this.isTelemetryEnabled() && !isDevMode) {
 			const extensionPackage = require(this.context.asAbsolutePath(
 				'./package.json'
 			));
 
 			this.reporter = new TelemetryReporter(
-				'salesforcedx-vscode',
+				'salesforcedx-vscode-slds',
 				extensionPackage.version,
 				extensionPackage.aiKey,
 				true

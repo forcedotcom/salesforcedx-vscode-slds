@@ -3,3 +3,6 @@ bin
 target
 out
 .DS_Store
+.vscode-test
+# nyc test coverage
+.nyc_output

@@ -3,20 +3,16 @@
 		"module": "commonjs",
 		"target": "es6",
 		"outDir": "out",
-		"rootDir": "src",
-		"lib": [ "es6" ],
+		"rootDir": ".",
+		"lib": ["es6", "es2017"],
 		"sourceMap": true,
-		"composite": true,
-		"declaration": true
+		"declaration": true,
+		"resolveJsonModule": true
 	},
-	"include": [
-		"src"
-	],
+	"include": ["src/test/", "src/data/*.json"],
 	"exclude": [
 		"node_modules",
-		".vscode-test"
-	],
-	"references": [
-		{ "path": "./client" }
+		".vscode-test",
+		"out"
 	]
 }
