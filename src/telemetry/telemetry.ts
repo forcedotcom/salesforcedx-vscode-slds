@@ -9,16 +9,13 @@ import * as util from 'util';
 import { TELEMETRY_OPT_OUT_LINK } from '../constants';
 import { nls } from '../messages';
 import { sfdxCoreSettings } from '../settings';
-import {
-	disableCLITelemetry,
-	getRootWorkspacePath,
-	isCLITelemetryAllowed,
-} from '../util';
 import TelemetryReporter from './telemetryReporter';
 import vscode = require('vscode');
 
+const sfdxCoreExtension = vscode.extensions.getExtension('salesforce.salesforcedx-vscode-core');
+
 const TELEMETRY_GLOBAL_VALUE = 'sfdxTelemetryMessage';
-const EXTENSION_NAME = 'salesforcedx-vscode-slds'; //TODO: change
+const EXTENSION_NAME = 'salesforcedx-vscode-slds';
 
 interface CommandMetric {
 	extensionName: string;
@@ -209,12 +206,12 @@ export class TelemetryService {
 	}
 
 	public async checkCliTelemetry(): Promise<boolean> {
-		return await isCLITelemetryAllowed(getRootWorkspacePath());
+		return await sfdxCoreExtension.exports.isCLITelemetryAllowed(sfdxCoreExtension.exports.getRootWorkspacePath());
 	}
 
 	public setCliTelemetryEnabled(isEnabled: boolean) {
 		if (!isEnabled) {
-			disableCLITelemetry();
+			sfdxCoreExtension.exports.disableCLITelemetry();
 		}
 	}
 }

@@ -145,7 +145,7 @@
     "vscode-test": "^1.4.0"
   },
   "extensionDependencies": [
-    "salesforce.salesforcedx-utils-vscode"
+    "salesforce.salesforcedx-vscode-core"
   ],
   "scripts": {
     "vscode:package": "vsce package",
