@@ -7,7 +7,6 @@
 
 import * as util from 'util';
 import { TELEMETRY_OPT_OUT_LINK } from '../constants';
-import { nls } from '../messages';
 import { sfdxCoreSettings } from '../settings';
 import TelemetryReporter from './telemetryReporter';
 import vscode = require('vscode');
@@ -104,12 +103,11 @@ export class TelemetryService {
 		const showTelemetryMessage = this.getHasTelemetryMessageBeenShown();
 
 		if (showTelemetryMessage) {
-			// Show the message and setb telemetry to true;
-			const showButtonText = nls.localize('telemetry_legal_dialog_button_text');
-			const showMessage = nls.localize(
-				'telemetry_legal_dialog_message',
-				TELEMETRY_OPT_OUT_LINK
-			);
+			// Show the message and set telemetry to true;
+			let message = sfdxCoreExtension.exports.message;
+			const showButtonText = message["telemetry_legal_dialog_button_text"];
+			const showMessage = message['telemetry_legal_dialog_message'] + TELEMETRY_OPT_OUT_LINK;
+
 			vscode.window
 				.showInformationMessage(showMessage, showButtonText)
 				.then((selection) => {
