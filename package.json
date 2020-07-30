@@ -132,6 +132,9 @@
     "typescript": "^3.2.2",
     "vsce": "^1.71.0"
   },
+  "extensionDependencies": [
+    "salesforce.salesforcedx-vscode-core"
+  ],
   "scripts": {
     "vscode:package": "vsce package",
     "vscode:prepublish": "npm run compile",

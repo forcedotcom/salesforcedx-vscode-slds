@@ -19,9 +19,9 @@ import { telemetryService } from './telemetry';
 
 const outputChannel : vscode.OutputChannel = vscode.window.createOutputChannel(`SLDS`);
 
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
 	// Telemetry service
-	telemetryService.initializeService(context);
+	await telemetryService.initializeService(context);
 	telemetryService.showTelemetryMessage();
 	const extensionHRStart = process.hrtime();
 
