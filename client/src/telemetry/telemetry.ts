@@ -12,8 +12,7 @@ import TelemetryReporter from './telemetryReporter';
 import {
 	TELEMETRY_GLOBAL_VALUE,
 	EXTENSION_NAME,
-	TELEMETRY_OPT_OUT_LINK,
-	SFDX_CONFIG_DISABLE_TELEMETRY
+	TELEMETRY_OPT_OUT_LINK
 } from '../constants';
 
 const sfdxCoreExtension = vscode.extensions.getExtension(

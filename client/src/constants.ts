@@ -19,5 +19,3 @@ export const TELEMETRY_OPT_OUT_LINK = 'https://developer.salesforce.com/tools/vs
 export const PUSH_OR_DEPLOY_ON_SAVE_ENABLED = 'push-or-deploy-on-save.enabled';
 export const RETRIEVE_TEST_CODE_COVERAGE = 'retrieve-test-code-coverage';
 export const SFDX_CLI_DOWNLOAD_LINK = 'https://developer.salesforce.com/tools/sfdxcli';
-export const SFDX_CONFIG_DISABLE_TELEMETRY = 'disableTelemetry';
-export const ENV_SFDX_DISABLE_TELEMETRY = 'SFDX_DISABLE_TELEMETRY';
