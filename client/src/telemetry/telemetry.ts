@@ -15,6 +15,11 @@ import {
 	TELEMETRY_OPT_OUT_LINK
 } from '../constants';
 
+const sfdxCoreExtension = vscode.extensions.getExtension(
+	'salesforce.salesforcedx-vscode-core'
+);
+const sfdxCoreExports = sfdxCoreExtension.exports;
+
 interface CommandMetric {
 	extensionName: string;
 	commandName: string;
@@ -25,6 +30,7 @@ export class TelemetryService {
 	private static instance: TelemetryService;
 	private context: vscode.ExtensionContext | undefined;
 	private reporter: TelemetryReporter | undefined;
+	private cliAllowsTelemetry: boolean = true;
 
 	public static getInstance() {
 		if (!TelemetryService.instance) {
@@ -33,10 +39,12 @@ export class TelemetryService {
 		return TelemetryService.instance;
 	}
 
-	public initializeService(context: vscode.ExtensionContext): void {
+	public async initializeService(context: vscode.ExtensionContext): Promise<void> {
 		this.context = context;
+		this.cliAllowsTelemetry = await sfdxCoreExports.telemetryService.checkCliTelemetry();
 		const machineId = vscode && vscode.env ? vscode.env.machineId : 'someValue.machineId';
 		const isDevMode = machineId === 'someValue.machineId';
+
 		// TelemetryReporter is not initialized if user has disabled telemetry setting.
 		if (this.reporter === undefined && this.isTelemetryEnabled() && !isDevMode) {
 			const extensionPackage = require(this.context.asAbsolutePath(
@@ -55,7 +63,7 @@ export class TelemetryService {
 	}
 
 	public isTelemetryEnabled(): boolean {
-		return sfdxCoreSettings.getTelemetryEnabled();
+		return sfdxCoreSettings.getTelemetryEnabled() && this.cliAllowsTelemetry;
 	}
 
 	private getHasTelemetryMessageBeenShown(): boolean {
@@ -156,5 +164,4 @@ export class TelemetryService {
 		const hrend = process.hrtime(hrstart);
 		return util.format('%d%d', hrend[0], hrend[1] / 1000000);
 	}
-
 }
