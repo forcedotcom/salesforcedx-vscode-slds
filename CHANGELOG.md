@@ -3,6 +3,21 @@ All notable changes to the "slds-validation-vscode" extension will be documented
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.2.0]
+Updates/enhancements:
+- New icon for extension
+- Update Java Detection logic
+- Respect Telemetry disabled via the CLI settings
+- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.4
+
+Security updates:
+- Bump lodash from 4.17.15 to 4.17.19
+
+Bug fixes:
+- Replace large numeric value with java's max int value
+
+Release info: https://github.com/forcedotcom/salesforcedx-vscode-slds/releases/tag/v1.2.0
+
 ## [1.1.0]
 - New LSP version
 - Minor repair to telemetry modal
