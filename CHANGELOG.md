@@ -5,16 +5,18 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [1.2.0]
 Updates/enhancements:
-- New icon for extension: 8477384d796027cea4cd46016d68631436c064c4
-- Update Java Detection logic: c2aef9fd0652701d9233c1e8cf26dd8fd5ffdedb
-- Respect Telemetry disabled via the CLI settings: 762d81e945dda979d6fa7eba175863b463b5f941
+- New icon for extension
+- Update Java Detection logic
+- Respect Telemetry disabled via the CLI settings
 - Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.4
 
 Security updates:
-- Bump lodash from 4.17.15 to 4.17.19: 8902cec101f3198650ec41c1d583a82edcac4448
+- Bump lodash from 4.17.15 to 4.17.19
 
 Bug fixes:
-- Replace large numeric value with java's max int value: 8380fc18567baccc9d59dfc94e5f1691c47d6b13
+- Replace large numeric value with java's max int value
+
+Release info: https://github.com/forcedotcom/salesforcedx-vscode-slds/releases/tag/v1.2.0
 
 ## [1.1.0]
 - New LSP version
