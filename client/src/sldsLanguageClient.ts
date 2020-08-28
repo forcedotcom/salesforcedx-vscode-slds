@@ -19,7 +19,7 @@ declare var v8debug: any;
 const DEBUG = (typeof v8debug === 'object') || startedInDebugMode();
 
 const documentSelector = [
-	{ scheme: 'file', language: 'css' }, 
+	{ scheme: 'file', language: 'css' },
 	{ scheme: 'file', language: 'html' },
 	{ scheme: 'file', language: 'javascript' }
 ];
@@ -143,7 +143,7 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 			}
 
 			args.push('-jar');
-			args.push(path.resolve(context.extensionPath, 'lsp-0.0.4-executable.jar'));
+			args.push(path.resolve(context.extensionPath, 'lsp-0.0.5-executable.jar'));
 			args.push(`--PORT=${port.toString()}`);
 
 			let process = child_process.spawn(javaExecutablePath, args, options);

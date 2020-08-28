@@ -3,6 +3,10 @@ All notable changes to the "slds-validation-vscode" extension will be documented
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+
+## [1.2.1]
+- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.5
+
 ## [1.2.0]
 Updates/enhancements:
 - New icon for extension
