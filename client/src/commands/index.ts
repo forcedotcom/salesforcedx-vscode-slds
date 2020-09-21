@@ -57,5 +57,9 @@ export class Commands {
 			this.context.updateState(ContextKey.AUTO_SUGGEST, true));
 		vscode.commands.registerCommand('slds.disable:autoSuggest', ()=>
 			this.context.updateState(ContextKey.AUTO_SUGGEST, false));
+		vscode.commands.registerCommand('slds.enable:scope', ()=>
+			this.context.updateState(ContextKey.SCOPE, true));
+		vscode.commands.registerCommand('slds.disable:scope', ()=>
+			this.context.updateState(ContextKey.SCOPE, false));
 	}
 }

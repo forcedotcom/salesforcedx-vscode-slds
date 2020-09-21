@@ -10,6 +10,7 @@
 import * as vscode from 'vscode';
 import tokens from './data/tokens.json';
 import {SLDSContext, ContextKey} from './context';
+import { shouldExecuteForDocument } from './utilities';
 
 const Kind = vscode.CompletionItemKind;
 
@@ -63,6 +64,10 @@ export function register(context: vscode.ExtensionContext): vscode.Disposable {
 	const extensionContext = context;
 	const provider = {
 		provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
+			if (!!! shouldExecuteForDocument(extensionContext, document.uri))  {
+				return undefined
+			}
+
 			let triggerRange = SLDSContext.isEnable(extensionContext, ContextKey.GLOBAL, ContextKey.AUTO_SUGGEST, ContextKey.DESIGN_TOKEN)
 				? shouldTriggerCompletions(document, position): false;
 			return triggerRange ? getCompletions(triggerRange) : undefined;

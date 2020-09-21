@@ -114,6 +114,16 @@
         "command": "slds.disable:autoSuggest",
         "title": "Disable Auto-Suggestion",
         "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:scope",
+        "title": "Scope SLDS Validator to run for SFDX Project files",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:scope",
+        "title": "Do not scope SLDS Validator to SFDX Project files",
+        "category": "SLDS"
       }
     ],
     "languages": [
