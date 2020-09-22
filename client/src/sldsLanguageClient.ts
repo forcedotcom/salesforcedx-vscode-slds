@@ -102,10 +102,10 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 			// Temporary solution for an LWC plugin issue where the end character range is too large for SLDS LSP server.
 			let filteredDuplex = new class extends Transform {
 				
-				private data: Array<Buffer> = []
+				private data: Array<Buffer> = [];
 
 				_transform(chunk: Buffer, encoding: string, callback: TransformCallback) {
-					const contentLength = /^Content-Length: /
+					const contentLength = /^Content-Length: /;
 					let buf: string = Buffer.from(chunk).toString();
 
 					/*
@@ -115,15 +115,15 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 					*/
 					if (contentLength.test(buf)) {
 						//content length triggers reset
-						this.data = []
-						this.data.push(chunk)
+						this.data = [];
+						this.data.push(chunk);
 					} else {
-						const sendData: boolean = shouldSendPayloadToServer(context, buf)
+						const sendData: boolean = shouldSendPayloadToServer(context, buf);
 
 						if (sendData) {
 							buf = buf.replace(matcher, replacer);
-							this.data.push(Buffer.from(buf))
-							this.data.forEach((item)=> this.push(item, encoding))
+							this.data.push(Buffer.from(buf));
+							this.data.forEach((item)=> this.push(item, encoding));
 						}
 					}
 
