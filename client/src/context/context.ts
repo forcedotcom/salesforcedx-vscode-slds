@@ -8,15 +8,9 @@
 import * as vscode from 'vscode';
 import { ContextKey } from './contextKey';
 import { LanguageClient } from 'vscode-languageclient';
-import { Context } from 'vm';
-
-interface State {
-	key: ContextKey;
-	value: boolean;
-}
 
 export class SLDSContext {
-	context : vscode.ExtensionContext;
+	context: vscode.ExtensionContext;
 	languageClient: LanguageClient;
 
 	constructor(context: vscode.ExtensionContext, languageClient: LanguageClient) {
@@ -26,12 +20,14 @@ export class SLDSContext {
 		this.syncServer();
 	}
 
-	private syncServer() : void {
+	private syncServer(): void {
 		this.languageClient.onReady().then(() => {
-			for (var key in  ContextKey) {
-				const contextKey : ContextKey = <ContextKey>key;
+			for (var key in ContextKey) {
+				const contextKey: ContextKey = <ContextKey>key;
 				const value = SLDSContext.isEnable(this.context, contextKey);
-				this.languageClient.sendNotification('state/updateState', {key, value});
+				if (SLDSContext.shouldNotifyServerOfContextChange(contextKey)) {
+					this.languageClient.sendNotification('state/updateState', { key, value });
+				}
 			}
 		});
 	}
@@ -39,12 +35,18 @@ export class SLDSContext {
 	public updateState(key: ContextKey, value: boolean) {
 		this.context.globalState.update(key, value);
 
-		this.languageClient.onReady().then(() => {
-			this.languageClient.sendNotification('state/updateState', {key, value});
-		});
+		if (SLDSContext.shouldNotifyServerOfContextChange(key)) {
+			this.languageClient.onReady().then(() => {
+				this.languageClient.sendNotification('state/updateState', { key, value });
+			});
+		}
 	}
 
-	public static isEnable(context: vscode.ExtensionContext, ... keys: ContextKey[]) : boolean {
+	private static shouldNotifyServerOfContextChange(key: ContextKey): boolean {
+		return key !== ContextKey.SCOPE
+	}
+
+	public static isEnable(context: vscode.ExtensionContext, ...keys: ContextKey[]): boolean {
 		for (var key in keys) {
 			if (context.globalState.get(key) === false) {
 				return false;

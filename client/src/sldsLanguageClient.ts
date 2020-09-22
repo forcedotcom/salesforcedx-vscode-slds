@@ -14,6 +14,7 @@ import * as child_process from "child_process";
 import { workspace, ExtensionContext, OutputChannel } from 'vscode';
 import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-languageclient';
 import { Transform, TransformCallback } from 'stream';
+import { shouldSendPayloadToServer } from './utilities';
 
 declare var v8debug: any;
 const DEBUG = (typeof v8debug === 'object') || startedInDebugMode();
@@ -27,7 +28,7 @@ const documentSelector = [
 function startedInDebugMode(): boolean {
 	let args = (process as any).execArgv;
 	if (args) {
-		return args.some((arg: string) => /^--debug=?/.test(arg) || /^--debug-brk=?/.test(arg) || /^--inspect-brk=?/.test(arg));
+		return args.some((arg: string) => /^--debug=?/.test(arg) || /^--debug-brk=?/.test(arg) || /^--inspect=?/.test(arg) || /^--inspect-brk=?/.test(arg));
 	}
 	return false;
 }
@@ -100,12 +101,32 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 			
 			// Temporary solution for an LWC plugin issue where the end character range is too large for SLDS LSP server.
 			let filteredDuplex = new class extends Transform {
-				_transform(chunk: any, encoding: string, callback: TransformCallback) {
-					let buf = Buffer.from(chunk).toString();
-					buf = buf.replace(matcher, replacer);
-					chunk = Buffer.from(buf);
-								
-					this.push(chunk, encoding);
+				
+				private data: Array<Buffer> = []
+
+				_transform(chunk: Buffer, encoding: string, callback: TransformCallback) {
+					const contentLength = /^Content-Length: /
+					let buf: string = Buffer.from(chunk).toString();
+
+					/*
+						JSONRPC send 2 types of messages:
+						1. Header - indicates Content Length
+						2. Payload
+					*/
+					if (contentLength.test(buf)) {
+						//content length triggers reset
+						this.data = []
+						this.data.push(chunk)
+					} else {
+						const sendData: boolean = shouldSendPayloadToServer(context, buf)
+
+						if (sendData) {
+							buf = buf.replace(matcher, replacer);
+							this.data.push(Buffer.from(buf))
+							this.data.forEach((item)=> this.push(item, encoding))
+						}
+					}
+
 					callback();
 				}
 			} ();
