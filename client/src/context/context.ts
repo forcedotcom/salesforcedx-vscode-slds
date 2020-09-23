@@ -43,7 +43,7 @@ export class SLDSContext {
 	}
 
 	private static shouldNotifyServerOfContextChange(key: ContextKey): boolean {
-		return key !== ContextKey.SCOPE
+		return key !== ContextKey.SCOPE;
 	}
 
 	public static isEnable(context: vscode.ExtensionContext, ...keys: ContextKey[]): boolean {

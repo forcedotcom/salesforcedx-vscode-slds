@@ -66,7 +66,7 @@ export function register(context: vscode.ExtensionContext): vscode.Disposable {
 		provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, 
 			token: vscode.CancellationToken, context: vscode.CompletionContext) {
 			if (!!! shouldExecuteForDocument(extensionContext, document.uri))  {
-				return undefined
+				return undefined;
 			}
 	
 			let triggerRange = SLDSContext.isEnable(extensionContext, ContextKey.GLOBAL, ContextKey.AUTO_SUGGEST, ContextKey.DESIGN_TOKEN)

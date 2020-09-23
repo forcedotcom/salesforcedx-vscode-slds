@@ -46,7 +46,7 @@ export function register(context: vscode.ExtensionContext): vscode.Disposable {
 	const provider = {
 		provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
 			if (!!! shouldExecuteForDocument(extensionContext, document.uri))  {
-				return undefined
+				return undefined;
 			}
 			
 			let triggerRange = 
