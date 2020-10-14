@@ -1,8 +1,10 @@
 # Change Log
 All notable changes to the "slds-validation-vscode" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
+## [1.3.0]
+Updates/enhancements:
+- Add File Scope to SLDS Validator
+- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.6
 
 ## [1.2.1]
 - Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.5
