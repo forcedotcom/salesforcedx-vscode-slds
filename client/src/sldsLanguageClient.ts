@@ -153,7 +153,7 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 			let options = { cwd: workspace.rootPath };
 
 			const { port } = server.address() as net.AddressInfo;
-			console.log('Listening on port ' + port);
+			console.log(`Listening on port ${port}`);
 
 			let args = [];
 			
@@ -169,13 +169,12 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 
 			let process = child_process.spawn(javaExecutablePath, args, options);
 
-			// Send raw output to a file
-			// TODO: why is context.storagePath undefined?
-			if (!fs.existsSync(context.storagePath)) {
-				fs.mkdirSync(context.storagePath);
+			const storagePath: string = context.storagePath ? context.storagePath : context.globalStoragePath;
+			if (!fs.existsSync(storagePath)) {
+				fs.mkdirSync(storagePath);
 			}
 
-			let logFile = context.storagePath + '/slds-extension.log';
+			const logFile: string = `${storagePath}/slds-extension.log`;
 			let logStream = fs.createWriteStream(logFile, { flags: 'w' });
 
 			process.stdout.pipe(logStream);

@@ -47,7 +47,7 @@ export class SLDSContext {
 	}
 
 	public static isEnable(context: vscode.ExtensionContext, ...keys: ContextKey[]): boolean {
-		for (var key in keys) {
+		for (let key of keys) {
 			if (context.globalState.get(key) === false) {
 				return false;
 			}
