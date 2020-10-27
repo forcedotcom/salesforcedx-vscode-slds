@@ -24,6 +24,62 @@
     "onLanguage:css"
   ],
   "contributes": {
+    "configuration": {
+      "title": "SLDS Validator",
+      "type": "object",
+      "properties": {
+        "salesforcedx-vscode-slds.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or Disable"
+        },
+        "salesforcedx-vscode-slds.file.scopeWithInSFDX": {
+          "type": "boolean",
+          "default": true,
+          "description": "If enabled, SLDS Validator runs only for SFDX Project files"
+        },
+        "salesforcedx-vscode-slds.enhancements.autoSuggest": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or Disable Auto-Suggestion"
+        },
+        "salesforcedx-vscode-slds.enhancements.density": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or Disable Density Tokens & Classes Suggestion"
+        },
+        "salesforcedx-vscode-slds.enhancements.utilityClasses": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or Disable Utilities Classes Suggestion"
+        },
+        "salesforcedx-vscode-slds.basic.bemNaming": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or Disable BEM Naming Suggestion"
+        },
+        "salesforcedx-vscode-slds.basic.deprecated": {
+          "type": "boolean",
+          "default": null,
+          "description": "Enable or Disable Deprecated Design Tokens Detection"
+        },
+        "salesforcedx-vscode-slds.basic.override": {
+          "type": "boolean",
+          "default": null,
+          "description": "Enable or Disable Override SLDS Utility Classes Detection"
+        },
+        "salesforcedx-vscode-slds.basic.designToken": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or Disable Design Token Suggestion"
+        },
+        "salesforcedx-vscode-slds.basic.invalid": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or Disable Invalid SLDS Utility Classes Detection"
+        }
+      }
+    },
     "commands": [
       {
         "command": "slds.enable",

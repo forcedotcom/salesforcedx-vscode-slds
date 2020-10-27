@@ -118,7 +118,7 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 						this.data = [];
 						this.data.push(chunk);
 					} else {
-						const sendData: boolean = shouldSendPayloadToServer(context, buf);
+						const sendData: boolean = shouldSendPayloadToServer(buf);
 
 						if (sendData) {
 							buf = buf.replace(matcher, replacer);

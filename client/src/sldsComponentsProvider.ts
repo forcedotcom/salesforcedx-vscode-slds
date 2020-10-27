@@ -41,15 +41,14 @@ function getCompletions(range: vscode.Range): vscode.CompletionList {
 	return new vscode.CompletionList(completions, false);
 }
 
-export function register(context: vscode.ExtensionContext): vscode.Disposable {
-	const extensionContext : vscode.ExtensionContext = context;
+export function register(): vscode.Disposable {
 	const provider = {
 		provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
-			if (!!! shouldExecuteForDocument(extensionContext, document.uri))  {
+			if (!!! shouldExecuteForDocument(document.uri))  {
 				return undefined;
 			}
 
-			let triggerRange = SLDSContext.isEnable(extensionContext, ContextKey.GLOBAL, ContextKey.AUTO_SUGGEST) 
+			let triggerRange = SLDSContext.isEnable(ContextKey.GLOBAL, ContextKey.AUTO_SUGGEST) 
 				? shouldTriggerCompletions(document, position) : false;
 			return triggerRange ? getCompletions(triggerRange) : undefined;
 		}

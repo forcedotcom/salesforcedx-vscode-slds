@@ -3,9 +3,9 @@ import { ContextKey, SLDSContext } from './context';
 import * as fs from 'fs';
 import * as path from 'path';
 
-export const shouldExecuteForDocument = (context: vscode.ExtensionContext, uri: vscode.Uri): 
+export const shouldExecuteForDocument = (uri: vscode.Uri): 
 		boolean => {
-		if (SLDSContext.isEnable(context, ContextKey.SCOPE)) {
+		if (SLDSContext.isEnable(ContextKey.SCOPE)) {
 				if (uri.scheme === 'file') {
 						const filePath: Array<string> = uri.fsPath.split(path.sep);
 						const locationOfForceApp: number = filePath.indexOf('force-app');
@@ -21,13 +21,13 @@ export const shouldExecuteForDocument = (context: vscode.ExtensionContext, uri: 
 		return true;
 };
 
-export const shouldSendPayloadToServer = (context: vscode.ExtensionContext, payload: string) : boolean => {
-		if (SLDSContext.isEnable(context, ContextKey.SCOPE)) {
+export const shouldSendPayloadToServer = (payload: string) : boolean => {
+		if (SLDSContext.isEnable(ContextKey.SCOPE)) {
 				const result = payload.match(/"method":"textDocument\/\w+".+"textDocument":{"uri":"([^"]+)"/);
 
 				if (result) {
 						const textDocument: string = result[1];
-						return shouldExecuteForDocument(context, vscode.Uri.parse(textDocument));
+						return shouldExecuteForDocument(vscode.Uri.parse(textDocument));
 				}
 		}
 
