@@ -91,7 +91,15 @@ export class SLDSContext {
 		for (let key of keys) {
 			const value: boolean = workspace.get<boolean>(MAPPINGS.get(key));
 
-			if (!!! value ) {
+			if (value === false ) {
+				return false;
+			}
+
+			/*
+				Disable Utility Class Detection
+				See Issue For More Context: https://github.com/forcedotcom/salesforcedx-slds-lsp/issues/22
+			*/
+			if (key === ContextKey.UTILITY_CLASS) {
 				return false;
 			}
 		}
