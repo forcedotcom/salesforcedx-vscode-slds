@@ -48,11 +48,6 @@
           "default": true,
           "description": "Enable or disable density tokens and classes suggestion"
         },
-        "salesforcedx-vscode-slds.enhancements.utilityClasses": {
-          "type": "boolean",
-          "default": true,
-          "description": "Enable or disable utilities classes suggestion"
-        },
         "salesforcedx-vscode-slds.basic.bemNaming": {
           "type": "boolean",
           "default": true,
@@ -99,16 +94,6 @@
       {
         "command": "slds.disable:density",
         "title": "Disable Density Tokens & Classes",
-        "category": "SLDS"
-      },
-      {
-        "command": "slds.enable:utility",
-        "title": "Enable Utility Classes",
-        "category": "SLDS"
-      },
-      {
-        "command": "slds.disable:utility",
-        "title": "Disable Utility Classes",
         "category": "SLDS"
       },
       {
