@@ -1,6 +1,4 @@
 # Change Log
-All notable changes to the "slds-validation-vscode" extension will be documented in this file.
-
 
 ## [1.4.0]
 Updates/enhancements:
