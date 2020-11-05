@@ -1,5 +1,13 @@
 # Change Log
-All notable changes to the "slds-validation-vscode" extension will be documented in this file.
+
+## [1.4.0]
+Updates/enhancements:
+- [Add settings support to toggle specific validators and when the validator should be ran.](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/42fdaac79a5c0e1273a4562d1cc88f3d3e5552e6)
+
+Bug fixes:
+- [Fixes issues with storagePath if it doesn't  exist.](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/b0c62982b28fd4f01113262d20de2077b3b35eb5)
+- [Turns off Utility class related validations.](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/92685fc6d749399f5d7f1701af2a8a590d7e9b3a)
+- [Update LSP to 0.0.7](https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.7)
 
 ## [1.3.0]
 Updates/enhancements:
