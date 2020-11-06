@@ -2,8 +2,8 @@
 	"name": "slds-lsp-client",
 	"description": "SLDS LSP Client for Vscode",
 	"author": "Salesforce",
-	"version": "0.0.1",
-	"publisher": "bma",
+	"version": "1.3.0",
+	"publisher": "salesforce",
 	"repository": {
 		"type": "git",
 		"url": "https://git.soma.salesforce.com/bma/slds-validation-vscode"

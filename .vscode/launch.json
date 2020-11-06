@@ -14,6 +14,18 @@
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
             "preLaunchTask": "watch client"
-        }
+        },
+        {
+			"name": "Run Extension Tests",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"--extensionTestsPath=${workspaceFolder}/client/out/test/suite/index.js"
+			],
+			"outFiles": ["${workspaceFolder}/client/out/test/**/*.js"],
+			"preLaunchTask": "watch client"
+		}
     ]
 }
