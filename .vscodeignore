@@ -5,3 +5,4 @@ vsc-extension-quickstart.md
 **/*.ts
 **/tsconfig.json
 **/tslint.json
+**/test/**

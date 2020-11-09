@@ -14,17 +14,7 @@ import {
 	EXTENSION_NAME,
 	TELEMETRY_OPT_OUT_LINK
 } from '../constants';
-
-const sfdxCoreExtension = vscode.extensions.getExtension(
-	'salesforce.salesforcedx-vscode-core'
-);
-const sfdxCoreExports = sfdxCoreExtension.exports;
-
-interface CommandMetric {
-	extensionName: string;
-	commandName: string;
-	executionTime?: string;
-}
+import { isCLITelemetryAllowed } from './cliConfiguration';
 
 export class TelemetryService {
 	private static instance: TelemetryService;
@@ -41,7 +31,7 @@ export class TelemetryService {
 
 	public async initializeService(context: vscode.ExtensionContext): Promise<void> {
 		this.context = context;
-		this.cliAllowsTelemetry = await sfdxCoreExports.telemetryService.checkCliTelemetry();
+		this.cliAllowsTelemetry = await isCLITelemetryAllowed();
 		const machineId = vscode && vscode.env ? vscode.env.machineId : 'someValue.machineId';
 		const isDevMode = machineId === 'someValue.machineId';
 
@@ -141,6 +131,12 @@ export class TelemetryService {
 	): void {
 		if (this.reporter !== undefined && this.isTelemetryEnabled) {
 			this.reporter.sendTelemetryEvent(eventName, properties, measures);
+		}
+	}
+
+	public sendException(name: string, message: string): void {
+		if (this.reporter !== undefined && this.isTelemetryEnabled) {
+			this.reporter.sendExceptionEvent(name, message);
 		}
 	}
 

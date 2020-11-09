@@ -3,14 +3,14 @@
 		"module": "commonjs",
 		"target": "es6",
 		"outDir": "out",
-		"rootDir": "src",
+		"rootDir": ".",
 		"lib": [ "es6" ],
 		"sourceMap": true,
 		"composite": true,
 		"declaration": true
 	},
 	"include": [
-		"src"
+		"src", "test"
 	],
 	"exclude": [
 		"node_modules",

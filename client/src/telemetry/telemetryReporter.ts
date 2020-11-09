@@ -114,9 +114,8 @@ export default class TelemetryReporter extends vscode.Disposable {
 		);
 		const cpus = os.cpus();
 		if (cpus && cpus.length > 0) {
-			commonProperties['common.cpus'] = `${cpus[0].model}(${cpus.length} x ${
-				cpus[0].speed
-			})`;
+			commonProperties['common.cpus'] = `${cpus[0].model}(${cpus.length} x ${cpus[0].speed
+				})`;
 		}
 		commonProperties['common.systemmemory'] = `${(
 			os.totalmem() /
@@ -150,6 +149,31 @@ export default class TelemetryReporter extends vscode.Disposable {
 				this.logStream.write(
 					`telemetry/${eventName} ${JSON.stringify({
 						properties,
+						measurements
+					})}\n`
+				);
+			}
+		}
+	}
+
+	public sendExceptionEvent(
+		exceptionName: string,
+		exceptionMessage: string,
+		measurements?: { [key: string]: number }): void {
+		if (this.userOptIn && exceptionMessage && this.appInsightsClient) {
+			const error = new Error();
+			error.name = `${this.extensionId}/${exceptionName}`;
+			error.message = exceptionMessage;
+			error.stack = 'DEPRECATED';
+
+			this.appInsightsClient.trackException({
+				exception: error,
+				measurements
+			});
+
+			if (this.logStream) {
+				this.logStream.write(
+					`telemetry/${exceptionName} ${JSON.stringify({
 						measurements
 					})}\n`
 				);
