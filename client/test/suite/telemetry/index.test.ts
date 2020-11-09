@@ -79,7 +79,7 @@ suite('Telementry', function () {
 		});
 	});
 
-	suite('Order of valuation', () => {
+	suite('Order of evaluation', () => {
 	
 		test('should evaluate at this order: Local Config, Global Config', async () => {
 			const stacks: Array<any> = [];

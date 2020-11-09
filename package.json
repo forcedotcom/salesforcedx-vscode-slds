@@ -196,7 +196,7 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -b",
     "watch": "tsc -b -w",
-    "test": "cd client && node client/out/test/runTest.js && cd ..",
+    "test": "cd client && node out/test/runTest.js && cd ..",
     "postinstall": "cd client && npm install && cd ..",
     "lint": "tslint --project tslint.json"
   }
