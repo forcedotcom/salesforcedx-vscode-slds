@@ -12,7 +12,7 @@
     "url": "https://github.com/forcedotcom/salesforcedx-vscode-slds"
   },
   "engines": {
-    "vscode": "^1.40.0"
+    "vscode": "1.51.1"
   },
   "categories": [
     "Programming Languages"
