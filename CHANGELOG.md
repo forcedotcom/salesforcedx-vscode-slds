@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.4.1]
+Performance:
+- [Remove SFDX-Code Dependencies to determine if user supports to send telemetry information.](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/6732175acac294af29b86557cbe385345d4e0ad9)
+
 ## [1.4.0]
 Updates/enhancements:
 - [Add settings support to toggle specific validators and when the validator should be ran.](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/42fdaac79a5c0e1273a4562d1cc88f3d3e5552e6)

@@ -3,7 +3,7 @@
   "displayName": "SLDS Validator",
   "publisher": "salesforce",
   "description": "Salesforce Lightning Design System",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "aiKey": "7344b284-73e5-420e-b680-73333da3e067",
   "icon": "images/slds-icon.png",
   "preview": true,
@@ -12,7 +12,7 @@
     "url": "https://github.com/forcedotcom/salesforcedx-vscode-slds"
   },
   "engines": {
-    "vscode": "^1.40.0"
+    "vscode": "1.51.1"
   },
   "categories": [
     "Programming Languages"
