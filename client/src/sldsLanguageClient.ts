@@ -86,7 +86,7 @@ function correctBinname(binname: string) {
 		return binname;
 }
 
-function createServerOptions(context: ExtensionContext, outputChannel: OutputChannel): () => Thenable<StreamInfo> {
+function createServerOptions(context: ExtensionContext, outputChannel: OutputChannel): () => Promise<StreamInfo> {
 	return createServerPromise.bind(this, context, outputChannel);
 }
 
