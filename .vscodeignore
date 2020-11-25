@@ -6,3 +6,9 @@ vsc-extension-quickstart.md
 **/tsconfig.json
 **/tslint.json
 **/test/**
+.github/**
+.circleci/**
+.npmrc
+.prettierrc
+client/**
+node_modules

@@ -4,3 +4,4 @@ target
 out
 .DS_Store
 .vscode-test
+dist
