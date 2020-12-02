@@ -16,7 +16,17 @@
             "label": "watch client",
 			"type": "npm",
 			"script": "watch",
-			"problemMatcher": "$tsc-watch",
+			"problemMatcher": {
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern" : {
+                    "regexp": "^\\s+(\\w+)\\s+in\\s+(\\.[\\w\/]+)\\s(\\d+):(\\d+-\\d+)",
+                    "severity": 1,
+                    "file": 2,
+                    "line": 3,
+                    "column": 4,
+                    "endColumn": 5
+                }
+            },
 			"isBackground": true,
 			"presentation": {
 				"reveal": "never"
@@ -25,15 +35,6 @@
 				"kind": "build",
 				"isDefault": true
 			}
-		},
-        {
-            "label": "build server",
-            "type": "shell",
-            "command": "mvn package",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        }
+		}
     ]
 }

@@ -1,4 +1,5 @@
 /*
+ * @license
  * Copyright (c) 2018, salesforce.com, inc.
  * All rights reserved.
  * SPDX-License-Identifier: BSD-3-Clause
@@ -86,7 +87,7 @@ function correctBinname(binname: string) {
 		return binname;
 }
 
-function createServerOptions(context: ExtensionContext, outputChannel: OutputChannel): () => Thenable<StreamInfo> {
+function createServerOptions(context: ExtensionContext, outputChannel: OutputChannel): () => Promise<StreamInfo> {
 	return createServerPromise.bind(this, context, outputChannel);
 }
 
