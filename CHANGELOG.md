@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.4.2]
+Updates/enhancements:
+- [Upgrade vscode client and add webpack configuration.](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/29217452fa8643d865c9059fc185c24ce3ad6e75)
+- [Update Non Windows environment to use node v12](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/c191b9fa72e17a70bb3801de7c3347dbeeb66f85)
+- [Upgrade LSP from 0.0.7 to 0.0.8 (](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/89e5f886c4ecdb15ebc8cfea725e1b55819e46d8)
+- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.8
+
 ## [1.4.1]
 Performance:
 - [Remove SFDX-Code Dependencies to determine if user supports to send telemetry information.](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/6732175acac294af29b86557cbe385345d4e0ad9)
