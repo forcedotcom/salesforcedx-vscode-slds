@@ -50,7 +50,7 @@ export function register(): vscode.Disposable {
 			}
 			
 			let triggerRange = 
-				SLDSContext.isEnable(ContextKey.GLOBAL, ContextKey.AUTO_SUGGEST, ContextKey.UTILITY_CLASS) 
+				SLDSContext.isEnable(ContextKey.GLOBAL, ContextKey.AUTO_SUGGEST) 
 					? shouldTriggerCompletions(document, position) : false;
 			return triggerRange ? getCompletions(triggerRange) : undefined;
 		}
