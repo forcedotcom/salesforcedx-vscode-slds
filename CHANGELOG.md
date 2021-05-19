@@ -1,5 +1,8 @@
 # Change Log
 
+## [1.4.3]
+- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.9
+
 ## [1.4.2]
 Updates/enhancements:
 - [Upgrade vscode client and add webpack configuration.](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/29217452fa8643d865c9059fc185c24ce3ad6e75)
