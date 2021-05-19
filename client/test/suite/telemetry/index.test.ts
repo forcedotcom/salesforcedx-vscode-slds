@@ -11,7 +11,7 @@ const proxyquire = require('proxyquire').noCallThru();
 const CLIPath = '../../../src/telemetry/cliConfiguration';
 import { ENV_SFDX_CLI_DISABLE_TELEMETRY, SFDX_CONFIG_DISABLE_TELEMETRY} from '../../../src/telemetry/utils';
 
-suite('Telementry', function () {
+suite('Telemetry', function () {
 	setup(() => {
 		delete process.env[ENV_SFDX_CLI_DISABLE_TELEMETRY];
 	});
