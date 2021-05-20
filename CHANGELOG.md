@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.4.4]
+Bug fixes:
+- [Address issue with Telemetry Enabled](https://github.com/forcedotcom/salesforcedx-vscode-slds/commit/0294a2a70f345e0448a89b4e93ffd8072ff9b421)
+
 ## [1.4.3]
 - Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.9
 
