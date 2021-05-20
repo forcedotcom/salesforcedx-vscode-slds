@@ -1,6 +1,8 @@
 'use strict';
 
 const path = require('path');
+const webpack = require('webpack');
+const extensionPackage = require('./package.json');
 
 const config = {
   target: 'node',
@@ -34,6 +36,11 @@ const config = {
         ]
       }
     ]
-  }
+  }, 
+  plugins: [new webpack.DefinePlugin({
+    'process.env.PACKAGE_NAME': JSON.stringify(extensionPackage.name),
+    'process.env.PACKAGE_VERSION': JSON.stringify(extensionPackage.version),
+    'process.env.PACKAGE_AI_KEY': JSON.stringify(extensionPackage.aiKey)
+  })]
 };
 module.exports = config;

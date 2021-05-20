@@ -38,16 +38,8 @@ export class TelemetryService {
 
 		// TelemetryReporter is not initialized if user has disabled telemetry setting.
 		if (this.reporter === undefined && this.isTelemetryEnabled() && !isDevMode) {
-			const extensionPackage = require(this.context.asAbsolutePath(
-				'./package.json'
-			));
-
-			this.reporter = new TelemetryReporter(
-				extensionPackage.name,
-				extensionPackage.version,
-				extensionPackage.aiKey,
-				true
-			);
+			this.reporter = new TelemetryReporter(process.env.PACKAGE_NAME, 
+				process.env.PACKAGE_VERSION, process.env.PACKAGE_AI_KEY, true);
 
 			this.context.subscriptions.push(this.reporter);
 		}
