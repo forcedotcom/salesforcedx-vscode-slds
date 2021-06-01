@@ -20,7 +20,7 @@ export const shouldExecuteForDocument = (uri: vscode.Uri):
 
 						if (locationOfForceApp !== -1) {
 								return fs.existsSync(
-										path.resolve(...filePath.slice(0, locationOfForceApp), `sfdx-project.json`));
+										path.resolve(path.sep, ...filePath.slice(0, locationOfForceApp), `sfdx-project.json`));
 						} 
 				}
 				return false;
