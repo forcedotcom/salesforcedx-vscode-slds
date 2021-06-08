@@ -1,5 +1,8 @@
 # Change Log
 
+## [1.4.6]
+- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.11
+
 ## [1.4.5]
 Bug fixes:
 - [Address SFDX package detection](https://github.com/forcedotcom/salesforcedx-vscode-slds/pull/85/commits/c951f3273b4ff16eb6846fae6f43e525c3d19bdb)
