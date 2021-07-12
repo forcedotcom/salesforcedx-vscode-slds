@@ -22,7 +22,8 @@ const MAPPINGS: Map<ContextKey, string> = new Map<ContextKey, string>([
 	[ContextKey.DESIGN_TOKEN, 'basic.designToken'],
 	[ContextKey.INVALID, 'basic.invalid'],
 	[ContextKey.UTILITY_CLASS, 'enhancements.utilityClasses'],
-	[ContextKey.SCOPE, 'file.scopeWithInSFDX']
+	[ContextKey.SCOPE, 'file.scopeWithInSFDX'],
+	[ContextKey.SLDS_MOBILE_VALIDATION, 'basic.mobileValidation']
 ]);
 
 export class SLDSContext {

@@ -62,5 +62,9 @@ export class Commands {
 			this.context.updateState(ContextKey.SCOPE, true));
 		vscode.commands.registerCommand('slds.disable:scope', ()=>
 			this.context.updateState(ContextKey.SCOPE, false));
+		vscode.commands.registerCommand('slds.enable:mobileValidation', ()=>
+			this.context.updateState(ContextKey.SLDS_MOBILE_VALIDATION, true));
+		vscode.commands.registerCommand('slds.disable:validation', ()=>
+			this.context.updateState(ContextKey.SLDS_MOBILE_VALIDATION, false));
 	}
 }
