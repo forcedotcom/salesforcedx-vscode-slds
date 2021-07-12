@@ -170,6 +170,16 @@
         "command": "slds.disable:scope",
         "title": "Do not scope SLDS Validator to SFDX project files",
         "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:mobileValidation",
+        "title": "Enable SLDS validation for mobile",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:mobileValidation",
+        "title": "Disable SLDS validation for mobile",
+        "category": "SLDS"
       }
     ],
     "languages": [
