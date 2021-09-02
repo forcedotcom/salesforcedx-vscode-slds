@@ -1,9 +1,14 @@
 # Change Log
+## [1.4.8]
+Updates/enhancements:
+- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.13
+
 ## [1.4.7]
 Updates/enhancements:
 - Enable suppression of SLDS warnings in HTML files for mobile via Quick Fix actions. Any HTML content that is between `<!-- sldsValidatorIgnore -->` and `<!-- sldsValidatorAllow -->` will now be exempt from SLDS validation. Furthermore `<!-- sldsValidatorIgnoreNextLine -->` will exempt the next immediate line from SLDS validation. By adding a `<!-- sldsValidatorIgnore -->` at the top of an HTML file with no `<!-- sldsValidatorAllow -->` anywhere else in that file, you can exempt the entire content of the file from SLDS validation.
 - New preference flag for SLDS Validator extension. Now using `Salesforce-vscode-slds > Basic : Mobile Validation` flag you can globally enable or disable SLDS validation for mobile.
 - Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.12
+
 ## [1.4.6]
 - Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.11
 
