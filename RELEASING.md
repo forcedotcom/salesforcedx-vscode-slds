@@ -27,3 +27,4 @@ Once latest changes are merged in:
 1. Create a GitHub release with the newly pushed tag here: https://github.com/forcedotcom/salesforcedx-vscode-slds/releases/new
 1. Release title should be `Release vMajor.Minor.Patch`
 1. Release description should be the latest changelog entry (from above)
+1. Upload the validator VSIX file as part of the release
