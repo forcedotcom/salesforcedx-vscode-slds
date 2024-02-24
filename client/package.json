@@ -9,14 +9,14 @@
 		"url": "https://git.soma.salesforce.com/bma/slds-validation-vscode"
 	},
 	"engines": {
-		"vscode": "^1.51.0"
+		"vscode": "^1.86.0"
 	},
 	"dependencies": {
-		"applicationinsights": "1.0.7",
-		"vscode-languageclient": "6.1.3"
+		"applicationinsights": "2.9.4",
+		"vscode-languageclient": "9.0.1"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.51.0",
-		"vscode-test": "1.3.0"
+		"@types/vscode": "^1.86.0",
+		"@vscode/test-electron": "2.3.9"
 	}
 }
