@@ -18,9 +18,12 @@ const config = {
   externalsPresets:{
     node: true
   },
-  externals: {
-    vscode: 'commonjs vscode'
+  externals: [
+    {
+      vscode: 'commonjs vscode'
   },
+    "@azure/functions-core" 
+  ],
   resolve: {
     extensions: ['.ts', '.js']
   },
