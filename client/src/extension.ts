@@ -9,7 +9,7 @@
 'use strict';
 
 import * as vscode from 'vscode';
-import { LanguageClient, Disposable } from 'vscode-languageclient';
+import { LanguageClient, Disposable } from 'vscode-languageclient/node';
 import { createLanguageClient } from './sldsLanguageClient';
 import * as componentsProvider from './sldsComponentsProvider';
 import * as utilitiesProvider from './sldsUtilitiesProvider';
@@ -29,7 +29,8 @@ export async function activate(context: vscode.ExtensionContext) {
 	// SLDS validation language client
 	outputChannel.append(`Starting SLDS ... `);
 	const languageClient : LanguageClient = createLanguageClient(context, outputChannel);
-	context.subscriptions.push(languageClient.start());
+	languageClient.start()
+	context.subscriptions.push(languageClient);
 
 	// SLDS Commands
 	outputChannel.append(`registering commands ... `);

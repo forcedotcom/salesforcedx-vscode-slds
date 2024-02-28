@@ -9,7 +9,7 @@
 'use strict';
 
 import * as vscode from 'vscode';
-import { LanguageClient } from 'vscode-languageclient';
+import { LanguageClient } from 'vscode-languageclient/node';
 import { ContextKey, SLDSContext } from './../context';
 
 export class Commands {

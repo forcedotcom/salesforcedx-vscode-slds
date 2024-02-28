@@ -8,7 +8,7 @@
 
 import * as vscode from 'vscode';
 import { ContextKey } from './contextKey';
-import { LanguageClient } from 'vscode-languageclient';
+import { LanguageClient, State } from 'vscode-languageclient/node';
 
 const CONFIG_KEY: string = 'salesforcedx-vscode-slds';
 
@@ -66,12 +66,14 @@ export class SLDSContext {
 	}
 
 	private syncContextWithServer(keys: Iterable<ContextKey>): void {
-		this.languageClient.onReady().then(() => {
-			for (let key of keys) {
-				const contextKey: ContextKey = <ContextKey>key;
-				const value = SLDSContext.isEnable(contextKey);
-				if (SLDSContext.shouldNotifyServerOfContextChange(contextKey)) {
-					this.languageClient.sendNotification('state/updateState', { key, value });
+		this.languageClient.onDidChangeState((s) => {
+			if (s.newState == State.Running) {
+				for (let key of keys) {
+					const contextKey: ContextKey = <ContextKey>key;
+					const value = SLDSContext.isEnable(contextKey);
+					if (SLDSContext.shouldNotifyServerOfContextChange(contextKey)) {
+						this.languageClient.sendNotification('state/updateState', { key, value });
+					}
 				}
 			}
 		});

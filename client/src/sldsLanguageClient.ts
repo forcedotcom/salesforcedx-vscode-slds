@@ -13,7 +13,7 @@ import * as path from 'path';
 import * as net from 'net';
 import * as child_process from "child_process";
 import { workspace, ExtensionContext, OutputChannel } from 'vscode';
-import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-languageclient';
+import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-languageclient/node';
 import { Transform, TransformCallback } from 'stream';
 import { shouldSendPayloadToServer } from './utilities';
 
@@ -105,7 +105,7 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 				
 				private data: Array<Buffer> = [];
 
-				_transform(chunk: Buffer, encoding: string, callback: TransformCallback) {
+				_transform(chunk: Buffer, encoding: BufferEncoding, callback: TransformCallback) {
 					const contentLength = /^Content-Length: /;
 					let buf: string = Buffer.from(chunk).toString();
 
