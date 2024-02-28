@@ -1,4 +1,9 @@
 # Change Log
+## [1.4.9]
+Updates/enhancements:
+- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.14
+
+# Change Log
 ## [1.4.8]
 Updates/enhancements:
 - Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.13
