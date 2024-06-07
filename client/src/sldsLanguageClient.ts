@@ -37,7 +37,7 @@ function startedInDebugMode(): boolean {
 // MIT Licensed code from: https://github.com/georgewfraser/vscode-javac
 function findJavaExecutable(binname: string) {
 	binname = correctBinname(binname);
-	
+
 	// First search if they have an existing java.home Apex setting
 	let javaApexConfig: string | undefined = readJavaConfig();
 	if (javaApexConfig) {
@@ -99,10 +99,10 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 			const matcher = /("character":1.7976931348623157e\+308)/;
 			const javaMaxIntValue = 2147483647;
 			const replacer = '"character":' + javaMaxIntValue + '}}';
-			
+
 			// Temporary solution for an LWC plugin issue where the end character range is too large for SLDS LSP server.
 			let filteredDuplex = new class extends Transform {
-				
+
 				private data: Array<Buffer> = [];
 
 				_transform(chunk: Buffer, encoding: BufferEncoding, callback: TransformCallback) {
@@ -157,7 +157,7 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 			console.log(`Listening on port ${port}`);
 
 			let args = [];
-			
+
 			if (DEBUG) {
 				args.push('-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044');
 				// suspend=y is the default. Use this form if you need to debug the server startup code:
@@ -165,7 +165,7 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 			}
 
 			args.push('-jar');
-			args.push(path.resolve(context.extensionPath, 'lsp-0.0.13-executable.jar'));
+			args.push(path.resolve(context.extensionPath, 'lsp-0.0.14-executable.jar'));
 			args.push(`--PORT=${port.toString()}`);
 
 			let process = child_process.spawn(javaExecutablePath, args, options);
