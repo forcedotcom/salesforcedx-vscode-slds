@@ -17,14 +17,13 @@ commands:
       - run:
           name: 'Install dependent modules'
           command: |
-            npm install
+            npm ci
+      # Compile the project in production mode by temporarily setting NODE_ENV to production.
+      # This is done during the compilation step only to ensure that the devDependencies are available in the step.
       - run:
           name: 'Compile in production mode'
-          environment:
-            - NODE_ENV: production
           command: |
-            npm install typescript
-            npm run compile
+            NODE_ENV=production npm run compile
       - run:
           name: 'Packaging extensions'
           command: npm run vscode:package
@@ -78,6 +77,7 @@ commands:
           name: 'Run lint'
           shell: bash.exe
           command: |
+            npm install
             npm run lint
 
 jobs:
@@ -94,12 +94,12 @@ jobs:
       - build-artifacts
 
   package-extension:
-    description: 'Packages extenson in a Windows environment'
+    description: 'Packages extension in a Windows environment'
     executor: win/default
     environment:
       - SFDX_AUTOUPDATE_DISABLE: true
       - SFDX_DOMAIN_RETRY: 300
-      - NODE_VERSION: '12.4.0'
+      - NODE_VERSION: '18.12'
     steps:
       - build-win
       - run:
