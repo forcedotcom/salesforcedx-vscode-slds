@@ -14,12 +14,16 @@ commands:
       - checkout
       - restore_cache:
           key: dependency-cache-v0-{{ checksum "package.json" }}
-      - run: npm install
+      - run:
+          name: 'Install dependent modules'
+          command: |
+            npm install
       - run:
           name: 'Compile in production mode'
           environment:
             - NODE_ENV: production
           command: |
+            npm install typescript
             npm run compile
       - run:
           name: 'Packaging extensions'
@@ -80,7 +84,7 @@ jobs:
   build-all:
     description: 'Build artifacts in a non-Windows environment'
     docker:
-      - image: circleci/node:12.20.0
+      - image: cimg/node:18.12
     environment:
       - SFDX_URL_LINUX: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
       - SFDX_AUTOUPDATE_DISABLE: true
