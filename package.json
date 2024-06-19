@@ -3,7 +3,7 @@
   "displayName": "SLDS Validator",
   "publisher": "salesforce",
   "description": "Salesforce Lightning Design System",
-  "version": "1.4.9",
+  "version": "1.4.10",
   "aiKey": "7344b284-73e5-420e-b680-73333da3e067",
   "icon": "images/slds-icon.png",
   "preview": true,
