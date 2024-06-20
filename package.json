@@ -198,8 +198,12 @@
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.11.20",
     "@types/sinon": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
     "@vscode/vsce": "^2.23.0",
     "chai": "^5.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "glob": "^10.3.10",
     "mocha": "^10.3.0",
     "node-loader": "^2.0.0",
@@ -218,6 +222,6 @@
     "test-compile": "tsc -b",
     "test": "npm run test-compile && cd client && node out/test/runTest.js && cd ..",
     "postinstall": "cd client && npm install && cd ..",
-    "lint": "tslint --project tslint.json"
+    "lint": "eslint . --ext .ts"
   }
 }

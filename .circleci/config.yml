@@ -77,7 +77,6 @@ commands:
           name: 'Run lint'
           shell: bash.exe
           command: |
-            npm install
             npm run lint
 
 jobs:
