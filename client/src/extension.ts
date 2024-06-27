@@ -29,7 +29,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	// SLDS validation language client
 	outputChannel.append(`Starting SLDS ... `);
 	const languageClient : LanguageClient = createLanguageClient(context, outputChannel);
-	languageClient.start()
+	languageClient.start();
 	context.subscriptions.push(languageClient);
 
 	// SLDS Commands
