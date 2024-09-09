@@ -21,7 +21,7 @@ Before you set up the SLDS Validator, make sure that you have these essentials:
 
 ## Documentation
 
-For documentation, visit the [Salesforce Extensions for Visual Studio Code](https://forcedotcom.github.io/salesforcedx-vscode) documentation site.
+Documentation is currently under maintenance as we prepare a new major release. Please see the [SLDS Validator for VS Code page](https://www.lightningdesignsystem.com/tools/validator/) here for further updates.
 
 ## Bugs and Feedback
 
