@@ -1,5 +1,32 @@
 # Change Log
+
+## [2.0.7]
+We’re happy to announce that SLDS Validator 2.x is generally available. It stays true to our vision of providing a robust SLDS validation tool that scans your Aura and Lightning design code. Validator 2.0.7 also introduces SLDS2 rules (beta) to scan your code and offer recommendations. SLDS2 is the latest version of the Lightning Design System. Make Salesforce your own with an AI-ready design system that includes configurable UI components and an advanced theming engine.
+
+**Note**: The SLDS2 rules included in SLDS Validator are a pilot or beta service that is subject to the Beta Services Terms at [Agreements - Salesforce.com](https://www.salesforce.com/company/legal/) or a written Unified Pilot Agreement if executed by Customer, and applicable terms in the [Product Terms Directory](https://ptd.salesforce.com/?_ga=2.247987783.1372150065.1709219475-629000709.1639001992). Use of this pilot or beta service is at the Customer's sole discretion.
+
+These are the new features in this version 2.0.7 release.
+
+- [NEW] We introduced new SLDS2 rules (beta) to scan your components and to produce recommendations by using our SLDS2 [global semantic styling hooks](https://www.lightningdesignsystem.com/platforms/lightning/new-global-styling-hooks-guidance/). The SLDS2 rules (beta) are turned off by default. To run the new SLDS2 rules (beta), in VS Code Settings, turn on SLDS: Enable SLDS2 Validation. After they’re turned on, SLDS2 rules:
+  - Detect and provide mapping recommendations for deprecated --lwc custom properties, deprecated --sds custom properties, and deprecated Aura design tokens
+  - Detect usage of hard-coded values in CSS and provide recommendations that use an updated global color style hook matching logic
+  - Detect styling hooks and SLDS classes that are no longer supported in SLDS2
+
+- [NEW] Previously, with Validator 1.0, you scanned individual files. Now with Validator 2.0, you can scan a full directory of files. Validator automatically parses the related component files and generates a report of recommendations. 
+
+  To run Validator against a directory of files, open VS Code and its Command Palette. Then search for and select **SLDS: Generate SARIF Report**. In your codebase, select a component directory. Validator then scans your code and produces an slds-report.sarif report.
+
+  **Note** To view the report, you need the [SARIF Viewer](https://marketplace.visualstudio.com/items?itemName=MS-SarifVSCode.sarif-viewer) VS Code extension.
+
+- [New] We introduced three code annotations that you can use to ignore Validator recommendations: 
+  - sldsValidatorAllow
+  - sldsValidatorIgnore
+  - sldsValidatorIgnoreNextLine
+
 ## [1.4.11]
+
+**IMPORTANT**: This is the last release for version 1. From now on, use version 2, which is generally available as of September 2024. Starting in September 2024, we no longer publish release notes for version 1.
+
 - Update README
 
 ## [1.4.10]
