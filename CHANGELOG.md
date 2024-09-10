@@ -7,7 +7,7 @@ We’re happy to announce that SLDS Validator 2.x is generally available. It sta
 
 These are the new features in this version 2.0.7 release.
 
-- [NEW] We introduced new SLDS2 rules (beta) to scan your components and to produce recommendations by using our SLDS2 [global semantic styling hooks](https://www.lightningdesignsystem.com/platforms/lightning/new-global-styling-hooks-guidance/). The SLDS2 rules (beta) are turned off by default. To run the new SLDS2 rules (beta), in VS Code Settings, turn on SLDS: Enable SLDS2 Validation. After they’re turned on, SLDS2 rules:
+- [NEW] We introduced new SLDS2 rules (beta) to scan your components and to produce recommendations by using our SLDS2 [global semantic styling hooks](https://www.lightningdesignsystem.com/platforms/lightning/new-global-styling-hooks-guidance/). The SLDS2 rules (beta) are turned off by default. To run the new SLDS2 rules (beta), in VS Code Settings, turn on **SLDS: Enable SLDS2 Validation**. After they’re turned on, SLDS2 rules:
   - Detect and provide mapping recommendations for deprecated --lwc custom properties, deprecated --sds custom properties, and deprecated Aura design tokens
   - Detect usage of hard-coded values in CSS and provide recommendations that use an updated global color style hook matching logic
   - Detect styling hooks and SLDS classes that are no longer supported in SLDS2
