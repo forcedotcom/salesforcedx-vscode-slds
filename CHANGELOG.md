@@ -1,4 +1,7 @@
 # Change Log
+## [1.4.11]
+- Update README
+
 ## [1.4.10]
 Updates/enhancements:
 - Update LSP to Summer ’24 (SLDS 2.24.4): https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.15
