@@ -23,41 +23,22 @@ These are the new features in this version 2.0.8 release.
   - sldsValidatorIgnore
   - sldsValidatorIgnoreNextLine
 
-## [2.0.7]
+## [1.4.11]
+
+**IMPORTANT**: This is the last release for version 1. From now on, use version 2, which is generally available as of September 2024. Starting in September 2024, we no longer publish release notes for version 1.
+
 - Update README
 
-## [2.0.6]
-- Supports for Windows Operation System
-- SARIF report - switch originalUriBaseIds to use relative path
-
-## [2.0.5]
+## [1.4.10]
 Updates/enhancements:
-- Add support for new design for Lightning UI Deprecated Items
-- Include SLDS2 without replacement in SARIF reports
+- Update LSP to Summer ’24 (SLDS 2.24.4): https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.15
 
-Bug fixes:
-- Upgrade 3rd Party Libraries
-- Fix issues with non Linux and Mac OS operating system
+# Change Log
+## [1.4.9]
+Updates/enhancements:
+- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.14
 
-## [2.0.4]
-- Enhanced error message in output, especially related to missing JAVA setup
-- New command to generate SARIF reports
-
-## [2.0.3]
-- Insert inline comments only for changes that requires UX review
-- Excluding detection and suggestion in fallback
-
-## [2.0.2]
-Bug fixes:
-- Update detection and suggestion message
-- Highlight code that do not have a corresponding styling hook that needed attention
-
-## [2.0.1]
-Bug fixes:
-- Address incorrect suggestion provided for Named Color and Hex Short Code
-- Address incorrect range calculation for some replacement
-- Address incorrect detection in fallback syntax
-
+# Change Log
 ## [1.4.8]
 Updates/enhancements:
 - Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.13
