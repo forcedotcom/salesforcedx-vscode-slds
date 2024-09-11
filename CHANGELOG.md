@@ -1,17 +1,39 @@
 # Change Log
-## [1.4.11]
+## [2.0.7]
 - Update README
 
-## [1.4.10]
-Updates/enhancements:
-- Update LSP to Summer ’24 (SLDS 2.24.4): https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.15
+## [2.0.6]
+- Supports for Windows Operation System
+- SARIF report - switch originalUriBaseIds to use relative path
 
-# Change Log
-## [1.4.9]
+## [2.0.5]
 Updates/enhancements:
-- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.14
+- Add support for new design for Lightning UI Deprecated Items
+- Include SLDS2 without replacement in SARIF reports
 
-# Change Log
+Bug fixes:
+- Upgrade 3rd Party Libraries
+- Fix issues with non Linux and Mac OS operating system
+
+## [2.0.4]
+- Enhanced error message in output, especially related to missing JAVA setup
+- New command to generate SARIF reports
+
+## [2.0.3]
+- Insert inline comments only for changes that requires UX review
+- Excluding detection and suggestion in fallback
+
+## [2.0.2]
+Bug fixes:
+- Update detection and suggestion message
+- Highlight code that do not have a corresponding styling hook that needed attention
+
+## [2.0.1]
+Bug fixes:
+- Address incorrect suggestion provided for Named Color and Hex Short Code
+- Address incorrect range calculation for some replacement
+- Address incorrect detection in fallback syntax
+
 ## [1.4.8]
 Updates/enhancements:
 - Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.13

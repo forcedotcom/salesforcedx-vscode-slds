@@ -23,7 +23,8 @@ const DEBUG = (typeof v8debug === 'object') || startedInDebugMode();
 const documentSelector = [
 	{ scheme: 'file', language: 'css' },
 	{ scheme: 'file', language: 'html' },
-	{ scheme: 'file', language: 'javascript' }
+	{ scheme: 'file', language: 'javascript' },
+	{ scheme: 'file', language: 'typescript' }
 ];
 
 function startedInDebugMode(): boolean {
@@ -93,8 +94,8 @@ function createServerOptions(context: ExtensionContext, outputChannel: OutputCha
 
 function createServerPromise(context: ExtensionContext, outputChannel: OutputChannel): Promise<StreamInfo> {
 	return new Promise((resolve, reject) => {
-		var server = net.createServer((socket) => {
-			outputChannel.appendLine("SLDS Started");
+		const server = net.createServer((socket) => {
+			outputChannel.appendLine("SLDS Validator Started");
 
 			const matcher = /("character":1.7976931348623157e\+308)/;
 			const javaMaxIntValue = 2147483647;
@@ -124,13 +125,13 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 						if (sendData) {
 							buf = buf.replace(matcher, replacer);
 							this.data.push(Buffer.from(buf));
-							this.data.forEach((item)=> this.push(item, encoding));
+							this.data.forEach((item) => this.push(item, encoding));
 						}
 					}
 
 					callback();
 				}
-			} ();
+			}();
 
 			filteredDuplex.pipe(socket);
 
@@ -139,50 +140,55 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 				writer: filteredDuplex
 			});
 		})
-		.on('end', () => console.log("Disconnected"))
-		.on('error', (err) => {
-			// handle errors here
-			outputChannel.appendLine("SLDS failed to start");
-			throw err;
-		});
+			.on('end', () => console.log("Disconnected"))
+			.on('error', (err) => {
+				// handle errors here
+				outputChannel.appendLine("SLDS Validator failed to start");
+				throw err;
+			});
 
 		let javaExecutablePath = findJavaExecutable('java');
+		if (javaExecutablePath == undefined) {
+			outputChannel.appendLine(`Java configuration missing. Please follow the steps listed in 'https://developer.salesforce.com/tools/vscode/en/vscode-desktop/java-setup'`)
 
-		// grab a random port.
-		server.listen(() => {
-			// Start the child java process
-			let options = { cwd: workspace.rootPath };
+		} else {
 
-			const { port } = server.address() as net.AddressInfo;
-			console.log(`Listening on port ${port}`);
+			// grab a random port.
+			server.listen(() => {
+				// Start the child java process
+				let options = { cwd: workspace.rootPath };
 
-			let args = [];
+				const { port } = server.address() as net.AddressInfo;
+				console.log(`Listening on port ${port}`);
 
-			if (DEBUG) {
-				args.push('-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044');
-				// suspend=y is the default. Use this form if you need to debug the server startup code:
-				//  params.push('-agentlib:jdwp=transport=dt_socket,server=y,address=1044');
-			}
+				let args = [];
 
-			args.push('-jar');
-			args.push(path.resolve(context.extensionPath, 'lsp-0.0.15-executable.jar'));
-			args.push(`--PORT=${port.toString()}`);
+				if (DEBUG) {
+					args.push('-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044');
+					// suspend=y is the default. Use this form if you need to debug the server startup code:
+					//  params.push('-agentlib:jdwp=transport=dt_socket,server=y,address=1044');
+				}
 
-			let process = child_process.spawn(javaExecutablePath, args, options);
+				args.push('-jar');
+				args.push(path.resolve(context.extensionPath, 'lsp-' + process.env.PACKAGE_VERSION + '-executable.jar'));
+				args.push(`--PORT=${port.toString()}`);
 
-			const storagePath: string = context.storagePath ? context.storagePath : context.globalStoragePath;
-			if (!fs.existsSync(storagePath)) {
-				fs.mkdirSync(storagePath);
-			}
+				const childProcess = child_process.spawn(javaExecutablePath, args, options);
 
-			const logFile: string = `${storagePath}/slds-extension.log`;
-			let logStream = fs.createWriteStream(logFile, { flags: 'w' });
+				const storagePath: string = context.storagePath ? context.storagePath : context.globalStoragePath;
+				if (!fs.existsSync(storagePath)) {
+					fs.mkdirSync(storagePath);
+				}
 
-			process.stdout.pipe(logStream);
-			process.stderr.pipe(logStream);
+				const logFile: string = `${storagePath}/slds-extension.log`;
+				let logStream = fs.createWriteStream(logFile, { flags: 'w' });
 
-			outputChannel.appendLine(`Storing LSP server log in '${logFile}'`);
-		});
+				childProcess.stdout.pipe(logStream);
+				childProcess.stderr.pipe(logStream);
+
+				outputChannel.appendLine(`Storing SLDS LSP server log in '${logFile}'`);
+			});
+		}
 	});
 }
 
@@ -193,7 +199,7 @@ function createClientOptions(outputChannel: OutputChannel): LanguageClientOption
 		outputChannel: outputChannel,
 		synchronize: {
 			fileEvents: [
-				workspace.createFileSystemWatcher('**/*.[cmp,html,js,css,app]')
+				workspace.createFileSystemWatcher('**/*.[cmp,html,js,css,app,ts]')
 			]
 		}
 	};
@@ -202,6 +208,6 @@ function createClientOptions(outputChannel: OutputChannel): LanguageClientOption
 export function createLanguageClient(context: ExtensionContext, outputChannel: OutputChannel): LanguageClient {
 	let serverOptions = createServerOptions(context, outputChannel);
 	let clientOptions = createClientOptions(outputChannel);
-	let client = new LanguageClient('sldsValidation', 'SLDS Validation', serverOptions, clientOptions);
+	let client = new LanguageClient('sldsValidation', 'SLDS Validator', serverOptions, clientOptions);
 	return client;
 }
