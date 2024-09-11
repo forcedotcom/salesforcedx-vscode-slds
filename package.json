@@ -38,47 +38,47 @@
         },
         "salesforcedx-vscode-slds.enhancements.autoSuggest": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Enable or disable auto-suggestion"
         },
         "salesforcedx-vscode-slds.enhancements.density": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Enable or disable density tokens and classes suggestion"
         },
         "salesforcedx-vscode-slds.basic.bemNaming": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Enable or disable BEM naming suggestion"
         },
         "salesforcedx-vscode-slds.basic.deprecated": {
           "type": "boolean",
-          "default": false,
+          "default": null,
           "description": "Enable or disable deprecated design tokens detection"
         },
         "salesforcedx-vscode-slds.basic.override": {
           "type": "boolean",
-          "default": false,
+          "default": null,
           "description": "Enable or disable the override SLDS utility classes detection"
         },
         "salesforcedx-vscode-slds.basic.designToken": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Enable or disable design token suggestion"
         },
         "salesforcedx-vscode-slds.basic.invalid": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Enable or disable invalid SLDS utility classes detection"
         },
         "salesforcedx-vscode-slds.basic.mobileValidation": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Enable or disable SLDS validation for mobile"
         },
         "salesforcedx-vscode-slds.basic.slds2": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Enable or disable SLDS2 validation"
         },
         "salesforcedx-vscode-slds.accessibility.colorContrast": {
