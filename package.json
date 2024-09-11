@@ -254,6 +254,6 @@
     "test-compile": "tsc -b",
     "test": "npm run test-compile && cd client && node out/test/runTest.js && cd ..",
     "postinstall": "cd client && npm install && cd ..",
-    "lint": "tslint --project tslint.json"
+    "lint": "eslint . --ext .ts"
   }
 }
