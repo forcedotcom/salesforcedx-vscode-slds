@@ -3,13 +3,13 @@
   "displayName": "SLDS Validator",
   "publisher": "salesforce",
   "description": "Salesforce Lightning Design System",
-  "version": "1.4.11",
+  "version": "2.0.8",
   "aiKey": "7344b284-73e5-420e-b680-73333da3e067",
   "icon": "images/slds-icon.png",
   "preview": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/forcedotcom/salesforcedx-vscode-slds"
+    "url": "https://git.soma.salesforce.com/salescloudui/salesforcedx-vscode-slds"
   },
   "engines": {
     "vscode": "^1.86.0"
@@ -21,7 +21,8 @@
   "activationEvents": [
     "onLanguage:javascript",
     "onLanguage:html",
-    "onLanguage:css"
+    "onLanguage:css",
+    "onLanguage:typescript"
   ],
   "contributes": {
     "configuration": {
@@ -35,48 +36,58 @@
         },
         "salesforcedx-vscode-slds.file.scopeWithInSFDX": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "If enabled, SLDS Validator runs only for SFDX project files"
         },
         "salesforcedx-vscode-slds.enhancements.autoSuggest": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Enable or disable auto-suggestion"
         },
         "salesforcedx-vscode-slds.enhancements.density": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Enable or disable density tokens and classes suggestion"
         },
         "salesforcedx-vscode-slds.basic.bemNaming": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Enable or disable BEM naming suggestion"
         },
         "salesforcedx-vscode-slds.basic.deprecated": {
           "type": "boolean",
-          "default": null,
+          "default": false,
           "description": "Enable or disable deprecated design tokens detection"
         },
         "salesforcedx-vscode-slds.basic.override": {
           "type": "boolean",
-          "default": null,
+          "default": false,
           "description": "Enable or disable the override SLDS utility classes detection"
         },
         "salesforcedx-vscode-slds.basic.designToken": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Enable or disable design token suggestion"
         },
         "salesforcedx-vscode-slds.basic.invalid": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Enable or disable invalid SLDS utility classes detection"
         },
         "salesforcedx-vscode-slds.basic.mobileValidation": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Enable or disable SLDS validation for mobile"
+        },
+        "salesforcedx-vscode-slds.basic.slds2": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable SLDS2 validation"
+        },
+        "salesforcedx-vscode-slds.accessibility.colorContrast": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable or disable Color Contrast Detection"
         }
       }
     },
@@ -180,6 +191,31 @@
         "command": "slds.disable:mobileValidation",
         "title": "Disable SLDS validation for mobile",
         "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:slds2",
+        "title": "Enable SLDS2 validation",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:slds2",
+        "title": "Disable SLDS2 validation",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.enable:wcag",
+        "title": "Enable Color Contrast Detection",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.disable:wcag",
+        "title": "Disable Color Contrast Detection",
+        "category": "SLDS"
+      },
+      {
+        "command": "slds.report",
+        "title": "Generate SARIF Report",
+        "category": "SLDS"
       }
     ],
     "languages": [
@@ -187,7 +223,10 @@
         "id": "html",
         "extensions": [
           ".cmp",
-          ".app"
+          ".app",
+          ".evt",
+          ".intf",
+          ".tokens"
         ]
       }
     ]
@@ -198,12 +237,8 @@
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.11.20",
     "@types/sinon": "^17.0.3",
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
     "@vscode/vsce": "^2.23.0",
     "chai": "^5.1.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
     "glob": "^10.3.10",
     "mocha": "^10.3.0",
     "node-loader": "^2.0.0",
@@ -222,6 +257,6 @@
     "test-compile": "tsc -b",
     "test": "npm run test-compile && cd client && node out/test/runTest.js && cd ..",
     "postinstall": "cd client && npm install && cd ..",
-    "lint": "eslint . --ext .ts"
+    "lint": "tslint --project tslint.json"
   }
 }

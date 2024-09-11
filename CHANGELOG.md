@@ -12,33 +12,52 @@ These are the new features in this version 2.0.8 release.
   - Detect usage of hard-coded values in CSS and provide recommendations that use an updated global color style hook matching logic
   - Detect styling hooks and SLDS classes that are no longer supported in SLDS2
 
-- [NEW] Previously, with Validator 1.0, you scanned individual files. Now with Validator 2.0, you can scan a full directory of files. Validator automatically parses the related component files and generates a report of recommendations. 
+- [NEW] Previously, with Validator 1.0, you scanned individual files. Now with Validator 2.0, you can scan a full directory of files. Validator automatically parses the related component files and generates a report of recommendations.
 
   To run Validator against a directory of files, open VS Code and its Command Palette. Then search for and select **SLDS: Generate SARIF Report**. In your codebase, select a component directory. Validator then scans your code and produces an slds-report.sarif report.
 
   **Note** To view the report, you need the [SARIF Viewer](https://marketplace.visualstudio.com/items?itemName=MS-SarifVSCode.sarif-viewer) VS Code extension.
 
-- [New] We introduced three code annotations that you can use to ignore Validator recommendations: 
+- [New] We introduced three code annotations that you can use to ignore Validator recommendations:
   - sldsValidatorAllow
   - sldsValidatorIgnore
   - sldsValidatorIgnoreNextLine
 
-## [1.4.11]
-
-**IMPORTANT**: This is the last release for version 1. From now on, use version 2, which is generally available as of September 2024. Starting in September 2024, we no longer publish release notes for version 1.
-
+## [2.0.7]
 - Update README
 
-## [1.4.10]
-Updates/enhancements:
-- Update LSP to Summer ’24 (SLDS 2.24.4): https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.15
+## [2.0.6]
+- Supports for Windows Operation System
+- SARIF report - switch originalUriBaseIds to use relative path
 
-# Change Log
-## [1.4.9]
+## [2.0.5]
 Updates/enhancements:
-- Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.14
+- Add support for new design for Lightning UI Deprecated Items
+- Include SLDS2 without replacement in SARIF reports
 
-# Change Log
+Bug fixes:
+- Upgrade 3rd Party Libraries
+- Fix issues with non Linux and Mac OS operating system
+
+## [2.0.4]
+- Enhanced error message in output, especially related to missing JAVA setup
+- New command to generate SARIF reports
+
+## [2.0.3]
+- Insert inline comments only for changes that requires UX review
+- Excluding detection and suggestion in fallback
+
+## [2.0.2]
+Bug fixes:
+- Update detection and suggestion message
+- Highlight code that do not have a corresponding styling hook that needed attention
+
+## [2.0.1]
+Bug fixes:
+- Address incorrect suggestion provided for Named Color and Hex Short Code
+- Address incorrect range calculation for some replacement
+- Address incorrect detection in fallback syntax
+
 ## [1.4.8]
 Updates/enhancements:
 - Update LSP: https://github.com/forcedotcom/salesforcedx-slds-lsp/releases/tag/v0.0.13
