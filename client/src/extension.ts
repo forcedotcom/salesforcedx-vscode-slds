@@ -18,7 +18,7 @@ import * as auraTokensProvider from './sldsAuraTokensProvider';
 import { Commands } from './commands';
 import { telemetryService } from './telemetry';
 
-const outputChannel : vscode.OutputChannel = vscode.window.createOutputChannel(`SLDS`);
+const outputChannel : vscode.OutputChannel = vscode.window.createOutputChannel(`SLDS`, {log: true});
 
 export async function activate(context: vscode.ExtensionContext) {
 	// Telemetry service
@@ -26,17 +26,20 @@ export async function activate(context: vscode.ExtensionContext) {
 	telemetryService.showTelemetryMessage();
 	const extensionHRStart = process.hrtime();
 
+	context.subscriptions.push(outputChannel);
+
 	// SLDS validation language client
-	outputChannel.append(`Starting SLDS ... `);
+	outputChannel.appendLine(`Starting SLDS ... `);
 	const languageClient : LanguageClient = createLanguageClient(context, outputChannel);
 	languageClient.start();
 	context.subscriptions.push(languageClient);
 
 	// SLDS Commands
-	outputChannel.append(`registering commands ... `);
+	outputChannel.appendLine(`Registering commands ... `);
 	const commands : Commands = new Commands(context, languageClient, outputChannel);
 	commands.register();
 
+	/* 
 	outputChannel.appendLine(`registering providers`);
 	// SLDS components completion provider
 	let components : Disposable = componentsProvider.register();
@@ -52,7 +55,8 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	// SLDS aura tokens completion provider
 	let auraTokens : Disposable = auraTokensProvider.register();
-	context.subscriptions.push(auraTokens);
+	context.subscriptions.push(auraTokens); 
+	*/
 
 	// send activationEvent
 	telemetryService.sendExtensionActivationEvent(extensionHRStart);

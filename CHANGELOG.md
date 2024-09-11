@@ -12,13 +12,13 @@ These are the new features in this version 2.0.8 release.
   - Detect usage of hard-coded values in CSS and provide recommendations that use an updated global color style hook matching logic
   - Detect styling hooks and SLDS classes that are no longer supported in SLDS2
 
-- [NEW] Previously, with Validator 1.0, you scanned individual files. Now with Validator 2.0, you can scan a full directory of files. Validator automatically parses the related component files and generates a report of recommendations. 
+- [NEW] Previously, with Validator 1.0, you scanned individual files. Now with Validator 2.0, you can scan a full directory of files. Validator automatically parses the related component files and generates a report of recommendations.
 
   To run Validator against a directory of files, open VS Code and its Command Palette. Then search for and select **SLDS: Generate SARIF Report**. In your codebase, select a component directory. Validator then scans your code and produces an slds-report.sarif report.
 
   **Note** To view the report, you need the [SARIF Viewer](https://marketplace.visualstudio.com/items?itemName=MS-SarifVSCode.sarif-viewer) VS Code extension.
 
-- [New] We introduced three code annotations that you can use to ignore Validator recommendations: 
+- [New] We introduced three code annotations that you can use to ignore Validator recommendations:
   - sldsValidatorAllow
   - sldsValidatorIgnore
   - sldsValidatorIgnoreNextLine

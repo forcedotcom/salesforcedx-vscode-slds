@@ -11,33 +11,50 @@ import { ContextKey, SLDSContext } from './context';
 import * as fs from 'fs';
 import * as path from 'path';
 
-export const shouldExecuteForDocument = (uri: vscode.Uri): 
-		boolean => {
-		if (SLDSContext.isEnable(ContextKey.SCOPE)) {
-				if (uri.scheme === 'file') {
-						const filePath: Array<string> = uri.fsPath.split(path.sep);
-						const locationOfForceApp: number = filePath.indexOf('force-app');
 
-						if (locationOfForceApp !== -1) {
-								return fs.existsSync(
-										path.resolve(path.sep, ...filePath.slice(0, locationOfForceApp), `sfdx-project.json`));
-						} 
-				}
-				return false;
-		}
+const statusBarItem = vscode.window.createStatusBarItem('SLDS Validator');
 
-		return true;
+export const updateStatusBar = (text: string, 
+    command: string = '_slds.showOutput', tooltip ?: string | vscode.MarkdownString) : void => {
+  statusBarItem.text = text;
+  statusBarItem.command = command;
+  statusBarItem.tooltip = tooltip;
+  return statusBarItem.show();
 };
 
-export const shouldSendPayloadToServer = (payload: string) : boolean => {
-		if (SLDSContext.isEnable(ContextKey.SCOPE)) {
-				const result = payload.match(/"method":"textDocument\/\w+".+"textDocument":{"uri":"([^"]+)"/);
+export const shouldExecuteForDocument = (uri: vscode.Uri): boolean => {
+  if (SLDSContext.isEnable(ContextKey.SCOPE)) {
+    if (uri.scheme === 'file') {
+      const filePath: Array<string> = uri.fsPath.split(path.sep);
+      const locationOfForceApp: number = filePath.indexOf('force-app');
 
-				if (result) {
-						const textDocument: string = result[1];
-						return shouldExecuteForDocument(vscode.Uri.parse(textDocument));
-				}
-		}
+      if (locationOfForceApp !== -1) {
+        return fs.existsSync(
+          path.resolve(
+            path.sep,
+            ...filePath.slice(0, locationOfForceApp),
+            `sfdx-project.json`
+          )
+        );
+      }
+    }
+    return false;
+  }
 
-		return true;
+  return true;
+};
+
+export const shouldSendPayloadToServer = (payload: string): boolean => {
+  if (SLDSContext.isEnable(ContextKey.SCOPE)) {
+    const result = payload.match(
+      /"method":"textDocument\/\w+".+"textDocument":{"uri":"([^"]+)"/
+    );
+
+    if (result) {
+      const textDocument: string = result[1];
+      return shouldExecuteForDocument(vscode.Uri.parse(textDocument));
+    }
+  }
+
+  return true;
 };
