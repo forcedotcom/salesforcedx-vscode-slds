@@ -7,10 +7,7 @@
   "aiKey": "7344b284-73e5-420e-b680-73333da3e067",
   "icon": "images/slds-icon.png",
   "preview": true,
-  "repository": {
-    "type": "git",
-    "url": "https://git.soma.salesforce.com/salescloudui/salesforcedx-vscode-slds"
-  },
+  "repository": "https://github.com/forcedotcom/salesforcedx-vscode-slds",
   "engines": {
     "vscode": "^1.86.0"
   },
