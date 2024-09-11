@@ -1,11 +1,11 @@
 # Change Log
 
 ## [2.0.8]
-We’re happy to announce that SLDS Validator 2.x is generally available. It stays true to our vision of providing a robust SLDS validation tool that scans your Aura and Lightning design code. Validator 2.0.7 also introduces SLDS2 rules (beta) to scan your code and offer recommendations. SLDS2 is the latest version of the Lightning Design System. Make Salesforce your own with an AI-ready design system that includes configurable UI components and an advanced theming engine.
+We’re happy to announce that SLDS Validator 2.x is generally available. It stays true to our vision of providing a robust SLDS validation tool that scans your Aura and Lightning design code. Validator 2.0.8 also introduces SLDS2 rules (beta) to scan your code and offer recommendations. SLDS2 is the latest version of the Lightning Design System. Make Salesforce your own with an AI-ready design system that includes configurable UI components and an advanced theming engine.
 
 **Note**: The SLDS2 rules included in SLDS Validator are a pilot or beta service that is subject to the Beta Services Terms at [Agreements - Salesforce.com](https://www.salesforce.com/company/legal/) or a written Unified Pilot Agreement if executed by Customer, and applicable terms in the [Product Terms Directory](https://ptd.salesforce.com/?_ga=2.247987783.1372150065.1709219475-629000709.1639001992). Use of this pilot or beta service is at the Customer's sole discretion.
 
-These are the new features in this version 2.0.7 release.
+These are the new features in this version 2.0.8 release.
 
 - [NEW] We introduced new SLDS2 rules (beta) to scan your components and to produce recommendations by using our SLDS2 [global semantic styling hooks](https://www.lightningdesignsystem.com/platforms/lightning/new-global-styling-hooks-guidance/). The SLDS2 rules (beta) are turned off by default. To run the new SLDS2 rules (beta), in VS Code Settings, turn on **SLDS: Enable SLDS2 Validation**. After they’re turned on, SLDS2 rules:
   - Detect and provide mapping recommendations for deprecated --lwc custom properties, deprecated --sds custom properties, and deprecated Aura design tokens
