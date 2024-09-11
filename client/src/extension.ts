@@ -26,12 +26,12 @@ export async function activate(context: vscode.ExtensionContext) {
 	telemetryService.showTelemetryMessage();
 	const extensionHRStart = process.hrtime();
 
-	context.subscriptions.push(outputChannel)
+	context.subscriptions.push(outputChannel);
 
 	// SLDS validation language client
 	outputChannel.appendLine(`Starting SLDS ... `);
 	const languageClient : LanguageClient = createLanguageClient(context, outputChannel);
-	languageClient.start()
+	languageClient.start();
 	context.subscriptions.push(languageClient);
 
 	// SLDS Commands

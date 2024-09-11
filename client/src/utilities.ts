@@ -12,15 +12,15 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 
-const statusBarItem = vscode.window.createStatusBarItem('SLDS Validator')
+const statusBarItem = vscode.window.createStatusBarItem('SLDS Validator');
 
 export const updateStatusBar = (text: string, 
     command: string = '_slds.showOutput', tooltip ?: string | vscode.MarkdownString) : void => {
-  statusBarItem.text = text
-  statusBarItem.command = command
-  statusBarItem.tooltip = tooltip
-  return statusBarItem.show()
-}
+  statusBarItem.text = text;
+  statusBarItem.command = command;
+  statusBarItem.tooltip = tooltip;
+  return statusBarItem.show();
+};
 
 export const shouldExecuteForDocument = (uri: vscode.Uri): boolean => {
   if (SLDSContext.isEnable(ContextKey.SCOPE)) {

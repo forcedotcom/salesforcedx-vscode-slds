@@ -90,7 +90,7 @@ export class SLDSContext {
   private syncContextWithServer(keys: Iterable<ContextKey>): void {
     this.languageClient.onDidChangeState((s) => {
       if (s.newState == State.Running) {
-        this.languageClient.sendNotification('state/updateLocale', vscode.env.language)
+        this.languageClient.sendNotification('state/updateLocale', vscode.env.language);
 
         for (let key of keys) {
           const contextKey: ContextKey = <ContextKey>key;

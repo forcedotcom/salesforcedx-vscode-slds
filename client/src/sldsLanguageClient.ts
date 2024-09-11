@@ -149,7 +149,7 @@ function createServerPromise(context: ExtensionContext, outputChannel: OutputCha
 
 		let javaExecutablePath = findJavaExecutable('java');
 		if (javaExecutablePath == undefined) {
-			outputChannel.appendLine(`Java configuration missing. Please follow the steps listed in 'https://developer.salesforce.com/tools/vscode/en/vscode-desktop/java-setup'`)
+			outputChannel.appendLine(`Java configuration missing. Please follow the steps listed in 'https://developer.salesforce.com/tools/vscode/en/vscode-desktop/java-setup'`);
 
 		} else {
 

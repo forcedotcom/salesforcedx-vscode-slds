@@ -111,7 +111,7 @@ export class Commands {
       'slds.report',
       async () => handleReportCommand(this.languageClient, this.outputChannel), this
     );
-    vscode.commands.registerCommand('_slds.showOutput', () => this.outputChannel.show(), this)
+    vscode.commands.registerCommand('_slds.showOutput', () => this.outputChannel.show(), this);
   }
 
 }
