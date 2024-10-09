@@ -8,21 +8,22 @@ SLDS Validator scans your UI code, validates it against a database of guidelines
 With the SLDS Validator extension, you get:
 
  - SLDS and SLDS 2 support
- - validation with recommended tokens and utility classes
- - syntax highlighting
- - code completion
- - context awareness
- - bulk report generation
+ - Validation with recommended tokens and utility classes
+ - Syntax highlighting
+ - Code completion
+ - Context awareness
+ - Bulk report generation
 
 To contribute to Validator, take a look at the [CONTRIBUTING](CONTRIBUTING.md) guide.
 
-## Prerequisites
-Before you get started with SLDS Validator, install these essentials:
- - Java. Follow [these instructions](https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/java-setup.html) to set up JDK.
- - [Visual Studio Code](https://code.visualstudio.com/download) v1.26 or later
-
 ## Latest News
 To learn about new and changed features in our latest releases, read our [release notes](https://marketplace.visualstudio.com/items/salesforce.salesforce-vscode-slds/changelog).
+
+## Prerequisites
+To get started with SLDS Validator, first install these essentials:
+
+ - Java. Follow [these instructions](https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/java-setup.html) to set up JDK.
+ - [Visual Studio Code](https://code.visualstudio.com/download) v1.26 or later
 
 ## Documentation
 
