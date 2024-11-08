@@ -2,7 +2,9 @@ name: Publish VSCode Extension
 
 on:
   release:
-    types: [created]
+    types: [released]
+  pull_request:
+    branches: ['**']
 
 jobs:
   publish:
@@ -14,9 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
-          # If you don't have .nvmrc, specify version directly:
-          # node-version: '18'
+          node-version: 'latest'
 
       - name: Install Dependencies
         run: npm install
@@ -35,7 +35,7 @@ jobs:
           fi
 
       - name: Publish Extension
-        if: success() && steps.package.outputs.VSIX_FILE
+        if: success() && steps.package.outputs.VSIX_FILE && github.event_name == 'release'
         run: |
           if npx vsce publish --pat "${{ secrets.VSCE_PERSONAL_ACCESS_TOKEN }}"; then
             echo "✅ Successfully published extension to marketplace"
