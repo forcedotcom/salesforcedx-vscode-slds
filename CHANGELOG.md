@@ -1,5 +1,8 @@
 # Change Log
 
+## [2.0.10]
+- Release Pipeline
+
 ## [2.0.9]
 - External Documentation update.
 
