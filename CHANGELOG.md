@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.0.11]
+- Various Sarif Reporting Fixes
+  - Fixes various issues with larger repositories
+- Mobile Validation bug
+  - The mobile validation rule has been re-enabled for end users
+
 ## [2.0.10]
 - Release Pipeline
 
