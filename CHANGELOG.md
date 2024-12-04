@@ -1,5 +1,14 @@
 # Change Log
 
+## [2.0.12]
+- Ruleset Separation
+  - Breaks out various rules into their own categories in both sarif reporter and in Vscode smells
+    - BEM
+    - DEPRECATED
+    - DENSITY
+- Readded SLDS2 Classes for 252.14 Patch
+  - In an effort to ensure users have a smooth transition from SLDS1 -> SLDS2 several classes from SLDS1 have been reintroduced to SLDS2 and will no longer show up as deprecated in the validator.
+
 ## [2.0.11]
 - Various Sarif Reporting Fixes
   - Fixes various issues with larger repositories
